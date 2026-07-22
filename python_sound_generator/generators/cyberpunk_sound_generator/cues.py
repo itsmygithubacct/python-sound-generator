@@ -389,7 +389,144 @@ def _drone_alert(style: Style, rng: random.Random,
     return engine.glitch(output, style, rng, 0.24)
 
 
-GROUPS = ("interface", "network", "security", "cyberware", "world")
+def _production_renderer(kind: str, signature: int,
+                         seconds: float) -> Renderer:
+    """Build a compact, style-aware renderer for production game semantics.
+
+    These cues deliberately share the cyberpunk palette while using distinct
+    pitch, cadence, bandwidth, and transient signatures.  They remain fully
+    procedural so physical recordings are only introduced through the
+    explicit, provenance-aware Foley path.
+    """
+
+    def render(style: Style, rng: random.Random,
+               intensity: float) -> list[float]:
+        output = _canvas(seconds)
+        base = 40 + signature % 31
+        bright = 74 + signature % 18
+        weight = 0.72 + 0.28 * intensity
+        if kind == "ui":
+            notes = (base + 12, base + 19) if signature % 2 == 0 else (
+                base + 19, base + 12
+            )
+            _add(output, 0.0, engine.sequence(
+                notes, min(seconds, 0.34), style, rng,
+                gap=0.065, tone_seconds=min(0.18, seconds), fm=True,
+            ), 0.55 * weight)
+            _add(output, 0.0, engine.static_burst(
+                min(seconds, 0.035), style, rng,
+            ), 0.15)
+        elif kind == "weapon":
+            _add(output, 0.0, engine.sub_hit(
+                min(seconds, 0.34), style, rng,
+                start_hz=145.0 + signature * 5.0,
+                end_hz=38.0 + signature % 9,
+            ), 0.58 * weight)
+            _add(output, 0.0, engine.static_burst(
+                min(seconds, 0.24), style, rng,
+                low=110.0 + signature * 13.0,
+                high=5_400.0 + signature * 170.0,
+                decay=0.025 + (signature % 5) * 0.012,
+            ), 0.48 * weight)
+            _add(output, min(seconds * 0.30, 0.12), engine.fm_tone(
+                base + 10, min(seconds * 0.55, 0.24), style, rng,
+                ratio=1.8 + (signature % 5) * 0.31,
+            ), 0.18)
+        elif kind == "impact":
+            _add(output, 0.0, engine.sub_hit(
+                min(seconds, 0.42), style, rng,
+                start_hz=120.0 + signature * 4.0,
+            ), 0.64 * weight)
+            _add(output, 0.0, engine.static_burst(
+                min(seconds, 0.32), style, rng,
+                low=180.0 + signature * 19.0,
+                high=3_600.0 + signature * 230.0,
+            ), 0.34 + 0.16 * intensity)
+            _add(output, 0.015, engine.sweep(
+                bright, base, min(seconds, 0.34), style, rng,
+                curve=1.1 + (signature % 4) * 0.22,
+            ), 0.21)
+        elif kind == "motion":
+            direction = -1 if signature % 2 else 1
+            start = base + (24 if direction < 0 else 0)
+            end = start + direction * (18 + signature % 12)
+            _add(output, 0.0, engine.sweep(
+                start, end, min(seconds * 0.82, 0.70), style, rng,
+                curve=0.62 if direction > 0 else 1.42,
+            ), 0.52 * weight)
+            _add(output, 0.0, _noise_swell(
+                min(seconds, 0.66), style, rng,
+                peak=min(seconds * 0.42, 0.24),
+            ), 0.19)
+        elif kind == "alert":
+            count = 3 + signature % 4
+            period = min(0.13, seconds / (count + 1))
+            for index in range(count):
+                note = bright if index % 2 == 0 else bright - 7 - signature % 3
+                _add(output, index * period, engine.digital_tone(
+                    note, min(0.10, seconds - index * period), style, rng,
+                    decay=0.030, vibrato=0.010 + signature % 4 * 0.003,
+                ), 0.48 * weight)
+            _add(output, 0.0, engine.radio_noise(
+                min(seconds, 0.82), style, rng,
+            ), 0.10 + 0.08 * intensity)
+        elif kind == "positive":
+            notes = (base, base + 7, base + 12, base + 19)
+            _add(output, 0.0, engine.sequence(
+                notes, min(seconds, 0.82), style, rng,
+                gap=max(0.055, min(0.12, seconds / 7.0)),
+                tone_seconds=min(0.30, seconds * 0.55), fm=True,
+            ), 0.55 * weight)
+            _add(output, min(seconds * 0.28, 0.22), _noise_swell(
+                min(seconds * 0.62, 0.52), style, rng,
+                peak=min(seconds * 0.20, 0.15),
+            ), 0.14)
+        elif kind == "negative":
+            _add(output, 0.0, engine.sequence(
+                (bright, bright - 6, bright - 13), min(seconds, 0.62),
+                style, rng, gap=0.085, tone_seconds=min(0.22, seconds),
+            ), 0.52 * weight)
+            _add(output, min(0.08, seconds * 0.18), engine.static_burst(
+                min(seconds * 0.72, 0.48), style, rng,
+                low=180.0, high=4_200.0 + signature * 90.0,
+            ), 0.24 + 0.12 * intensity)
+        elif kind == "matrix":
+            _add(output, 0.0, engine.pulse_train(
+                base + 12, 4 + signature % 5, 0.058 + signature % 3 * 0.011,
+                min(seconds, 0.68), style, rng, rising=signature % 2 == 0,
+            ), 0.48 * weight)
+            _add(output, min(seconds * 0.32, 0.20), engine.fm_tone(
+                bright, min(seconds * 0.60, 0.42), style, rng,
+                ratio=2.1 + signature % 6 * 0.27,
+                index=1.4 + signature % 4 * 0.45,
+            ), 0.32)
+            _add(output, 0.0, engine.radio_noise(
+                min(seconds, 0.72), style, rng,
+            ), 0.09)
+        elif kind == "magic":
+            _add(output, 0.0, engine.sweep(
+                base, bright, min(seconds * 0.74, 0.64), style, rng,
+                curve=0.54 + signature % 4 * 0.10,
+            ), 0.48 * weight)
+            _add(output, min(seconds * 0.18, 0.14), engine.fm_tone(
+                bright + signature % 5, min(seconds * 0.58, 0.44),
+                style, rng, ratio=2.6 + signature % 3 * 0.53,
+            ), 0.34)
+            _add(output, 0.0, _noise_swell(
+                min(seconds, 0.66), style, rng,
+                peak=min(seconds * 0.44, 0.28),
+            ), 0.16)
+        else:
+            raise ValueError(f"unknown production renderer kind: {kind}")
+        return engine.glitch(output, style, rng, 0.12 + signature * 0.013)
+
+    return render
+
+
+GROUPS = (
+    "interface", "network", "security", "cyberware", "world",
+    "combat", "stealth", "matrix", "magic",
+)
 
 
 def _cue(
@@ -467,6 +604,86 @@ CUES: dict[str, Cue] = {
              _objective_update, -5.0, 0.72, "data preamble", "objective code", "display swell"),
         _cue("drone_alert", "world", "nearby surveillance or combat drone warning",
              _drone_alert, -2.5, 0.95, "alternating siren", "rotor modulation", "radio telemetry"),
+        _cue("cursor_move", "interface", "move through a terminal or tactical menu",
+             _production_renderer("ui", 1, 0.10), -10.0, 0.10, "dry data chirp"),
+        _cue("menu_cancel", "interface", "cancel or back out of an interface",
+             _production_renderer("ui", 2, 0.24), -8.0, 0.24, "falling command pair"),
+        _cue("dialogue_blip", "interface", "repeatable encrypted dialogue character blip",
+             _production_renderer("ui", 3, 0.08), -13.0, 0.08, "short radio syllable"),
+        _cue("door_open", "world", "powered security door opening",
+             _production_renderer("motion", 4, 0.72), -5.0, 0.72, "motor sweep", "latch edge"),
+        _cue("footstep", "world", "armored street footstep",
+             _production_renderer("impact", 5, 0.24), -9.0, 0.24, "boot contact", "gear tick"),
+        _cue("transport_arrive", "world", "cab, lift, or district transport arrival",
+             _production_renderer("motion", 6, 0.92), -5.0, 0.92, "braking sweep", "arrival code"),
+        _cue("purchase", "world", "equipment or service purchase confirmed",
+             _production_renderer("positive", 7, 0.58), -6.0, 0.58, "ledger ticks", "receipt code"),
+        _cue("clinic_heal", "world", "medical treatment or stabilization",
+             _production_renderer("positive", 8, 0.90), -5.0, 0.90, "monitor rise", "recovery field"),
+        _cue("runner_hire", "world", "runner joins under contract",
+             _production_renderer("positive", 9, 0.96), -4.0, 0.96, "contract handshake", "crew code"),
+        _cue("safehouse_rest", "world", "safehouse rest and recovery",
+             _production_renderer("positive", 10, 1.10), -8.0, 1.10, "systems settle", "safe cadence"),
+        _cue("save_game", "world", "campaign state committed safely",
+             _production_renderer("positive", 11, 0.82), -7.0, 0.82, "write pulses", "commit tone"),
+        _cue("combat_start", "combat", "tactical encounter begins",
+             _production_renderer("alert", 12, 0.82), -2.5, 0.82, "threat pulses", "initiative lock"),
+        _cue("pistol_shot", "combat", "compact firearm discharge",
+             _production_renderer("weapon", 13, 0.42), -1.5, 0.42, "muzzle crack", "action ring"),
+        _cue("smg_burst", "combat", "short automatic burst",
+             _production_renderer("weapon", 14, 0.62), -1.0, 0.62, "burst reports", "mechanism chatter"),
+        _cue("rifle_shot", "combat", "high-pressure rifle discharge",
+             _production_renderer("weapon", 15, 0.56), -1.0, 0.56, "supersonic crack", "pressure tail"),
+        _cue("shotgun_blast", "combat", "broad close-range firearm blast",
+             _production_renderer("weapon", 16, 0.72), -0.8, 0.72, "broad report", "low pressure tail"),
+        _cue("reload", "combat", "magazine and action reload sequence",
+             _production_renderer("motion", 17, 0.76), -6.0, 0.76, "magazine movement", "action cycle"),
+        _cue("dry_fire", "combat", "empty weapon trigger and striker",
+             _production_renderer("ui", 18, 0.18), -8.0, 0.18, "dry mechanism click"),
+        _cue("melee_swing", "combat", "close-combat weapon swing",
+             _production_renderer("motion", 19, 0.38), -4.5, 0.38, "fast air cut"),
+        _cue("melee_hit", "combat", "close-combat strike lands",
+             _production_renderer("impact", 20, 0.46), -1.5, 0.46, "body impact", "weapon edge"),
+        _cue("armor_hit", "combat", "attack stopped or reduced by armor",
+             _production_renderer("impact", 21, 0.48), -2.0, 0.48, "plate contact", "deflection ring"),
+        _cue("grenade_throw", "combat", "grenade leaves the hand",
+             _production_renderer("motion", 22, 0.42), -5.0, 0.42, "throw whoosh", "arming tick"),
+        _cue("grenade_explosion", "combat", "grenade detonation",
+             _production_renderer("weapon", 23, 1.05), -0.5, 1.05, "shock transient", "debris tail"),
+        _cue("ricochet", "combat", "projectile deflects from hard cover",
+             _production_renderer("impact", 24, 0.58), -3.0, 0.58, "cover strike", "metallic departure"),
+        _cue("runner_downed", "combat", "crew member becomes incapacitated",
+             _production_renderer("negative", 25, 0.86), -2.5, 0.86, "condition fall", "flatline code"),
+        _cue("combat_victory", "combat", "hostile force neutralized",
+             _production_renderer("positive", 26, 1.06), -2.5, 1.06, "clear signal", "crew cadence"),
+        _cue("mission_failure", "combat", "run fails or team is forced out",
+             _production_renderer("negative", 27, 1.08), -2.0, 1.08, "objective collapse", "failure code"),
+        _cue("stealth_detect", "stealth", "guard or sensor notices suspicious activity",
+             _production_renderer("alert", 28, 0.52), -4.0, 0.52, "awareness pulse"),
+        _cue("alarm_raise", "stealth", "facility alarm escalates",
+             _production_renderer("alert", 29, 0.96), -1.5, 0.96, "security siren", "reinforcement code"),
+        _cue("alarm_clear", "stealth", "facility returns to a lower alert state",
+             _production_renderer("positive", 30, 0.68), -6.0, 0.68, "alarm release", "clear code"),
+        _cue("lockpick", "stealth", "physical lock or maglock bypassed",
+             _production_renderer("ui", 31, 0.54), -6.0, 0.54, "mechanism ticks", "unlock code"),
+        _cue("overwatch_ready", "stealth", "overwatch reaction is armed",
+             _production_renderer("alert", 32, 0.46), -5.0, 0.46, "target lock", "ready pulse"),
+        _cue("escape", "stealth", "team reaches extraction or breaks pursuit",
+             _production_renderer("positive", 33, 0.92), -3.5, 0.92, "pursuit release", "extraction cadence"),
+        _cue("jack_in", "matrix", "operator enters the Matrix",
+             _production_renderer("matrix", 34, 0.94), -3.0, 0.94, "persona boot", "node handshake"),
+        _cue("program_attack", "matrix", "offensive program executes",
+             _production_renderer("matrix", 35, 0.62), -2.0, 0.62, "program packets", "ICE impact"),
+        _cue("ice_spawn", "matrix", "hostile countermeasure activates",
+             _production_renderer("matrix", 36, 0.78), -2.0, 0.78, "ICE materialization", "threat clock"),
+        _cue("dumpshock", "matrix", "operator is forcibly disconnected",
+             _production_renderer("negative", 37, 1.02), -1.0, 1.02, "link rupture", "feedback impact"),
+        _cue("magic_cast", "magic", "spell force gathers and releases",
+             _production_renderer("magic", 38, 0.82), -3.0, 0.82, "force rise", "cast release"),
+        _cue("magic_impact", "magic", "spell strikes or is resisted",
+             _production_renderer("magic", 39, 0.72), -1.5, 0.72, "arcane impact", "resistance shimmer"),
+        _cue("magic_drain", "magic", "spell backlash drains the caster",
+             _production_renderer("negative", 40, 0.88), -2.5, 0.88, "energy collapse", "mental strain"),
     )
 }
 

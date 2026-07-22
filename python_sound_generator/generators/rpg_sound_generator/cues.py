@@ -265,7 +265,130 @@ def _rest(theme: Theme, rng: random.Random,
     return out
 
 
-GROUPS = ("inventory", "items", "progression", "world", "system")
+def _production_renderer(kind: str, signature: int,
+                         seconds: float) -> Renderer:
+    """Build a deterministic, theme-aware cue for a production semantic."""
+
+    def render(theme: Theme, rng: random.Random,
+               intensity: float) -> list[float]:
+        out = dsp.silence(seconds)
+        base = 42 + signature % 25
+        high = 70 + signature % 17
+        weight = 0.70 + 0.30 * intensity
+
+        if kind == "ui":
+            notes = (base + 12, base + 19) if signature % 2 == 0 else (
+                base + 19, base + 12
+            )
+            _add(out, 0.0, engine.arpeggio(
+                notes, min(seconds, 0.34), theme, rng,
+                gap=0.065, note_duration=min(0.18, seconds),
+            ), 0.55 * weight)
+            _add(out, 0.0, engine.click(
+                min(seconds, 0.045), theme, rng,
+                bright=signature % 3 != 0,
+            ), 0.20)
+        elif kind == "impact":
+            _add(out, 0.0, engine.thump(
+                min(seconds, 0.36), theme, rng,
+            ), 0.55 * weight)
+            _add(out, 0.0, engine.click(
+                min(seconds, 0.10), theme, rng,
+                bright=signature % 3 != 1,
+            ), 0.28 * weight)
+            _add(out, 0.01, engine.sweep(
+                high, base, min(seconds, 0.30), theme, rng,
+                decay=max(0.03, min(seconds, 0.30) * 0.42),
+                curve=1.10 + signature % 4 * 0.18,
+            ), 0.22)
+        elif kind == "motion":
+            rising = signature % 2 == 0
+            start = base if rising else high + 7
+            end = high + 7 if rising else base
+            _add(out, 0.0, engine.whoosh(
+                min(seconds * 0.82, 0.68),
+                220.0 if rising else 4_200.0,
+                4_200.0 if rising else 220.0,
+                theme, rng,
+            ), 0.34 * weight)
+            _add(out, 0.0, engine.sweep(
+                start, end, min(seconds * 0.72, 0.52), theme, rng,
+                curve=0.70 if rising else 1.42,
+            ), 0.34)
+        elif kind == "alert":
+            notes = tuple(
+                high if index % 2 == 0 else high - 6 - signature % 3
+                for index in range(3 + signature % 3)
+            )
+            _add(out, 0.0, engine.arpeggio(
+                notes, min(seconds, 0.78), theme, rng,
+                gap=0.095, note_duration=0.17,
+            ), 0.53 * weight)
+            _add(out, 0.0, engine.thump(
+                min(seconds, 0.30), theme, rng,
+            ), 0.24)
+        elif kind == "positive":
+            notes = (base, base + 4 + signature % 3, base + 7, base + 12)
+            _add(out, 0.0, engine.arpeggio(
+                notes, min(seconds, 0.90), theme, rng,
+                gap=max(0.065, min(0.12, seconds / 7.0)),
+                note_duration=min(0.34, seconds * 0.58),
+            ), 0.53 * weight)
+            _add(out, min(seconds * 0.28, 0.22), engine.sparkle(
+                min(seconds * 0.58, 0.52), theme, rng,
+                density=3 + signature % 6,
+            ), 0.24)
+        elif kind == "negative":
+            _add(out, 0.0, engine.sweep(
+                high + 5, base - 5, min(seconds * 0.76, 0.68),
+                theme, rng, curve=1.28 + signature % 4 * 0.16,
+            ), 0.54 * weight)
+            _add(out, min(0.06, seconds * 0.16), engine.whoosh(
+                min(seconds * 0.68, 0.52), 2_800.0, 130.0,
+                theme, rng,
+            ), 0.24)
+        elif kind == "magic":
+            rising = signature % 4 != 3
+            _add(out, 0.0, engine.whoosh(
+                min(seconds * 0.70, 0.58),
+                180.0 if rising else 5_200.0,
+                5_200.0 if rising else 180.0,
+                theme, rng,
+            ), 0.28 * weight)
+            _add(out, 0.02, engine.sweep(
+                base, high + signature % 7, min(seconds * 0.62, 0.50),
+                theme, rng, curve=0.72 + signature % 3 * 0.18,
+            ), 0.36)
+            _add(out, min(seconds * 0.30, 0.22), engine.sparkle(
+                min(seconds * 0.58, 0.48), theme, rng,
+                density=4 + signature % 7,
+            ), 0.30)
+            if signature % 3 == 0:
+                _add(out, min(seconds * 0.44, 0.31), engine.thump(
+                    min(seconds * 0.34, 0.28), theme, rng,
+                ), 0.26)
+        elif kind == "vehicle":
+            pulse_seconds = min(seconds, 0.24)
+            for index in range(2 + signature % 3):
+                _add(out, index * 0.12, engine.thump(
+                    pulse_seconds, theme, rng,
+                ), (0.24 + index * 0.04) * weight)
+            _add(out, 0.0, engine.sweep(
+                base - 6, base + 7 if signature % 2 == 0 else base - 12,
+                min(seconds * 0.86, 0.72), theme, rng,
+                curve=0.76 + signature % 4 * 0.20,
+            ), 0.28)
+        else:
+            raise ValueError(f"unknown production renderer kind: {kind}")
+        return out
+
+    return render
+
+
+GROUPS = (
+    "interface", "inventory", "items", "battle", "magic", "progression",
+    "summon", "world", "system",
+)
 
 
 def _cue(name: str, group: str, description: str, renderer: Renderer,
@@ -331,6 +454,141 @@ CUES: dict[str, Cue] = {
              _save_game, -6.0, 0.94, "settling cadence", "tonic ring"),
         _cue("rest", "system", "rest, camp, or pass time safely",
              _rest, -8.0, 1.34, "descending lullaby", "soft exhale"),
+        _cue("cursor_move", "interface", "move a cursor through a menu",
+             _production_renderer("ui", 1, 0.10), -11.0, 0.10,
+             "crystal cursor tick"),
+        _cue("menu_confirm", "interface", "accept a menu command",
+             _production_renderer("ui", 2, 0.24), -7.0, 0.24,
+             "rising menu interval", "latch click"),
+        _cue("menu_cancel", "interface", "back out of a menu command",
+             _production_renderer("ui", 3, 0.24), -8.0, 0.24,
+             "falling menu interval", "release click"),
+        _cue("menu_error", "interface", "reject an unavailable command",
+             _production_renderer("negative", 4, 0.34), -5.0, 0.34,
+             "denial fall", "muted rush"),
+        _cue("text_blip", "interface", "one repeatable dialogue character",
+             _production_renderer("ui", 5, 0.09), -12.0, 0.09,
+             "compact speech tone"),
+        _cue("battle_start", "battle", "transition into active battle",
+             _production_renderer("alert", 6, 0.82), -2.5, 0.82,
+             "battle warning", "low strike"),
+        _cue("atb_ready", "battle", "a party member is ready to act",
+             _production_renderer("ui", 7, 0.30), -7.0, 0.30,
+             "readiness chime", "turn marker"),
+        _cue("attack_swing", "battle", "weapon or limb cuts through the air",
+             _production_renderer("motion", 8, 0.30), -4.0, 0.30,
+             "weapon air cut"),
+        _cue("attack_hit", "battle", "ordinary physical attack connects",
+             _production_renderer("impact", 9, 0.40), -2.0, 0.40,
+             "contact crack", "body impact"),
+        _cue("attack_miss", "battle", "physical attack misses its target",
+             _production_renderer("motion", 10, 0.38), -5.0, 0.38,
+             "empty swing", "miss fall"),
+        _cue("critical_hit", "battle", "high-damage physical strike lands",
+             _production_renderer("impact", 11, 0.68), -1.0, 0.68,
+             "heavy crack", "critical collapse"),
+        _cue("player_hurt", "battle", "party member takes damage",
+             _production_renderer("impact", 12, 0.42), -2.5, 0.42,
+             "body hit", "pain fall"),
+        _cue("enemy_defeat", "battle", "one enemy is removed from battle",
+             _production_renderer("negative", 13, 0.72), -3.0, 0.72,
+             "enemy collapse", "spirit release"),
+        _cue("defend", "battle", "party member braces against damage",
+             _production_renderer("positive", 14, 0.48), -6.0, 0.48,
+             "guard chord", "brace tick"),
+        _cue("counter", "battle", "counterattack is triggered",
+             _production_renderer("impact", 15, 0.50), -2.0, 0.50,
+             "counter flash", "returning blow"),
+        _cue("row_change", "battle", "character changes battle row",
+             _production_renderer("motion", 16, 0.42), -6.0, 0.42,
+             "formation sweep", "position chime"),
+        _cue("run_success", "battle", "party escapes battle",
+             _production_renderer("positive", 17, 0.70), -4.0, 0.70,
+             "escape ascent", "release sparkle"),
+        _cue("run_failure", "battle", "escape attempt fails",
+             _production_renderer("negative", 18, 0.58), -3.5, 0.58,
+             "blocked retreat", "failure rush"),
+        _cue("victory", "battle", "battle ends in victory",
+             _production_renderer("positive", 19, 1.18), -2.0, 1.18,
+             "victory cadence", "reward sparkle"),
+        _cue("defeat", "battle", "party is defeated",
+             _production_renderer("negative", 20, 1.16), -2.0, 1.16,
+             "party collapse", "lost cadence"),
+        _cue("magic_cast", "magic", "generic spell energy is released",
+             _production_renderer("magic", 21, 0.72), -3.0, 0.72,
+             "casting rise", "arcane release"),
+        _cue("fire_spell", "magic", "fire-element spell impacts",
+             _production_renderer("magic", 22, 0.84), -1.5, 0.84,
+             "heated rush", "flame burst"),
+        _cue("ice_spell", "magic", "ice-element spell impacts",
+             _production_renderer("magic", 23, 0.88), -2.0, 0.88,
+             "frozen shimmer", "ice fracture"),
+        _cue("lightning_spell", "magic", "lightning-element spell impacts",
+             _production_renderer("magic", 24, 0.72), -1.0, 0.72,
+             "electric rise", "lightning snap"),
+        _cue("water_spell", "magic", "water-element spell flows and impacts",
+             _production_renderer("magic", 25, 0.92), -2.5, 0.92,
+             "liquid sweep", "water strike"),
+        _cue("wind_spell", "magic", "wind-element spell cuts through targets",
+             _production_renderer("magic", 26, 0.76), -2.0, 0.76,
+             "air spiral", "wind cut"),
+        _cue("earth_spell", "magic", "earth-element spell impacts",
+             _production_renderer("magic", 27, 0.94), -1.0, 0.94,
+             "stone rise", "ground impact"),
+        _cue("light_spell", "magic", "holy or light spell resolves",
+             _production_renderer("magic", 28, 0.92), -2.5, 0.92,
+             "radiant rise", "light crown"),
+        _cue("dark_spell", "magic", "shadow or dark spell resolves",
+             _production_renderer("magic", 29, 0.98), -2.0, 0.98,
+             "void fall", "dark pressure"),
+        _cue("heal_spell", "magic", "restore hit points with magic",
+             _production_renderer("positive", 30, 0.88), -4.5, 0.88,
+             "restoration ascent", "healing motes"),
+        _cue("revive_spell", "magic", "restore an incapacitated ally",
+             _production_renderer("positive", 31, 1.08), -3.0, 1.08,
+             "life return", "revival crown"),
+        _cue("buff_spell", "magic", "beneficial status effect is applied",
+             _production_renderer("positive", 32, 0.76), -4.0, 0.76,
+             "status ascent", "benefit sparkle"),
+        _cue("debuff_spell", "magic", "harmful status effect is applied",
+             _production_renderer("negative", 33, 0.78), -3.0, 0.78,
+             "status fall", "affliction rush"),
+        _cue("reflect_spell", "magic", "reflective magic barrier engages",
+             _production_renderer("magic", 34, 0.82), -3.5, 0.82,
+             "mirror rise", "barrier ring"),
+        _cue("summon_charge", "summon", "summoning ritual gathers power",
+             _production_renderer("magic", 35, 1.12), -2.0, 1.12,
+             "ritual pressure", "summon ascent"),
+        _cue("summon_appear", "summon", "summoned ally materializes",
+             _production_renderer("magic", 36, 1.22), -1.5, 1.22,
+             "dimensional opening", "arrival crown"),
+        _cue("summon_impact", "summon", "summoned ally completes its attack",
+             _production_renderer("impact", 37, 1.06), -0.8, 1.06,
+             "summon strike", "massive impact"),
+        _cue("magic_learn", "summon", "new spell or summon is learned",
+             _production_renderer("positive", 38, 1.12), -3.0, 1.12,
+             "knowledge ascent", "learned flourish"),
+        _cue("door_open", "world", "open an ordinary door",
+             _production_renderer("motion", 39, 0.54), -7.0, 0.54,
+             "hinge motion", "latch release"),
+        _cue("switch_toggle", "world", "toggle a dungeon or field mechanism",
+             _production_renderer("ui", 40, 0.32), -6.0, 0.32,
+             "mechanism click", "state chime"),
+        _cue("puzzle_solve", "world", "complete a field puzzle",
+             _production_renderer("positive", 41, 0.94), -3.5, 0.94,
+             "solution cadence", "discovery sparkle"),
+        _cue("vehicle_board", "world", "board a world-travel vehicle",
+             _production_renderer("vehicle", 42, 0.74), -5.0, 0.74,
+             "vehicle start", "boarding signal"),
+        _cue("vehicle_move", "world", "vehicle travels through the world",
+             _production_renderer("vehicle", 43, 0.88), -7.0, 0.88,
+             "engine pulse", "travel motion"),
+        _cue("vehicle_land", "world", "airship or vehicle arrives",
+             _production_renderer("vehicle", 44, 0.92), -4.5, 0.92,
+             "engine settle", "arrival impact"),
+        _cue("world_shift", "world", "major world state changes",
+             _production_renderer("alert", 45, 1.08), -2.5, 1.08,
+             "world warning", "transformation chord"),
     )
 }
 

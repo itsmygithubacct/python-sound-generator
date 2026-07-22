@@ -1,6 +1,9 @@
 from __future__ import annotations
 
+import hashlib
 import json
+import math
+import struct
 import wave
 
 import pytest
@@ -21,9 +24,19 @@ from python_sound_generator.rpg import (
 
 
 def test_rpg_catalog_is_grouped_and_core_pack_covers_every_cue():
-    assert GROUPS == ("inventory", "items", "progression", "world", "system")
+    assert GROUPS == (
+        "interface",
+        "inventory",
+        "items",
+        "battle",
+        "magic",
+        "progression",
+        "summon",
+        "world",
+        "system",
+    )
     assert set(THEMES) == {"fantasy", "dark", "retro"}
-    assert len(CUES) == 19
+    assert len(CUES) == 64
     assert {cue.group for cue in CUES.values()} == set(GROUPS)
     assert [entry.cue for entry in PACKS["core"].entries] == list(CUES)
     assert {name for name, cue in CUES.items() if cue.foley_kinds} == {
@@ -35,6 +48,27 @@ def test_rpg_catalog_is_grouped_and_core_pack_covers_every_cue():
         "chest_open",
         "door_unlock",
     }
+
+
+def _pcm_digest(samples: list[float]) -> str:
+    frames = bytearray()
+    for sample in samples:
+        value = max(-1.0, min(1.0, float(sample)))
+        frames.extend(struct.pack("<h", round(value * 32_767.0)))
+    return hashlib.sha256(frames).hexdigest()
+
+
+def test_every_rpg_cue_has_exact_duration_finite_unique_pcm():
+    digests = set()
+    for index, (name, cue) in enumerate(CUES.items(), 1):
+        samples = generate(name, theme="fantasy", seed=100 + index)
+        assert len(samples) == round(cue.seconds * SR), name
+        assert all(math.isfinite(sample) for sample in samples), name
+        assert max(abs(sample) for sample in samples) == pytest.approx(
+            10 ** (cue.peak_db / 20)
+        )
+        digests.add(_pcm_digest(samples))
+    assert len(digests) == len(CUES)
 
 
 def test_rpg_optional_foley_inventory_is_complete_without_duplicate_masters():

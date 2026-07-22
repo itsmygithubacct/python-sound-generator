@@ -426,7 +426,133 @@ def _strange_event(style: Style, rng: random.Random,
     return output
 
 
-GROUPS = ("interface", "dialogue", "items", "psychic", "battle", "world")
+def _production_renderer(kind: str, signature: int,
+                         seconds: float) -> Renderer:
+    """Create an original cartridge-styled cue for a gameplay semantic."""
+
+    def render(style: Style, rng: random.Random,
+               intensity: float) -> list[float]:
+        output = _canvas(seconds)
+        base = 44 + signature % 25
+        high = 70 + signature % 17
+        weight = 0.72 + 0.28 * intensity
+        if kind == "ui":
+            notes = (base + 12, base + 19) if signature % 2 == 0 else (
+                base + 19, base + 12
+            )
+            _add(output, 0.0, engine.arpeggio(
+                notes, min(seconds, 0.34), style, rng,
+                gap=0.065, tone_seconds=min(0.18, seconds),
+                crooked=(signature % 3 - 1) * 0.09,
+            ), 0.58 * weight)
+            _add(output, 0.0, engine.noise_hit(
+                min(seconds, 0.035), style, rng,
+                low=1_100.0, high=8_000.0,
+            ), 0.12)
+        elif kind == "impact":
+            drum = ("kick", "snare", "tom", "clap")[signature % 4]
+            _add(output, 0.0, engine.drum(
+                drum, min(seconds, 0.38), style, rng,
+            ), 0.54 * weight)
+            _add(output, 0.0, engine.noise_hit(
+                min(seconds, 0.30), style, rng,
+                low=140.0 + signature * 23.0,
+                high=4_200.0 + signature * 120.0,
+                decay=0.035 + signature % 5 * 0.014,
+            ), 0.34 * weight)
+            _add(output, 0.01, engine.pitch_slide(
+                high, base, min(seconds, 0.28), style, rng,
+                curve=1.1 + signature % 4 * 0.20,
+                wobble=0.006 + signature % 4 * 0.004,
+            ), 0.18)
+        elif kind == "motion":
+            rising = signature % 2 == 0
+            start = base if rising else high + 8
+            end = high + 8 if rising else base
+            _add(output, 0.0, engine.pitch_slide(
+                start, end, min(seconds * 0.80, 0.68), style, rng,
+                curve=0.62 if rising else 1.46,
+                wobble=0.008 + signature % 5 * 0.003,
+            ), 0.50 * weight)
+            _add(output, 0.0, _noise_swell(
+                min(seconds, 0.62), style, rng,
+                peak=min(seconds * 0.40, 0.24),
+                low=180.0, high=5_800.0 + signature * 65.0,
+            ), 0.14)
+        elif kind == "alert":
+            notes = tuple(high if index % 2 == 0 else high - 6 - signature % 3
+                          for index in range(3 + signature % 3))
+            _add(output, 0.0, engine.arpeggio(
+                notes, min(seconds, 0.72), style, rng,
+                gap=0.095, tone_seconds=0.15, crooked=0.14,
+            ), 0.52 * weight)
+            _add(output, 0.0, engine.drum(
+                "tom", min(seconds, 0.30), style, rng,
+            ), 0.20 + 0.10 * intensity)
+        elif kind == "positive":
+            notes = (base, base + 4 + signature % 3, base + 7, base + 12)
+            _add(output, 0.0, engine.arpeggio(
+                notes, min(seconds, 0.86), style, rng,
+                gap=max(0.065, min(0.12, seconds / 7.0)),
+                tone_seconds=min(0.30, seconds * 0.55), crooked=0.08,
+            ), 0.55 * weight)
+            _add(output, min(seconds * 0.28, 0.20), engine.sparkle(
+                min(seconds * 0.58, 0.48), style, rng,
+                count=3 + signature % 6,
+            ), 0.20)
+        elif kind == "negative":
+            _add(output, 0.0, engine.pitch_slide(
+                high + 5, base - 5, min(seconds * 0.76, 0.62),
+                style, rng, curve=1.28 + signature % 4 * 0.17,
+                wobble=0.018 + signature % 5 * 0.004,
+            ), 0.54 * weight)
+            _add(output, min(0.06, seconds * 0.16), _noise_swell(
+                min(seconds * 0.72, 0.50), style, rng,
+                peak=min(seconds * 0.30, 0.19),
+                low=100.0, high=3_800.0 + signature * 70.0,
+            ), 0.21)
+        elif kind == "role":
+            notes = (base, base + 7, base + 3 + signature % 5, high)
+            _add(output, 0.0, engine.arpeggio(
+                notes, min(seconds, 0.78), style, rng,
+                gap=0.083 + signature % 3 * 0.012,
+                tone_seconds=0.25, crooked=0.18 - signature % 4 * 0.07,
+            ), 0.48 * weight)
+            _add(output, min(seconds * 0.30, 0.22), engine.chord(
+                (base - 5, base + 2, base + 9),
+                min(seconds * 0.52, 0.38), style, rng,
+            ), 0.22)
+        elif kind == "service":
+            _add(output, 0.0, engine.drum(
+                ("clap", "tom", "snare")[signature % 3],
+                min(seconds, 0.22), style, rng,
+            ), 0.20)
+            _add(output, 0.035, engine.arpeggio(
+                (base, base + 5, base + 12), min(seconds, 0.72),
+                style, rng, gap=0.105, tone_seconds=0.28,
+                crooked=0.10,
+            ), 0.48 * weight)
+        elif kind == "condition":
+            _add(output, 0.0, engine.pitch_slide(
+                high, base - signature % 7, min(seconds, 0.58),
+                style, rng, curve=1.34, wobble=0.025 + signature % 4 * 0.008,
+            ), 0.48 * weight)
+            _add(output, 0.04, engine.noise_hit(
+                min(seconds * 0.66, 0.42), style, rng,
+                low=120.0, high=3_200.0 + signature * 95.0,
+                decay=0.16,
+            ), 0.20)
+        else:
+            raise ValueError(f"unknown production renderer kind: {kind}")
+        return output
+
+    return render
+
+
+GROUPS = (
+    "interface", "dialogue", "items", "psychic", "battle", "world",
+    "field", "roles", "services", "conditions",
+)
 
 
 def _cue(
@@ -515,6 +641,78 @@ CUES: dict[str, Cue] = {
              _party_join, -4.0, 1.10, "two interlocking voices", "shared chord"),
         _cue("strange_event", "world", "surreal reveal, odd NPC beat, or reality shift",
              _strange_event, -4.0, 0.88, "alternating bent phrases", "uncertain noise"),
+        _cue("attack_swing", "battle", "party member swings or throws an attack",
+             _production_renderer("motion", 3, 0.34), -4.0, 0.34, "cartridge air cut"),
+        _cue("attack_miss", "battle", "an attack misses its target",
+             _production_renderer("motion", 4, 0.42), -5.0, 0.42, "empty swing", "miss chirp"),
+        _cue("defend", "battle", "party member braces against damage",
+             _production_renderer("positive", 5, 0.48), -6.0, 0.48, "guard chord", "brace tick"),
+        _cue("run_success", "battle", "party escapes the encounter",
+             _production_renderer("positive", 6, 0.68), -4.5, 0.68, "escape run", "release chord"),
+        _cue("run_failure", "battle", "escape attempt is blocked",
+             _production_renderer("negative", 7, 0.54), -4.0, 0.54, "stumble fall", "denial buzz"),
+        _cue("mortal_warning", "battle", "rolling HP approaches zero",
+             _production_renderer("alert", 8, 0.76), -2.0, 0.76, "urgent counter pulse"),
+        _cue("shield_break", "battle", "protective psychic field breaks",
+             _production_renderer("impact", 9, 0.64), -2.5, 0.64, "field crack", "falling shards"),
+        _cue("status_cured", "battle", "an unusual condition is removed",
+             _production_renderer("positive", 10, 0.62), -5.0, 0.62, "cleanse ascent", "clear sparkle"),
+        _cue("revive", "battle", "an unconscious party member returns",
+             _production_renderer("positive", 11, 0.96), -3.0, 0.96, "heartbeat return", "rising life chord"),
+        _cue("enemy_defeat", "battle", "one enemy leaves the encounter",
+             _production_renderer("impact", 12, 0.58), -3.0, 0.58, "odd collapse", "defeat pop"),
+        _cue("party_down", "battle", "the party is defeated",
+             _production_renderer("negative", 13, 1.06), -2.0, 1.06, "rolling collapse", "lost chord"),
+        _cue("boss_start", "battle", "major enemy encounter begins",
+             _production_renderer("alert", 14, 1.02), -1.5, 1.02, "boss drum", "crooked threat call"),
+        _cue("mood_shift", "battle", "enemy mood changes substantially",
+             _production_renderer("role", 15, 0.56), -5.0, 0.56, "mood wobble", "reaction chord"),
+        _cue("surrender", "battle", "enemy yields without being defeated",
+             _production_renderer("positive", 16, 0.86), -3.5, 0.86, "tension release", "peace cadence"),
+        _cue("enemy_notice", "field", "visible enemy notices the party",
+             _production_renderer("alert", 17, 0.46), -4.0, 0.46, "attention chirp", "chase tick"),
+        _cue("player_advantage", "field", "party enters battle with initiative",
+             _production_renderer("positive", 18, 0.72), -3.5, 0.72, "advantage ascent"),
+        _cue("enemy_advantage", "field", "enemy enters battle with initiative",
+             _production_renderer("negative", 19, 0.72), -2.5, 0.72, "ambush fall"),
+        _cue("instant_win", "field", "outmatched enemies are resolved immediately",
+             _production_renderer("positive", 20, 0.82), -3.0, 0.82, "quick victory", "reward sparkle"),
+        _cue("enemy_join", "field", "nearby enemy joins the encounter",
+             _production_renderer("alert", 21, 0.54), -3.0, 0.54, "reinforcement call"),
+        _cue("footstep", "field", "one stylized suburban footstep",
+             _production_renderer("impact", 22, 0.20), -10.0, 0.20, "shoe contact", "tiny room tone"),
+        _cue("mount_move", "field", "temporary fast movement or bicycle-like travel",
+             _production_renderer("motion", 23, 0.62), -7.0, 0.62, "wheel pulse", "travel chirp"),
+        _cue("secret_found", "field", "hidden route or object is discovered",
+             _production_renderer("positive", 24, 0.92), -3.5, 0.92, "discovery figure", "surprise sparkle"),
+        _cue("inspire", "roles", "unpredictable supportive party command",
+             _production_renderer("role", 25, 0.88), -4.0, 0.88, "hopeful odd phrase", "chance shimmer"),
+        _cue("scan_enemy", "roles", "technical character analyzes an enemy",
+             _production_renderer("role", 26, 0.64), -5.0, 0.64, "scanner steps", "data answer"),
+        _cue("gadget_use", "roles", "technical gadget activates",
+             _production_renderer("role", 27, 0.66), -4.0, 0.66, "toy mechanism", "gadget discharge"),
+        _cue("gadget_break", "roles", "technical gadget fails or breaks",
+             _production_renderer("negative", 28, 0.62), -3.0, 0.62, "broken clock", "parts rattle"),
+        _cue("gadget_repair", "roles", "broken gadget is repaired",
+             _production_renderer("service", 29, 0.84), -5.0, 0.84, "tool ticks", "repair cadence"),
+        _cue("mimic", "roles", "party member imitates another action",
+             _production_renderer("role", 30, 0.72), -4.0, 0.72, "echoed phrase", "copy wobble"),
+        _cue("atm", "services", "bank deposit or withdrawal completes",
+             _production_renderer("service", 31, 0.58), -6.0, 0.58, "keypad ticks", "cash code"),
+        _cue("shop", "services", "shop transaction completes",
+             _production_renderer("service", 32, 0.62), -5.5, 0.62, "register pop", "receipt cadence"),
+        _cue("hospital", "services", "medical treatment or revival service",
+             _production_renderer("service", 33, 0.92), -6.0, 0.92, "monitor phrase", "recovery chord"),
+        _cue("inn", "services", "lodging rest restores the party",
+             _production_renderer("service", 34, 1.02), -8.0, 1.02, "sleepy cadence", "morning chime"),
+        _cue("delivery", "services", "stored item arrives or is collected",
+             _production_renderer("service", 35, 0.74), -5.0, 0.74, "doorstep knock", "parcel code"),
+        _cue("poison_tick", "conditions", "damage-over-time condition ticks",
+             _production_renderer("condition", 36, 0.46), -5.0, 0.46, "sick pulse", "toxic wobble"),
+        _cue("confusion", "conditions", "control or targeting becomes confused",
+             _production_renderer("condition", 37, 0.68), -4.5, 0.68, "crossed pitches", "dizzy noise"),
+        _cue("homesick", "conditions", "emotional condition interrupts an action",
+             _production_renderer("condition", 38, 0.86), -6.0, 0.86, "lonely fall", "home echo"),
     )
 }
 

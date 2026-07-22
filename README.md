@@ -122,12 +122,12 @@ remain visible to the caller.
 
 ## RPG sound library
 
-The `rpg` provider adds 19 deterministic one-shots for the interactions around
-an adventure: inventory and equipment, currency and items, treasure and locks,
-quests and leveling, dialogue and encounters, saving, and rest. Every cue can
-be rendered in `fantasy`, `dark`, or `retro` themes. The `core` pack emits one
-of every cue in group directories; `inventory` and `progression` emit variation
-banks for repeated events.
+The `rpg` provider adds 64 deterministic one-shots for a complete party-RPG
+sound vocabulary: menus, inventory, equipment, items, physical battle, elemental
+magic, summons, progression, field mechanisms, vehicles, saving, and rest.
+Every cue can be rendered in `fantasy`, `dark`, or `retro` themes. The `core`
+pack emits one of every cue in group directories; `inventory` and `progression`
+emit variation banks for repeated events.
 
 ```sh
 soundgen rpg list
@@ -161,12 +161,12 @@ encounter, save, and rest identities remain synthesized.
 
 ## Cyberpunk game sound library
 
-The `cyberpunk` provider supplies 24 deterministic one-shots across interface,
-network, security, cyberware, and world-feedback groups. Its `electric`, `noir`,
-and `corporate` styles preserve event meanings while changing pitch, bandwidth,
-instability, distortion, and low-frequency weight. The synthesis combines
-FM-like tones, packet pulses, quantised oscillators, filtered radio static, sub
-impacts, and deterministic glitch processing.
+The `cyberpunk` provider supplies 64 deterministic one-shots across interface,
+network, security, cyberware, world, combat, stealth, matrix, and magic groups.
+Its `electric`, `noir`, and `corporate` styles preserve event meanings while
+changing pitch, bandwidth, instability, distortion, and low-frequency weight.
+The synthesis combines FM-like tones, packet pulses, quantised oscillators,
+filtered radio static, sub impacts, and deterministic glitch processing.
 
 ```sh
 soundgen cyberpunk list
@@ -175,7 +175,7 @@ soundgen cyberpunk info hack_success --style corporate
 soundgen cyberpunk render emp_blast --style noir --count 3 --seed 42
 soundgen cyberpunk render implant_activate --foley-mix 0.7 --seed 42
 soundgen cyberpunk pack netrunner --style electric --out output/cyberpunk
-soundgen cyberpunk pack core --style electric --play  # audition all 24 in order
+soundgen cyberpunk pack core --style electric --play  # audition all 64 in order
 ```
 
 The `core` pack writes one cue per organised group directory. `netrunner`
@@ -197,12 +197,13 @@ radio, hologram, credit, objective, and drone-rate cues remain procedural.
 
 ## Quirky 16-bit RPG sound library
 
-The `quirky-rpg` provider supplies 28 original one-shots for an offbeat
+The `quirky-rpg` provider supplies 64 original one-shots for an offbeat
 early-1990s console RPG: compact menus, dialogue reactions, everyday items,
-psychic abilities, battle feedback, telephones, doors, saving, party changes,
-and surreal events. Its `suburban`, `psychedelic`, and `lofi` styles change the
-waveform palette, pitch instability, bandwidth, bit depth, sample hold, echo,
-and transient weight while keeping each gameplay event recognizable.
+psychic abilities, battle and field feedback, character-role actions, town
+services, conditions, telephones, doors, saving, party changes, and surreal
+events. Its `suburban`, `psychedelic`, and `lofi` styles change the waveform
+palette, pitch instability, bandwidth, bit depth, sample hold, echo, and
+transient weight while keeping each gameplay event recognizable.
 
 ```sh
 soundgen quirky-rpg list
@@ -211,7 +212,7 @@ soundgen quirky-rpg info strange_event --style psychedelic
 soundgen quirky-rpg render psi_cast --style psychedelic --count 3 --seed 42
 soundgen quirky-rpg render critical_hit --foley-mix 0.65 --seed 42
 soundgen quirky-rpg pack hometown --style suburban --out output/quirky-rpg
-soundgen quirky-rpg pack core --style suburban --play  # audition all 28 in order
+soundgen quirky-rpg pack core --style suburban --play  # audition all 64 in order
 ```
 
 The `core` pack writes every cue once in group directories. `hometown` provides

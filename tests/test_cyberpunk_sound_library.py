@@ -32,9 +32,19 @@ def _pcm_digest(samples: list[float]) -> str:
 
 
 def test_cyberpunk_catalog_is_grouped_and_packs_have_stable_coverage():
-    assert GROUPS == ("interface", "network", "security", "cyberware", "world")
+    assert GROUPS == (
+        "interface",
+        "network",
+        "security",
+        "cyberware",
+        "world",
+        "combat",
+        "stealth",
+        "matrix",
+        "magic",
+    )
     assert set(STYLES) == {"electric", "noir", "corporate"}
-    assert len(CUES) == 24
+    assert len(CUES) == 64
     assert {cue.group for cue in CUES.values()} == set(GROUPS)
     assert [entry.cue for entry in PACKS["core"].entries] == list(CUES)
     assert sum(entry.count for entry in PACKS["netrunner"].entries) == 30

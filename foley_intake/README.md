@@ -32,3 +32,8 @@ The completed integration:
 
 The selected-source metadata and final cue mappings are recorded in
 [`manifest.json`](manifest.json).
+
+Potential game-specific recordings that were researched but not downloaded or
+approved remain in the local research workspace rather than the published
+source tree. Candidate entries must pass the same original-file, checksum,
+provenance, and listening gates before they can enter the source catalog.

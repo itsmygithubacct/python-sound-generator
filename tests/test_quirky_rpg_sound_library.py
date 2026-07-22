@@ -41,9 +41,13 @@ def test_quirky_rpg_catalog_is_grouped_and_packs_have_stable_coverage():
         "psychic",
         "battle",
         "world",
+        "field",
+        "roles",
+        "services",
+        "conditions",
     )
     assert set(STYLES) == {"suburban", "psychedelic", "lofi"}
-    assert len(CUES) == 28
+    assert len(CUES) == 64
     assert {cue.group for cue in CUES.values()} == set(GROUPS)
     assert [entry.cue for entry in PACKS["core"].entries] == list(CUES)
     assert sum(entry.count for entry in PACKS["hometown"].entries) == 48
@@ -114,7 +118,7 @@ def test_quirky_rpg_public_import_stays_standard_library_only():
     script = """
 import sys
 from python_sound_generator.quirky_rpg import CUES, generate
-assert len(CUES) == 28
+assert len(CUES) == 64
 assert generate('cursor_move', seed=3)
 assert 'numpy' not in sys.modules
 assert 'scipy' not in sys.modules
