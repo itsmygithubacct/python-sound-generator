@@ -1,0 +1,24 @@
+{
+  "source_audio_policy": "CC0 or public domain only",
+  "retrieved_utc": "2026-07-17",
+  "conversion": "The approved master is preserved outside the generator. The bundled excerpt was decoded with FFmpeg, downmixed to mono, resampled to 44100 Hz, and written as signed 16-bit PCM WAV with metadata removed.",
+  "collections": [
+    {
+      "name": "Drill_sound.wav",
+      "author": "1pjladd2",
+      "license": "CC0 1.0",
+      "source_page": "https://freesound.org/s/128607/",
+      "original_file": "128607__1pjladd2__drill_sound.wav",
+      "original_sha256": "8b27b575b695bd60b54e61f2a9743e5a1ccdfc31010d4a34ccca3b5c26220273",
+      "selection": "A real drill cutting concrete. Approved by ear 2026-07-17 with the instruction to dampen it slightly.",
+      "files": [
+        {
+          "file": "drill_concrete_cc0.wav",
+          "source_start_seconds": 0.5,
+          "source_duration_seconds": 11.5,
+          "sha256": "e0fe72089619066ea9938df74d3e0fa1aa3ec97a76dc3fece90e0059bd9d9264"
+        }
+      ]
+    }
+  ]
+}

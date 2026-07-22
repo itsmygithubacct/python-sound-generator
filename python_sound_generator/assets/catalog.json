@@ -1,0 +1,1237 @@
+{
+  "schema_version": 1,
+  "algorithm": "sha256",
+  "description": "Shared immutable WAV blobs. Alias keys preserve provider-level logical names and their original provenance ownership.",
+  "aliases": {
+    "aircraft_spacecraft_generator/sources/kenney_impact_metal_heavy_000.wav": {
+      "sha256": "f2f2e01a96edf13affdabb2d1aa6297d5de0f926b9727752b70fb4c4f2874121",
+      "file": "audio/f2f2e01a96edf13affdabb2d1aa6297d5de0f926b9727752b70fb4c4f2874121.wav",
+      "bytes": 14610,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/kenney_impact_metal_heavy_001.wav": {
+      "sha256": "32efa1eafcfea0f95c53eb609750ced1ef24cb5ab5c02e35ed42f98046ca3e97",
+      "file": "audio/32efa1eafcfea0f95c53eb609750ced1ef24cb5ab5c02e35ed42f98046ca3e97.wav",
+      "bytes": 31510,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/kenney_impact_metal_heavy_002.wav": {
+      "sha256": "1a0125d3d80e35b6e5f6e44b5b852d3422d74c2d277bd7ecea06ab2230280e70",
+      "file": "audio/1a0125d3d80e35b6e5f6e44b5b852d3422d74c2d277bd7ecea06ab2230280e70.wav",
+      "bytes": 10168,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/kenney_impact_metal_heavy_003.wav": {
+      "sha256": "9f5ef498757d9d41e92f573477f860a36053175fdd3df6b24c84642aa749eead",
+      "file": "audio/9f5ef498757d9d41e92f573477f860a36053175fdd3df6b24c84642aa749eead.wav",
+      "bytes": 18072,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/kenney_impact_metal_heavy_004.wav": {
+      "sha256": "90f5ce96a678b3a25ed378aa5c9dd69bb14bfe72a6fef33bd7989ee7909ce0bc",
+      "file": "audio/90f5ce96a678b3a25ed378aa5c9dd69bb14bfe72a6fef33bd7989ee7909ce0bc.wav",
+      "bytes": 11624,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/kenney_impact_metal_light_000.wav": {
+      "sha256": "ca3926ac68bef126b00dc85968c8d47be0bd34bd95eb439e056daebcbfe0a102",
+      "file": "audio/ca3926ac68bef126b00dc85968c8d47be0bd34bd95eb439e056daebcbfe0a102.wav",
+      "bytes": 32974,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/kenney_impact_metal_light_001.wav": {
+      "sha256": "f66c3fdfccddbe342209d8f7d736327ae456eab2beaed475375145de9db631a2",
+      "file": "audio/f66c3fdfccddbe342209d8f7d736327ae456eab2beaed475375145de9db631a2.wav",
+      "bytes": 22034,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/kenney_impact_metal_light_002.wav": {
+      "sha256": "6c7c06103556f9480697e44ff9608d218ef64e8986e7be3c20a733af63f69477",
+      "file": "audio/6c7c06103556f9480697e44ff9608d218ef64e8986e7be3c20a733af63f69477.wav",
+      "bytes": 20618,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/kenney_impact_metal_light_003.wav": {
+      "sha256": "db0b15fa9d87e6c15cb1f971359ce482b345c29c0f09dc2004a59d9530934a7f",
+      "file": "audio/db0b15fa9d87e6c15cb1f971359ce482b345c29c0f09dc2004a59d9530934a7f.wav",
+      "bytes": 42594,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/kenney_impact_metal_light_004.wav": {
+      "sha256": "66d57ab3a4da349488303b14db08a1d1abb3728aba1719dd7655932742670ee2",
+      "file": "audio/66d57ab3a4da349488303b14db08a1d1abb3728aba1719dd7655932742670ee2.wav",
+      "bytes": 18644,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/kenney_impact_metal_medium_000.wav": {
+      "sha256": "972bed45f9ed6c6bba31037d6ec4d3f2862b2ac32a4dc892b2056f695ad48f98",
+      "file": "audio/972bed45f9ed6c6bba31037d6ec4d3f2862b2ac32a4dc892b2056f695ad48f98.wav",
+      "bytes": 23792,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/kenney_impact_metal_medium_001.wav": {
+      "sha256": "126ed59c7ecd9e3e5c66bb89744535ab6c35ada2bdfc4a02d887895591b1d553",
+      "file": "audio/126ed59c7ecd9e3e5c66bb89744535ab6c35ada2bdfc4a02d887895591b1d553.wav",
+      "bytes": 12474,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/kenney_impact_metal_medium_002.wav": {
+      "sha256": "488590358f1f10e15e440e7a06bc4662fe1a7f965e82d672793a0b8a1c7eb0a9",
+      "file": "audio/488590358f1f10e15e440e7a06bc4662fe1a7f965e82d672793a0b8a1c7eb0a9.wav",
+      "bytes": 10330,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/kenney_impact_metal_medium_003.wav": {
+      "sha256": "087b8ba6d989a169e057cec9ee60bdd24d30357b0f9a45f4e1dc529650e7e00f",
+      "file": "audio/087b8ba6d989a169e057cec9ee60bdd24d30357b0f9a45f4e1dc529650e7e00f.wav",
+      "bytes": 22222,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/kenney_impact_metal_medium_004.wav": {
+      "sha256": "01113bc49a193ce6cc6e2aa7b5e97e6ac4d8ca9347babe1f45d49aa8664d9e88",
+      "file": "audio/01113bc49a193ce6cc6e2aa7b5e97e6ac4d8ca9347babe1f45d49aa8664d9e88.wav",
+      "bytes": 9474,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/kenney_impact_plate_heavy_000.wav": {
+      "sha256": "53c2bce2c0513a86154938e4f6f6a5766acf4b3c03a02621653dfa250324d6aa",
+      "file": "audio/53c2bce2c0513a86154938e4f6f6a5766acf4b3c03a02621653dfa250324d6aa.wav",
+      "bytes": 43178,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/kenney_impact_plate_heavy_001.wav": {
+      "sha256": "ee66a6d9839b65ec66b2849e3f13ee6e339f9e744b09b3edf786ac1a7e9663c2",
+      "file": "audio/ee66a6d9839b65ec66b2849e3f13ee6e339f9e744b09b3edf786ac1a7e9663c2.wav",
+      "bytes": 30898,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/kenney_impact_plate_heavy_002.wav": {
+      "sha256": "16a8b6bdbd94e5f9bced08fdd8e03c76cb54fb9748349ac315f72fbb50051119",
+      "file": "audio/16a8b6bdbd94e5f9bced08fdd8e03c76cb54fb9748349ac315f72fbb50051119.wav",
+      "bytes": 43666,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/kenney_impact_plate_heavy_003.wav": {
+      "sha256": "b0d2eb923fdd17b655f02707aff65d5c846611db52c36853a111b8e1c6c05c92",
+      "file": "audio/b0d2eb923fdd17b655f02707aff65d5c846611db52c36853a111b8e1c6c05c92.wav",
+      "bytes": 30388,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/kenney_impact_plate_heavy_004.wav": {
+      "sha256": "2534d930ebd33e7933d0d7c9d46f0604abf2f89f35c045f7680dde5981613e1e",
+      "file": "audio/2534d930ebd33e7933d0d7c9d46f0604abf2f89f35c045f7680dde5981613e1e.wav",
+      "bytes": 49388,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/kenney_impact_plate_light_000.wav": {
+      "sha256": "209c3c12659a3ce4c05202e52ae48117ff80db53834e85d9c7dd5b7a7ac79a40",
+      "file": "audio/209c3c12659a3ce4c05202e52ae48117ff80db53834e85d9c7dd5b7a7ac79a40.wav",
+      "bytes": 47920,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/kenney_impact_plate_light_001.wav": {
+      "sha256": "76fcb16e502ab2322d23d6ceea927b9d468f6b00c8560885ca9e961d07252fad",
+      "file": "audio/76fcb16e502ab2322d23d6ceea927b9d468f6b00c8560885ca9e961d07252fad.wav",
+      "bytes": 57820,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/kenney_impact_plate_light_002.wav": {
+      "sha256": "69ca4dbe0b9e4c8b544b37754f35af3a07185b4ade3b368869441866b77847a5",
+      "file": "audio/69ca4dbe0b9e4c8b544b37754f35af3a07185b4ade3b368869441866b77847a5.wav",
+      "bytes": 43192,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/kenney_impact_plate_light_003.wav": {
+      "sha256": "2a9ae2dbbb4f29b5b2a51aaa574a7254cdf5d2bb8c2005f695990c13e5e99748",
+      "file": "audio/2a9ae2dbbb4f29b5b2a51aaa574a7254cdf5d2bb8c2005f695990c13e5e99748.wav",
+      "bytes": 46612,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/kenney_impact_plate_light_004.wav": {
+      "sha256": "36c4c1430831532a55ac175074a7eb4253b3227a011034da4cdb528df41c2d1a",
+      "file": "audio/36c4c1430831532a55ac175074a7eb4253b3227a011034da4cdb528df41c2d1a.wav",
+      "bytes": 57990,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/kenney_impact_plate_medium_000.wav": {
+      "sha256": "a9353c6028decb476fef030932ef89b7d0c8ccaa6e8430ffd9379e25679ff708",
+      "file": "audio/a9353c6028decb476fef030932ef89b7d0c8ccaa6e8430ffd9379e25679ff708.wav",
+      "bytes": 53816,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/kenney_impact_plate_medium_001.wav": {
+      "sha256": "f4dfe44fced924da244333c9a7879c196bb710cb8d309be97309176ed756e4a8",
+      "file": "audio/f4dfe44fced924da244333c9a7879c196bb710cb8d309be97309176ed756e4a8.wav",
+      "bytes": 54428,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/kenney_impact_plate_medium_002.wav": {
+      "sha256": "17bc3403f92ac75722de6e4b4d6aa22c7fde0db6bce29e788f5481021e6c9e70",
+      "file": "audio/17bc3403f92ac75722de6e4b4d6aa22c7fde0db6bce29e788f5481021e6c9e70.wav",
+      "bytes": 45522,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/kenney_impact_plate_medium_003.wav": {
+      "sha256": "1dfbac8c4324bd884118eb5f342827949bda667d249adcde59fb7c1a1ad8de40",
+      "file": "audio/1dfbac8c4324bd884118eb5f342827949bda667d249adcde59fb7c1a1ad8de40.wav",
+      "bytes": 57732,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/kenney_impact_plate_medium_004.wav": {
+      "sha256": "4addad8db76697b96193da0ed12d59f175eaad7c4a5cea6bc5737641bb2aba44",
+      "file": "audio/4addad8db76697b96193da0ed12d59f175eaad7c4a5cea6bc5737641bb2aba44.wav",
+      "bytes": 47204,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/kenney_impact_tin_medium_000.wav": {
+      "sha256": "24cac43edf403448d4568c5b6cc154e092c754ee0e9a780c78b98e39a4dbb087",
+      "file": "audio/24cac43edf403448d4568c5b6cc154e092c754ee0e9a780c78b98e39a4dbb087.wav",
+      "bytes": 13820,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/kenney_impact_tin_medium_001.wav": {
+      "sha256": "28a4e7728621af7645c1a6b43d750991f95ec22d7040d49bb8f4604ab278ac74",
+      "file": "audio/28a4e7728621af7645c1a6b43d750991f95ec22d7040d49bb8f4604ab278ac74.wav",
+      "bytes": 15196,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/kenney_impact_tin_medium_002.wav": {
+      "sha256": "98e14aecf0e22eb78d3830b1a60fa6f5f701f45c0ee112583a4b88ec1faf495c",
+      "file": "audio/98e14aecf0e22eb78d3830b1a60fa6f5f701f45c0ee112583a4b88ec1faf495c.wav",
+      "bytes": 11622,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/kenney_impact_tin_medium_003.wav": {
+      "sha256": "2ce6dd94aa17373b44691c2d11e0bcce529cf419605192fe0f9552ed47e3929b",
+      "file": "audio/2ce6dd94aa17373b44691c2d11e0bcce529cf419605192fe0f9552ed47e3929b.wav",
+      "bytes": 18746,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/kenney_impact_tin_medium_004.wav": {
+      "sha256": "a0338ecc989b290f0b0ea38298ab0cb73c673fde12a4f3c2caa527a1ed373912",
+      "file": "audio/a0338ecc989b290f0b0ea38298ab0cb73c673fde12a4f3c2caa527a1ed373912.wav",
+      "bytes": 17870,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/rubberduck_break_metal_falling_01.wav": {
+      "sha256": "1ad0cd30b44980bc3409bb82950a856040e107f0699977062a36a59fdba7d2a3",
+      "file": "audio/1ad0cd30b44980bc3409bb82950a856040e107f0699977062a36a59fdba7d2a3.wav",
+      "bytes": 102418,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/rubberduck_break_metal_falling_02.wav": {
+      "sha256": "ab36eed3d9e7137370c932c3c29925e27098d1d1800b233f7d4a3775c2f47351",
+      "file": "audio/ab36eed3d9e7137370c932c3c29925e27098d1d1800b233f7d4a3775c2f47351.wav",
+      "bytes": 65392,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/rubberduck_break_metal_falling_03.wav": {
+      "sha256": "19a32394ea5e391412c47aaf7df41c95e99b5cd26222e3d20cffec956e0f71e7",
+      "file": "audio/19a32394ea5e391412c47aaf7df41c95e99b5cd26222e3d20cffec956e0f71e7.wav",
+      "bytes": 37108,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/rubberduck_break_metal_falling_04.wav": {
+      "sha256": "c89d910bc18a7770487334a698bff9eccb3c0bca0781d35d64b0a8996df2a41c",
+      "file": "audio/c89d910bc18a7770487334a698bff9eccb3c0bca0781d35d64b0a8996df2a41c.wav",
+      "bytes": 38004,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/rubberduck_break_metal_falling_05.wav": {
+      "sha256": "aa0334b10ba7f57965aa3b52282a9a896ac8f6b4b39cadf64e69792f214f1cb5",
+      "file": "audio/aa0334b10ba7f57965aa3b52282a9a896ac8f6b4b39cadf64e69792f214f1cb5.wav",
+      "bytes": 35646,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/rubberduck_break_metal_hit_01.wav": {
+      "sha256": "3ff36bc7e78ec4921d0c5102763e95b1cad17a28fd1edad8d31cf3cc970503ad",
+      "file": "audio/3ff36bc7e78ec4921d0c5102763e95b1cad17a28fd1edad8d31cf3cc970503ad.wav",
+      "bytes": 21064,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/rubberduck_break_metal_hit_02.wav": {
+      "sha256": "b8679ed082c455b5c35a71ad6eb332c5bb9483a6f79e46039d5bda185fca56ad",
+      "file": "audio/b8679ed082c455b5c35a71ad6eb332c5bb9483a6f79e46039d5bda185fca56ad.wav",
+      "bytes": 48580,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/rubberduck_break_metal_hit_03.wav": {
+      "sha256": "80af77e813f7c757080b644feef339999c8ca2315cf2fc8630c4f96b40cc810a",
+      "file": "audio/80af77e813f7c757080b644feef339999c8ca2315cf2fc8630c4f96b40cc810a.wav",
+      "bytes": 40662,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/rubberduck_break_metal_hit_04.wav": {
+      "sha256": "827c881b78d700766196acbaf6d70dbc226b239238647b8a377fd1e2af1d2e2b",
+      "file": "audio/827c881b78d700766196acbaf6d70dbc226b239238647b8a377fd1e2af1d2e2b.wav",
+      "bytes": 35916,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/rubberduck_break_metal_hit_05.wav": {
+      "sha256": "da3952efbb1e0760daf5d77c4fed85ef36dc5d4dad709e3c9fab4b01c1723b7d",
+      "file": "audio/da3952efbb1e0760daf5d77c4fed85ef36dc5d4dad709e3c9fab4b01c1723b7d.wav",
+      "bytes": 29188,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/rubberduck_break_metal_hit_06.wav": {
+      "sha256": "e14e48c536c0fff64929c3c4367007d006c1e42500c950d95b41c26bfb5eec4c",
+      "file": "audio/e14e48c536c0fff64929c3c4367007d006c1e42500c950d95b41c26bfb5eec4c.wav",
+      "bytes": 32826,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/rubberduck_break_rock_breaking_01.wav": {
+      "sha256": "1ca9485e635a93b824dcf841a640e74df0e6b5fd39fca7584e8ce5d653b0d333",
+      "file": "audio/1ca9485e635a93b824dcf841a640e74df0e6b5fd39fca7584e8ce5d653b0d333.wav",
+      "bytes": 101204,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/rubberduck_break_rock_breaking_02.wav": {
+      "sha256": "ab0ce3a30508f47048da20a3d8a1d4903636635d527dd9ef7635bba0c538a285",
+      "file": "audio/ab0ce3a30508f47048da20a3d8a1d4903636635d527dd9ef7635bba0c538a285.wav",
+      "bytes": 76338,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/rubberduck_break_rock_breaking_03.wav": {
+      "sha256": "6ccee3f6257a2c33aee220461985cdabeca19d7b9df8f52ee33363ef3459d88c",
+      "file": "audio/6ccee3f6257a2c33aee220461985cdabeca19d7b9df8f52ee33363ef3459d88c.wav",
+      "bytes": 40252,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/rubberduck_break_rock_falling_01.wav": {
+      "sha256": "36911e9df71a9504b5ae1ee88acd0c0c0d67f8f2936a09c3ad07b07268579cc9",
+      "file": "audio/36911e9df71a9504b5ae1ee88acd0c0c0d67f8f2936a09c3ad07b07268579cc9.wav",
+      "bytes": 80912,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/rubberduck_break_rock_falling_02.wav": {
+      "sha256": "e798595dc1fc7a5da5e39819f7e585515f1ba29b399ff37b517cb699f363eb33",
+      "file": "audio/e798595dc1fc7a5da5e39819f7e585515f1ba29b399ff37b517cb699f363eb33.wav",
+      "bytes": 44678,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/rubberduck_break_rock_falling_03.wav": {
+      "sha256": "151ba6ef3cb0b6bb3691e5e8d0bb618358793caadd98647e8c910fa2cdc4ff6f",
+      "file": "audio/151ba6ef3cb0b6bb3691e5e8d0bb618358793caadd98647e8c910fa2cdc4ff6f.wav",
+      "bytes": 75116,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/rubberduck_break_rock_falling_04.wav": {
+      "sha256": "e29decd03475ecf2022928fe711defe8a08a1b63a23237714983c46ec2ae42c8",
+      "file": "audio/e29decd03475ecf2022928fe711defe8a08a1b63a23237714983c46ec2ae42c8.wav",
+      "bytes": 28332,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/rubberduck_break_rock_falling_05.wav": {
+      "sha256": "c272a8cf3d7fd01ee43f77886a8a75ef40b146316f3714ba2903d34a767a36fd",
+      "file": "audio/c272a8cf3d7fd01ee43f77886a8a75ef40b146316f3714ba2903d34a767a36fd.wav",
+      "bytes": 49890,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/rubberduck_metal_falling_01.wav": {
+      "sha256": "e9fed0208344a79cee68ce6560da07aa4313a88d4f8b26dbddb6f655429c0c52",
+      "file": "audio/e9fed0208344a79cee68ce6560da07aa4313a88d4f8b26dbddb6f655429c0c52.wav",
+      "bytes": 157602,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/rubberduck_metal_falling_02.wav": {
+      "sha256": "becfa06b76c5a76fa95f752e101be2c478c307e21b6d258fe5fee3b6e8886004",
+      "file": "audio/becfa06b76c5a76fa95f752e101be2c478c307e21b6d258fe5fee3b6e8886004.wav",
+      "bytes": 84408,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/rubberduck_metal_hit_01.wav": {
+      "sha256": "a0e981bfe62cfc5fe92b9670b3e78e1193ef8f6f729ea852c88ee23afa9ed3f4",
+      "file": "audio/a0e981bfe62cfc5fe92b9670b3e78e1193ef8f6f729ea852c88ee23afa9ed3f4.wav",
+      "bytes": 23782,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/rubberduck_metal_hit_02.wav": {
+      "sha256": "f430e4225fd34ec989131312bb1c7e35452c564b481d06f63cee32eb115fddfe",
+      "file": "audio/f430e4225fd34ec989131312bb1c7e35452c564b481d06f63cee32eb115fddfe.wav",
+      "bytes": 38424,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/rubberduck_metal_hit_03.wav": {
+      "sha256": "b6b8a500425af967a8569fdd9df55b5fcb011074f63ddd20b137eeea9ef8a3e9",
+      "file": "audio/b6b8a500425af967a8569fdd9df55b5fcb011074f63ddd20b137eeea9ef8a3e9.wav",
+      "bytes": 34920,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/rubberduck_metal_hit_04.wav": {
+      "sha256": "5061e93874059d8baec51426dacae98c8008d64a812c051ad539d8990dd921af",
+      "file": "audio/5061e93874059d8baec51426dacae98c8008d64a812c051ad539d8990dd921af.wav",
+      "bytes": 33022,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/rubberduck_metal_hit_05.wav": {
+      "sha256": "c410dbb520294fea5aaebd094dbc315b179ad2b82c24a849858bbe47baa62de2",
+      "file": "audio/c410dbb520294fea5aaebd094dbc315b179ad2b82c24a849858bbe47baa62de2.wav",
+      "bytes": 29136,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/rubberduck_sfx2_metal_01.wav": {
+      "sha256": "01f0b7a0153401d75dc5dabd98a54b8576b858c47c731fe40682094d452360d4",
+      "file": "audio/01f0b7a0153401d75dc5dabd98a54b8576b858c47c731fe40682094d452360d4.wav",
+      "bytes": 51232,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/rubberduck_sfx2_metal_02.wav": {
+      "sha256": "042abd6df8d916ca9a84502169ac48f0080a825fa9d46748937323864a317a9c",
+      "file": "audio/042abd6df8d916ca9a84502169ac48f0080a825fa9d46748937323864a317a9c.wav",
+      "bytes": 28242,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/rubberduck_sfx2_metal_03.wav": {
+      "sha256": "bdec297e146c89549c2250db6a5231ace367246b0a62b90416ec5c7e49baf20c",
+      "file": "audio/bdec297e146c89549c2250db6a5231ace367246b0a62b90416ec5c7e49baf20c.wav",
+      "bytes": 24990,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/rubberduck_sfx2_metal_04.wav": {
+      "sha256": "8547d269e3f804654b334ed74adde58a19d52ecc7627e9013520f9306674ebd3",
+      "file": "audio/8547d269e3f804654b334ed74adde58a19d52ecc7627e9013520f9306674ebd3.wav",
+      "bytes": 33790,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/rubberduck_sfx2_metal_05.wav": {
+      "sha256": "801f92babd0adbe4937a929532a2dc5c02feabfb760fbed6feb8e5c2a6c5e843",
+      "file": "audio/801f92babd0adbe4937a929532a2dc5c02feabfb760fbed6feb8e5c2a6c5e843.wav",
+      "bytes": 42008,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/rubberduck_sfx2_metal_06.wav": {
+      "sha256": "a01d8e6d10b205de593bbbb6a03e651c59e736cb2c20931ac35eedcdad6f2771",
+      "file": "audio/a01d8e6d10b205de593bbbb6a03e651c59e736cb2c20931ac35eedcdad6f2771.wav",
+      "bytes": 25158,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/rubberduck_sfx2_metal_hit_01.wav": {
+      "sha256": "052bee983270a549e57a86f8ef5e95c280c41dd2e9332466e3150cc8e1140a3c",
+      "file": "audio/052bee983270a549e57a86f8ef5e95c280c41dd2e9332466e3150cc8e1140a3c.wav",
+      "bytes": 71640,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/rubberduck_sfx2_metal_hit_02.wav": {
+      "sha256": "344cda9b34ba3a91d5fe2b59c9bee40f737f6e7634802e1be8e18063fbb947b5",
+      "file": "audio/344cda9b34ba3a91d5fe2b59c9bee40f737f6e7634802e1be8e18063fbb947b5.wav",
+      "bytes": 18344,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/rubberduck_sfx2_stones_01.wav": {
+      "sha256": "fff40ec7580b7691f589aa32a4065bf224504a1df70bfb0ffc09226736b5471d",
+      "file": "audio/fff40ec7580b7691f589aa32a4065bf224504a1df70bfb0ffc09226736b5471d.wav",
+      "bytes": 43212,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/rubberduck_sfx2_stones_02.wav": {
+      "sha256": "ca718c5e440247f48c8af2106a3f9139c1ddb94b3d2d3b2c35afae0c2572962a",
+      "file": "audio/ca718c5e440247f48c8af2106a3f9139c1ddb94b3d2d3b2c35afae0c2572962a.wav",
+      "bytes": 49064,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "aircraft_spacecraft_generator/sources/rubberduck_sfx2_stones_03.wav": {
+      "sha256": "d3bd5581e70325e953c69b9a28b18fbd62854d16d3d8989f4490fb4db565db84",
+      "file": "audio/d3bd5581e70325e953c69b9a28b18fbd62854d16d3d8989f4490fb4db565db84.wav",
+      "bytes": 47222,
+      "provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json"
+    },
+    "computer_sounds_generator/sources/switch_cc0.wav": {
+      "sha256": "106ce2dd59976cc2c954eb06e69976dd8827e5c1aa129cc2a4466d915f1beca9",
+      "file": "audio/106ce2dd59976cc2c954eb06e69976dd8827e5c1aa129cc2a4466d915f1beca9.wav",
+      "bytes": 81750,
+      "provenance": "generators/computer_sounds_generator/sources/provenance.json"
+    },
+    "creature_foley_generator/sources/rubberduck_break_rock_breaking_01.wav": {
+      "sha256": "1ca9485e635a93b824dcf841a640e74df0e6b5fd39fca7584e8ce5d653b0d333",
+      "file": "audio/1ca9485e635a93b824dcf841a640e74df0e6b5fd39fca7584e8ce5d653b0d333.wav",
+      "bytes": 101204,
+      "provenance": "generators/creature_foley_generator/sources/provenance.json"
+    },
+    "creature_foley_generator/sources/rubberduck_break_rock_breaking_02.wav": {
+      "sha256": "ab0ce3a30508f47048da20a3d8a1d4903636635d527dd9ef7635bba0c538a285",
+      "file": "audio/ab0ce3a30508f47048da20a3d8a1d4903636635d527dd9ef7635bba0c538a285.wav",
+      "bytes": 76338,
+      "provenance": "generators/creature_foley_generator/sources/provenance.json"
+    },
+    "creature_foley_generator/sources/rubberduck_break_rock_falling_01.wav": {
+      "sha256": "36911e9df71a9504b5ae1ee88acd0c0c0d67f8f2936a09c3ad07b07268579cc9",
+      "file": "audio/36911e9df71a9504b5ae1ee88acd0c0c0d67f8f2936a09c3ad07b07268579cc9.wav",
+      "bytes": 80912,
+      "provenance": "generators/creature_foley_generator/sources/provenance.json"
+    },
+    "creature_foley_generator/sources/rubberduck_break_rock_falling_03.wav": {
+      "sha256": "151ba6ef3cb0b6bb3691e5e8d0bb618358793caadd98647e8c910fa2cdc4ff6f",
+      "file": "audio/151ba6ef3cb0b6bb3691e5e8d0bb618358793caadd98647e8c910fa2cdc4ff6f.wav",
+      "bytes": 75116,
+      "provenance": "generators/creature_foley_generator/sources/provenance.json"
+    },
+    "creature_foley_generator/sources/rubberduck_break_wood_breaking_01.wav": {
+      "sha256": "57b6992167e0a3a60db23540f04a038eb88d89ecd03e11d0880d7e6601e2906e",
+      "file": "audio/57b6992167e0a3a60db23540f04a038eb88d89ecd03e11d0880d7e6601e2906e.wav",
+      "bytes": 26366,
+      "provenance": "generators/creature_foley_generator/sources/provenance.json"
+    },
+    "creature_foley_generator/sources/rubberduck_break_wood_breaking_02.wav": {
+      "sha256": "4af67517860de00cbe24dadf798138749eadf55e2deed97710ef8e9d330c41e8",
+      "file": "audio/4af67517860de00cbe24dadf798138749eadf55e2deed97710ef8e9d330c41e8.wav",
+      "bytes": 22008,
+      "provenance": "generators/creature_foley_generator/sources/provenance.json"
+    },
+    "creature_foley_generator/sources/rubberduck_break_wood_breaking_03.wav": {
+      "sha256": "4533a85e0a4dfd04edfaf36e51620525640369a4d056db3d837748303ad0beac",
+      "file": "audio/4533a85e0a4dfd04edfaf36e51620525640369a4d056db3d837748303ad0beac.wav",
+      "bytes": 43052,
+      "provenance": "generators/creature_foley_generator/sources/provenance.json"
+    },
+    "creature_foley_generator/sources/rubberduck_break_wood_falling_01.wav": {
+      "sha256": "1a7b043f4b08e33a0fb8991fce6970ed6232016dba48f785c28f59d7d3a4c9c1",
+      "file": "audio/1a7b043f4b08e33a0fb8991fce6970ed6232016dba48f785c28f59d7d3a4c9c1.wav",
+      "bytes": 61554,
+      "provenance": "generators/creature_foley_generator/sources/provenance.json"
+    },
+    "creature_foley_generator/sources/rubberduck_break_wood_hit_01.wav": {
+      "sha256": "c3797f05af0b6a11c6c54b7e33d6f0f79958fcabe8c470b9463c4898ee1ba98d",
+      "file": "audio/c3797f05af0b6a11c6c54b7e33d6f0f79958fcabe8c470b9463c4898ee1ba98d.wav",
+      "bytes": 21922,
+      "provenance": "generators/creature_foley_generator/sources/provenance.json"
+    },
+    "creature_foley_generator/sources/rubberduck_break_wood_hit_02.wav": {
+      "sha256": "8d433b29cffde366720f0d50cc600032f4b729fee1fd91d3313ab2f30815ff74",
+      "file": "audio/8d433b29cffde366720f0d50cc600032f4b729fee1fd91d3313ab2f30815ff74.wav",
+      "bytes": 24906,
+      "provenance": "generators/creature_foley_generator/sources/provenance.json"
+    },
+    "door_sound_generator/sources/laleksic_lock.wav": {
+      "sha256": "106ce2dd59976cc2c954eb06e69976dd8827e5c1aa129cc2a4466d915f1beca9",
+      "file": "audio/106ce2dd59976cc2c954eb06e69976dd8827e5c1aa129cc2a4466d915f1beca9.wav",
+      "bytes": 81750,
+      "provenance": "generators/door_sound_generator/sources/provenance.json"
+    },
+    "fire_sound_generator/sources/pagdev_fireplace.wav": {
+      "sha256": "16cfece8740d3549474fae1b2b36c5f2a0c496d11f93027790e61f353e2e7c15",
+      "file": "audio/16cfece8740d3549474fae1b2b36c5f2a0c496d11f93027790e61f353e2e7c15.wav",
+      "bytes": 2581198,
+      "provenance": "generators/fire_sound_generator/sources/provenance.json"
+    },
+    "lava_sound_generator/sources/pagdev_fireplace.wav": {
+      "sha256": "16cfece8740d3549474fae1b2b36c5f2a0c496d11f93027790e61f353e2e7c15",
+      "file": "audio/16cfece8740d3549474fae1b2b36c5f2a0c496d11f93027790e61f353e2e7c15.wav",
+      "bytes": 2581198,
+      "provenance": "generators/lava_sound_generator/sources/provenance.json"
+    },
+    "projectile_sounds/sources/independent_nu_hit02.wav": {
+      "sha256": "3e59aed4da4be8d80e13b347b31af0acb5e84c99637eafa4f7241ff5a881592d",
+      "file": "audio/3e59aed4da4be8d80e13b347b31af0acb5e84c99637eafa4f7241ff5a881592d.wav",
+      "bytes": 103852,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/independent_nu_hit07.wav": {
+      "sha256": "96859017e07d0299170435ae9a3e188acb14fce36bf0b46b18422f497887313f",
+      "file": "audio/96859017e07d0299170435ae9a3e188acb14fce36bf0b46b18422f497887313f.wav",
+      "bytes": 99244,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/independent_nu_hit08.wav": {
+      "sha256": "ba1ce929ba044bd525b0ee5782358f000935c6cdc365267ad20a3ed6ce3cbf74",
+      "file": "audio/ba1ce929ba044bd525b0ee5782358f000935c6cdc365267ad20a3ed6ce3cbf74.wav",
+      "bytes": 136108,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/independent_nu_hit20.wav": {
+      "sha256": "ff6b05f98464746526fdd2b25160eec7a9f76c98a5a2d10c32c9644ed8f1286c",
+      "file": "audio/ff6b05f98464746526fdd2b25160eec7a9f76c98a5a2d10c32c9644ed8f1286c.wav",
+      "bytes": 106156,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/independent_nu_hit29.wav": {
+      "sha256": "d5a7cae1028ddb748bcd012816a9f20488c6727d11984c09263bb20ef5db0f53",
+      "file": "audio/d5a7cae1028ddb748bcd012816a9f20488c6727d11984c09263bb20ef5db0f53.wav",
+      "bytes": 80812,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/independent_nu_hit34.wav": {
+      "sha256": "33b0f5a03779d179cef2c0935da829532647f26b024a10ed497744163c9440e5",
+      "file": "audio/33b0f5a03779d179cef2c0935da829532647f26b024a10ed497744163c9440e5.wav",
+      "bytes": 101548,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/kenney_impact_metal_heavy_000.wav": {
+      "sha256": "f2f2e01a96edf13affdabb2d1aa6297d5de0f926b9727752b70fb4c4f2874121",
+      "file": "audio/f2f2e01a96edf13affdabb2d1aa6297d5de0f926b9727752b70fb4c4f2874121.wav",
+      "bytes": 14610,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/kenney_impact_metal_heavy_001.wav": {
+      "sha256": "32efa1eafcfea0f95c53eb609750ced1ef24cb5ab5c02e35ed42f98046ca3e97",
+      "file": "audio/32efa1eafcfea0f95c53eb609750ced1ef24cb5ab5c02e35ed42f98046ca3e97.wav",
+      "bytes": 31510,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/kenney_impact_metal_heavy_002.wav": {
+      "sha256": "1a0125d3d80e35b6e5f6e44b5b852d3422d74c2d277bd7ecea06ab2230280e70",
+      "file": "audio/1a0125d3d80e35b6e5f6e44b5b852d3422d74c2d277bd7ecea06ab2230280e70.wav",
+      "bytes": 10168,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/kenney_impact_metal_heavy_003.wav": {
+      "sha256": "9f5ef498757d9d41e92f573477f860a36053175fdd3df6b24c84642aa749eead",
+      "file": "audio/9f5ef498757d9d41e92f573477f860a36053175fdd3df6b24c84642aa749eead.wav",
+      "bytes": 18072,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/kenney_impact_metal_heavy_004.wav": {
+      "sha256": "90f5ce96a678b3a25ed378aa5c9dd69bb14bfe72a6fef33bd7989ee7909ce0bc",
+      "file": "audio/90f5ce96a678b3a25ed378aa5c9dd69bb14bfe72a6fef33bd7989ee7909ce0bc.wav",
+      "bytes": 11624,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/kenney_impact_metal_light_000.wav": {
+      "sha256": "ca3926ac68bef126b00dc85968c8d47be0bd34bd95eb439e056daebcbfe0a102",
+      "file": "audio/ca3926ac68bef126b00dc85968c8d47be0bd34bd95eb439e056daebcbfe0a102.wav",
+      "bytes": 32974,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/kenney_impact_metal_light_001.wav": {
+      "sha256": "f66c3fdfccddbe342209d8f7d736327ae456eab2beaed475375145de9db631a2",
+      "file": "audio/f66c3fdfccddbe342209d8f7d736327ae456eab2beaed475375145de9db631a2.wav",
+      "bytes": 22034,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/kenney_impact_metal_light_002.wav": {
+      "sha256": "6c7c06103556f9480697e44ff9608d218ef64e8986e7be3c20a733af63f69477",
+      "file": "audio/6c7c06103556f9480697e44ff9608d218ef64e8986e7be3c20a733af63f69477.wav",
+      "bytes": 20618,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/kenney_impact_metal_light_003.wav": {
+      "sha256": "db0b15fa9d87e6c15cb1f971359ce482b345c29c0f09dc2004a59d9530934a7f",
+      "file": "audio/db0b15fa9d87e6c15cb1f971359ce482b345c29c0f09dc2004a59d9530934a7f.wav",
+      "bytes": 42594,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/kenney_impact_metal_light_004.wav": {
+      "sha256": "66d57ab3a4da349488303b14db08a1d1abb3728aba1719dd7655932742670ee2",
+      "file": "audio/66d57ab3a4da349488303b14db08a1d1abb3728aba1719dd7655932742670ee2.wav",
+      "bytes": 18644,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/kenney_impact_metal_medium_000.wav": {
+      "sha256": "972bed45f9ed6c6bba31037d6ec4d3f2862b2ac32a4dc892b2056f695ad48f98",
+      "file": "audio/972bed45f9ed6c6bba31037d6ec4d3f2862b2ac32a4dc892b2056f695ad48f98.wav",
+      "bytes": 23792,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/kenney_impact_metal_medium_001.wav": {
+      "sha256": "126ed59c7ecd9e3e5c66bb89744535ab6c35ada2bdfc4a02d887895591b1d553",
+      "file": "audio/126ed59c7ecd9e3e5c66bb89744535ab6c35ada2bdfc4a02d887895591b1d553.wav",
+      "bytes": 12474,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/kenney_impact_metal_medium_002.wav": {
+      "sha256": "488590358f1f10e15e440e7a06bc4662fe1a7f965e82d672793a0b8a1c7eb0a9",
+      "file": "audio/488590358f1f10e15e440e7a06bc4662fe1a7f965e82d672793a0b8a1c7eb0a9.wav",
+      "bytes": 10330,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/kenney_impact_metal_medium_003.wav": {
+      "sha256": "087b8ba6d989a169e057cec9ee60bdd24d30357b0f9a45f4e1dc529650e7e00f",
+      "file": "audio/087b8ba6d989a169e057cec9ee60bdd24d30357b0f9a45f4e1dc529650e7e00f.wav",
+      "bytes": 22222,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/kenney_impact_metal_medium_004.wav": {
+      "sha256": "01113bc49a193ce6cc6e2aa7b5e97e6ac4d8ca9347babe1f45d49aa8664d9e88",
+      "file": "audio/01113bc49a193ce6cc6e2aa7b5e97e6ac4d8ca9347babe1f45d49aa8664d9e88.wav",
+      "bytes": 9474,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/kenney_impact_mining_000.wav": {
+      "sha256": "21e98491c0e1cccbbc0cf67d50b12fbfb283cef4af6c67ee82343e34cdbf8d51",
+      "file": "audio/21e98491c0e1cccbbc0cf67d50b12fbfb283cef4af6c67ee82343e34cdbf8d51.wav",
+      "bytes": 82760,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/kenney_impact_mining_001.wav": {
+      "sha256": "b94384cb82bb9a7486b4cd828dc56c2a2a94d72a5d8e261257f63cb047078347",
+      "file": "audio/b94384cb82bb9a7486b4cd828dc56c2a2a94d72a5d8e261257f63cb047078347.wav",
+      "bytes": 76760,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/kenney_impact_mining_002.wav": {
+      "sha256": "be8ad433b0c9592e5f4c490278dc912bfcda5bf56b645b3f187b64cf1fc697cd",
+      "file": "audio/be8ad433b0c9592e5f4c490278dc912bfcda5bf56b645b3f187b64cf1fc697cd.wav",
+      "bytes": 71050,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/kenney_impact_mining_003.wav": {
+      "sha256": "080fcdb0c6e9ffe5be2ca490f57a27edb542b4b32565fe0ae1b69fd4f3061124",
+      "file": "audio/080fcdb0c6e9ffe5be2ca490f57a27edb542b4b32565fe0ae1b69fd4f3061124.wav",
+      "bytes": 87548,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/kenney_impact_mining_004.wav": {
+      "sha256": "899f00b1fc5b054687003af9ac05b34e7c8068a00fa38e913f6e48f46e8c13fe",
+      "file": "audio/899f00b1fc5b054687003af9ac05b34e7c8068a00fa38e913f6e48f46e8c13fe.wav",
+      "bytes": 73310,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/kenney_impact_plate_heavy_000.wav": {
+      "sha256": "53c2bce2c0513a86154938e4f6f6a5766acf4b3c03a02621653dfa250324d6aa",
+      "file": "audio/53c2bce2c0513a86154938e4f6f6a5766acf4b3c03a02621653dfa250324d6aa.wav",
+      "bytes": 43178,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/kenney_impact_plate_heavy_001.wav": {
+      "sha256": "ee66a6d9839b65ec66b2849e3f13ee6e339f9e744b09b3edf786ac1a7e9663c2",
+      "file": "audio/ee66a6d9839b65ec66b2849e3f13ee6e339f9e744b09b3edf786ac1a7e9663c2.wav",
+      "bytes": 30898,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/kenney_impact_plate_heavy_002.wav": {
+      "sha256": "16a8b6bdbd94e5f9bced08fdd8e03c76cb54fb9748349ac315f72fbb50051119",
+      "file": "audio/16a8b6bdbd94e5f9bced08fdd8e03c76cb54fb9748349ac315f72fbb50051119.wav",
+      "bytes": 43666,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/kenney_impact_plate_heavy_003.wav": {
+      "sha256": "b0d2eb923fdd17b655f02707aff65d5c846611db52c36853a111b8e1c6c05c92",
+      "file": "audio/b0d2eb923fdd17b655f02707aff65d5c846611db52c36853a111b8e1c6c05c92.wav",
+      "bytes": 30388,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/kenney_impact_plate_heavy_004.wav": {
+      "sha256": "2534d930ebd33e7933d0d7c9d46f0604abf2f89f35c045f7680dde5981613e1e",
+      "file": "audio/2534d930ebd33e7933d0d7c9d46f0604abf2f89f35c045f7680dde5981613e1e.wav",
+      "bytes": 49388,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/kenney_impact_plate_light_000.wav": {
+      "sha256": "209c3c12659a3ce4c05202e52ae48117ff80db53834e85d9c7dd5b7a7ac79a40",
+      "file": "audio/209c3c12659a3ce4c05202e52ae48117ff80db53834e85d9c7dd5b7a7ac79a40.wav",
+      "bytes": 47920,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/kenney_impact_plate_light_001.wav": {
+      "sha256": "76fcb16e502ab2322d23d6ceea927b9d468f6b00c8560885ca9e961d07252fad",
+      "file": "audio/76fcb16e502ab2322d23d6ceea927b9d468f6b00c8560885ca9e961d07252fad.wav",
+      "bytes": 57820,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/kenney_impact_plate_light_002.wav": {
+      "sha256": "69ca4dbe0b9e4c8b544b37754f35af3a07185b4ade3b368869441866b77847a5",
+      "file": "audio/69ca4dbe0b9e4c8b544b37754f35af3a07185b4ade3b368869441866b77847a5.wav",
+      "bytes": 43192,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/kenney_impact_plate_light_003.wav": {
+      "sha256": "2a9ae2dbbb4f29b5b2a51aaa574a7254cdf5d2bb8c2005f695990c13e5e99748",
+      "file": "audio/2a9ae2dbbb4f29b5b2a51aaa574a7254cdf5d2bb8c2005f695990c13e5e99748.wav",
+      "bytes": 46612,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/kenney_impact_plate_light_004.wav": {
+      "sha256": "36c4c1430831532a55ac175074a7eb4253b3227a011034da4cdb528df41c2d1a",
+      "file": "audio/36c4c1430831532a55ac175074a7eb4253b3227a011034da4cdb528df41c2d1a.wav",
+      "bytes": 57990,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/kenney_impact_plate_medium_000.wav": {
+      "sha256": "a9353c6028decb476fef030932ef89b7d0c8ccaa6e8430ffd9379e25679ff708",
+      "file": "audio/a9353c6028decb476fef030932ef89b7d0c8ccaa6e8430ffd9379e25679ff708.wav",
+      "bytes": 53816,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/kenney_impact_plate_medium_001.wav": {
+      "sha256": "f4dfe44fced924da244333c9a7879c196bb710cb8d309be97309176ed756e4a8",
+      "file": "audio/f4dfe44fced924da244333c9a7879c196bb710cb8d309be97309176ed756e4a8.wav",
+      "bytes": 54428,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/kenney_impact_plate_medium_002.wav": {
+      "sha256": "17bc3403f92ac75722de6e4b4d6aa22c7fde0db6bce29e788f5481021e6c9e70",
+      "file": "audio/17bc3403f92ac75722de6e4b4d6aa22c7fde0db6bce29e788f5481021e6c9e70.wav",
+      "bytes": 45522,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/kenney_impact_plate_medium_003.wav": {
+      "sha256": "1dfbac8c4324bd884118eb5f342827949bda667d249adcde59fb7c1a1ad8de40",
+      "file": "audio/1dfbac8c4324bd884118eb5f342827949bda667d249adcde59fb7c1a1ad8de40.wav",
+      "bytes": 57732,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/kenney_impact_plate_medium_004.wav": {
+      "sha256": "4addad8db76697b96193da0ed12d59f175eaad7c4a5cea6bc5737641bb2aba44",
+      "file": "audio/4addad8db76697b96193da0ed12d59f175eaad7c4a5cea6bc5737641bb2aba44.wav",
+      "bytes": 47204,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/kenney_impact_tin_medium_000.wav": {
+      "sha256": "24cac43edf403448d4568c5b6cc154e092c754ee0e9a780c78b98e39a4dbb087",
+      "file": "audio/24cac43edf403448d4568c5b6cc154e092c754ee0e9a780c78b98e39a4dbb087.wav",
+      "bytes": 13820,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/kenney_impact_tin_medium_001.wav": {
+      "sha256": "28a4e7728621af7645c1a6b43d750991f95ec22d7040d49bb8f4604ab278ac74",
+      "file": "audio/28a4e7728621af7645c1a6b43d750991f95ec22d7040d49bb8f4604ab278ac74.wav",
+      "bytes": 15196,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/kenney_impact_tin_medium_002.wav": {
+      "sha256": "98e14aecf0e22eb78d3830b1a60fa6f5f701f45c0ee112583a4b88ec1faf495c",
+      "file": "audio/98e14aecf0e22eb78d3830b1a60fa6f5f701f45c0ee112583a4b88ec1faf495c.wav",
+      "bytes": 11622,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/kenney_impact_tin_medium_003.wav": {
+      "sha256": "2ce6dd94aa17373b44691c2d11e0bcce529cf419605192fe0f9552ed47e3929b",
+      "file": "audio/2ce6dd94aa17373b44691c2d11e0bcce529cf419605192fe0f9552ed47e3929b.wav",
+      "bytes": 18746,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/kenney_impact_tin_medium_004.wav": {
+      "sha256": "a0338ecc989b290f0b0ea38298ab0cb73c673fde12a4f3c2caa527a1ed373912",
+      "file": "audio/a0338ecc989b290f0b0ea38298ab0cb73c673fde12a4f3c2caa527a1ed373912.wav",
+      "bytes": 17870,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/rubberduck_break_metal_falling_01.wav": {
+      "sha256": "1ad0cd30b44980bc3409bb82950a856040e107f0699977062a36a59fdba7d2a3",
+      "file": "audio/1ad0cd30b44980bc3409bb82950a856040e107f0699977062a36a59fdba7d2a3.wav",
+      "bytes": 102418,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/rubberduck_break_metal_falling_02.wav": {
+      "sha256": "ab36eed3d9e7137370c932c3c29925e27098d1d1800b233f7d4a3775c2f47351",
+      "file": "audio/ab36eed3d9e7137370c932c3c29925e27098d1d1800b233f7d4a3775c2f47351.wav",
+      "bytes": 65392,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/rubberduck_break_metal_falling_03.wav": {
+      "sha256": "19a32394ea5e391412c47aaf7df41c95e99b5cd26222e3d20cffec956e0f71e7",
+      "file": "audio/19a32394ea5e391412c47aaf7df41c95e99b5cd26222e3d20cffec956e0f71e7.wav",
+      "bytes": 37108,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/rubberduck_break_metal_falling_04.wav": {
+      "sha256": "c89d910bc18a7770487334a698bff9eccb3c0bca0781d35d64b0a8996df2a41c",
+      "file": "audio/c89d910bc18a7770487334a698bff9eccb3c0bca0781d35d64b0a8996df2a41c.wav",
+      "bytes": 38004,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/rubberduck_break_metal_falling_05.wav": {
+      "sha256": "aa0334b10ba7f57965aa3b52282a9a896ac8f6b4b39cadf64e69792f214f1cb5",
+      "file": "audio/aa0334b10ba7f57965aa3b52282a9a896ac8f6b4b39cadf64e69792f214f1cb5.wav",
+      "bytes": 35646,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/rubberduck_break_metal_hit_01.wav": {
+      "sha256": "3ff36bc7e78ec4921d0c5102763e95b1cad17a28fd1edad8d31cf3cc970503ad",
+      "file": "audio/3ff36bc7e78ec4921d0c5102763e95b1cad17a28fd1edad8d31cf3cc970503ad.wav",
+      "bytes": 21064,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/rubberduck_break_metal_hit_02.wav": {
+      "sha256": "b8679ed082c455b5c35a71ad6eb332c5bb9483a6f79e46039d5bda185fca56ad",
+      "file": "audio/b8679ed082c455b5c35a71ad6eb332c5bb9483a6f79e46039d5bda185fca56ad.wav",
+      "bytes": 48580,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/rubberduck_break_metal_hit_03.wav": {
+      "sha256": "80af77e813f7c757080b644feef339999c8ca2315cf2fc8630c4f96b40cc810a",
+      "file": "audio/80af77e813f7c757080b644feef339999c8ca2315cf2fc8630c4f96b40cc810a.wav",
+      "bytes": 40662,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/rubberduck_break_metal_hit_04.wav": {
+      "sha256": "827c881b78d700766196acbaf6d70dbc226b239238647b8a377fd1e2af1d2e2b",
+      "file": "audio/827c881b78d700766196acbaf6d70dbc226b239238647b8a377fd1e2af1d2e2b.wav",
+      "bytes": 35916,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/rubberduck_break_metal_hit_05.wav": {
+      "sha256": "da3952efbb1e0760daf5d77c4fed85ef36dc5d4dad709e3c9fab4b01c1723b7d",
+      "file": "audio/da3952efbb1e0760daf5d77c4fed85ef36dc5d4dad709e3c9fab4b01c1723b7d.wav",
+      "bytes": 29188,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/rubberduck_break_metal_hit_06.wav": {
+      "sha256": "e14e48c536c0fff64929c3c4367007d006c1e42500c950d95b41c26bfb5eec4c",
+      "file": "audio/e14e48c536c0fff64929c3c4367007d006c1e42500c950d95b41c26bfb5eec4c.wav",
+      "bytes": 32826,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/rubberduck_break_rock_breaking_01.wav": {
+      "sha256": "1ca9485e635a93b824dcf841a640e74df0e6b5fd39fca7584e8ce5d653b0d333",
+      "file": "audio/1ca9485e635a93b824dcf841a640e74df0e6b5fd39fca7584e8ce5d653b0d333.wav",
+      "bytes": 101204,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/rubberduck_break_rock_breaking_02.wav": {
+      "sha256": "ab0ce3a30508f47048da20a3d8a1d4903636635d527dd9ef7635bba0c538a285",
+      "file": "audio/ab0ce3a30508f47048da20a3d8a1d4903636635d527dd9ef7635bba0c538a285.wav",
+      "bytes": 76338,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/rubberduck_break_rock_breaking_03.wav": {
+      "sha256": "6ccee3f6257a2c33aee220461985cdabeca19d7b9df8f52ee33363ef3459d88c",
+      "file": "audio/6ccee3f6257a2c33aee220461985cdabeca19d7b9df8f52ee33363ef3459d88c.wav",
+      "bytes": 40252,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/rubberduck_break_rock_falling_01.wav": {
+      "sha256": "36911e9df71a9504b5ae1ee88acd0c0c0d67f8f2936a09c3ad07b07268579cc9",
+      "file": "audio/36911e9df71a9504b5ae1ee88acd0c0c0d67f8f2936a09c3ad07b07268579cc9.wav",
+      "bytes": 80912,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/rubberduck_break_rock_falling_02.wav": {
+      "sha256": "e798595dc1fc7a5da5e39819f7e585515f1ba29b399ff37b517cb699f363eb33",
+      "file": "audio/e798595dc1fc7a5da5e39819f7e585515f1ba29b399ff37b517cb699f363eb33.wav",
+      "bytes": 44678,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/rubberduck_break_rock_falling_03.wav": {
+      "sha256": "151ba6ef3cb0b6bb3691e5e8d0bb618358793caadd98647e8c910fa2cdc4ff6f",
+      "file": "audio/151ba6ef3cb0b6bb3691e5e8d0bb618358793caadd98647e8c910fa2cdc4ff6f.wav",
+      "bytes": 75116,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/rubberduck_break_rock_falling_04.wav": {
+      "sha256": "e29decd03475ecf2022928fe711defe8a08a1b63a23237714983c46ec2ae42c8",
+      "file": "audio/e29decd03475ecf2022928fe711defe8a08a1b63a23237714983c46ec2ae42c8.wav",
+      "bytes": 28332,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/rubberduck_break_rock_falling_05.wav": {
+      "sha256": "c272a8cf3d7fd01ee43f77886a8a75ef40b146316f3714ba2903d34a767a36fd",
+      "file": "audio/c272a8cf3d7fd01ee43f77886a8a75ef40b146316f3714ba2903d34a767a36fd.wav",
+      "bytes": 49890,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/rubberduck_break_rock_falling_06.wav": {
+      "sha256": "e487a2e00731a68a8aa6be3c276af761e44e4ac8ebd287d0302ce0eb2dac001d",
+      "file": "audio/e487a2e00731a68a8aa6be3c276af761e44e4ac8ebd287d0302ce0eb2dac001d.wav",
+      "bytes": 41036,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/rubberduck_break_rock_falling_07.wav": {
+      "sha256": "12d92322eeb0acc1691885c59b82fa0f4e9fa41d64a77b1b918c4f25104fa209",
+      "file": "audio/12d92322eeb0acc1691885c59b82fa0f4e9fa41d64a77b1b918c4f25104fa209.wav",
+      "bytes": 31136,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/rubberduck_break_rock_falling_08.wav": {
+      "sha256": "ccc537e0b07abce4735ea9401a56ad91e83ecf5ed0de76df9f5bb4cce3ffb3bf",
+      "file": "audio/ccc537e0b07abce4735ea9401a56ad91e83ecf5ed0de76df9f5bb4cce3ffb3bf.wav",
+      "bytes": 34734,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/rubberduck_break_rock_falling_09.wav": {
+      "sha256": "2b9014bbfc03c915834b6c6eef48e56ef653d437092f5cdf64765b8da9089cab",
+      "file": "audio/2b9014bbfc03c915834b6c6eef48e56ef653d437092f5cdf64765b8da9089cab.wav",
+      "bytes": 60462,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/rubberduck_metal_falling_01.wav": {
+      "sha256": "e9fed0208344a79cee68ce6560da07aa4313a88d4f8b26dbddb6f655429c0c52",
+      "file": "audio/e9fed0208344a79cee68ce6560da07aa4313a88d4f8b26dbddb6f655429c0c52.wav",
+      "bytes": 157602,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/rubberduck_metal_falling_02.wav": {
+      "sha256": "becfa06b76c5a76fa95f752e101be2c478c307e21b6d258fe5fee3b6e8886004",
+      "file": "audio/becfa06b76c5a76fa95f752e101be2c478c307e21b6d258fe5fee3b6e8886004.wav",
+      "bytes": 84408,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/rubberduck_metal_hit_01.wav": {
+      "sha256": "a0e981bfe62cfc5fe92b9670b3e78e1193ef8f6f729ea852c88ee23afa9ed3f4",
+      "file": "audio/a0e981bfe62cfc5fe92b9670b3e78e1193ef8f6f729ea852c88ee23afa9ed3f4.wav",
+      "bytes": 23782,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/rubberduck_metal_hit_02.wav": {
+      "sha256": "f430e4225fd34ec989131312bb1c7e35452c564b481d06f63cee32eb115fddfe",
+      "file": "audio/f430e4225fd34ec989131312bb1c7e35452c564b481d06f63cee32eb115fddfe.wav",
+      "bytes": 38424,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/rubberduck_metal_hit_03.wav": {
+      "sha256": "b6b8a500425af967a8569fdd9df55b5fcb011074f63ddd20b137eeea9ef8a3e9",
+      "file": "audio/b6b8a500425af967a8569fdd9df55b5fcb011074f63ddd20b137eeea9ef8a3e9.wav",
+      "bytes": 34920,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/rubberduck_metal_hit_04.wav": {
+      "sha256": "5061e93874059d8baec51426dacae98c8008d64a812c051ad539d8990dd921af",
+      "file": "audio/5061e93874059d8baec51426dacae98c8008d64a812c051ad539d8990dd921af.wav",
+      "bytes": 33022,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/rubberduck_metal_hit_05.wav": {
+      "sha256": "c410dbb520294fea5aaebd094dbc315b179ad2b82c24a849858bbe47baa62de2",
+      "file": "audio/c410dbb520294fea5aaebd094dbc315b179ad2b82c24a849858bbe47baa62de2.wav",
+      "bytes": 29136,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/rubberduck_sfx2_metal_01.wav": {
+      "sha256": "01f0b7a0153401d75dc5dabd98a54b8576b858c47c731fe40682094d452360d4",
+      "file": "audio/01f0b7a0153401d75dc5dabd98a54b8576b858c47c731fe40682094d452360d4.wav",
+      "bytes": 51232,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/rubberduck_sfx2_metal_02.wav": {
+      "sha256": "042abd6df8d916ca9a84502169ac48f0080a825fa9d46748937323864a317a9c",
+      "file": "audio/042abd6df8d916ca9a84502169ac48f0080a825fa9d46748937323864a317a9c.wav",
+      "bytes": 28242,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/rubberduck_sfx2_metal_03.wav": {
+      "sha256": "bdec297e146c89549c2250db6a5231ace367246b0a62b90416ec5c7e49baf20c",
+      "file": "audio/bdec297e146c89549c2250db6a5231ace367246b0a62b90416ec5c7e49baf20c.wav",
+      "bytes": 24990,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/rubberduck_sfx2_metal_04.wav": {
+      "sha256": "8547d269e3f804654b334ed74adde58a19d52ecc7627e9013520f9306674ebd3",
+      "file": "audio/8547d269e3f804654b334ed74adde58a19d52ecc7627e9013520f9306674ebd3.wav",
+      "bytes": 33790,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/rubberduck_sfx2_metal_05.wav": {
+      "sha256": "801f92babd0adbe4937a929532a2dc5c02feabfb760fbed6feb8e5c2a6c5e843",
+      "file": "audio/801f92babd0adbe4937a929532a2dc5c02feabfb760fbed6feb8e5c2a6c5e843.wav",
+      "bytes": 42008,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/rubberduck_sfx2_metal_06.wav": {
+      "sha256": "a01d8e6d10b205de593bbbb6a03e651c59e736cb2c20931ac35eedcdad6f2771",
+      "file": "audio/a01d8e6d10b205de593bbbb6a03e651c59e736cb2c20931ac35eedcdad6f2771.wav",
+      "bytes": 25158,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/rubberduck_sfx2_metal_hit_01.wav": {
+      "sha256": "052bee983270a549e57a86f8ef5e95c280c41dd2e9332466e3150cc8e1140a3c",
+      "file": "audio/052bee983270a549e57a86f8ef5e95c280c41dd2e9332466e3150cc8e1140a3c.wav",
+      "bytes": 71640,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/rubberduck_sfx2_metal_hit_02.wav": {
+      "sha256": "344cda9b34ba3a91d5fe2b59c9bee40f737f6e7634802e1be8e18063fbb947b5",
+      "file": "audio/344cda9b34ba3a91d5fe2b59c9bee40f737f6e7634802e1be8e18063fbb947b5.wav",
+      "bytes": 18344,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/rubberduck_sfx2_stones_01.wav": {
+      "sha256": "fff40ec7580b7691f589aa32a4065bf224504a1df70bfb0ffc09226736b5471d",
+      "file": "audio/fff40ec7580b7691f589aa32a4065bf224504a1df70bfb0ffc09226736b5471d.wav",
+      "bytes": 43212,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/rubberduck_sfx2_stones_02.wav": {
+      "sha256": "ca718c5e440247f48c8af2106a3f9139c1ddb94b3d2d3b2c35afae0c2572962a",
+      "file": "audio/ca718c5e440247f48c8af2106a3f9139c1ddb94b3d2d3b2c35afae0c2572962a.wav",
+      "bytes": 49064,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "projectile_sounds/sources/rubberduck_sfx2_stones_03.wav": {
+      "sha256": "d3bd5581e70325e953c69b9a28b18fbd62854d16d3d8989f4490fb4db565db84",
+      "file": "audio/d3bd5581e70325e953c69b9a28b18fbd62854d16d3d8989f4490fb4db565db84.wav",
+      "bytes": 47222,
+      "provenance": "generators/projectile_sounds/sources/provenance.json"
+    },
+    "stone_noise_generator/sources/kenney_impact_mining_000.wav": {
+      "sha256": "21e98491c0e1cccbbc0cf67d50b12fbfb283cef4af6c67ee82343e34cdbf8d51",
+      "file": "audio/21e98491c0e1cccbbc0cf67d50b12fbfb283cef4af6c67ee82343e34cdbf8d51.wav",
+      "bytes": 82760,
+      "provenance": "generators/stone_noise_generator/sources/provenance.json"
+    },
+    "stone_noise_generator/sources/kenney_impact_mining_001.wav": {
+      "sha256": "b94384cb82bb9a7486b4cd828dc56c2a2a94d72a5d8e261257f63cb047078347",
+      "file": "audio/b94384cb82bb9a7486b4cd828dc56c2a2a94d72a5d8e261257f63cb047078347.wav",
+      "bytes": 76760,
+      "provenance": "generators/stone_noise_generator/sources/provenance.json"
+    },
+    "stone_noise_generator/sources/kenney_impact_mining_002.wav": {
+      "sha256": "be8ad433b0c9592e5f4c490278dc912bfcda5bf56b645b3f187b64cf1fc697cd",
+      "file": "audio/be8ad433b0c9592e5f4c490278dc912bfcda5bf56b645b3f187b64cf1fc697cd.wav",
+      "bytes": 71050,
+      "provenance": "generators/stone_noise_generator/sources/provenance.json"
+    },
+    "stone_noise_generator/sources/kenney_impact_mining_003.wav": {
+      "sha256": "080fcdb0c6e9ffe5be2ca490f57a27edb542b4b32565fe0ae1b69fd4f3061124",
+      "file": "audio/080fcdb0c6e9ffe5be2ca490f57a27edb542b4b32565fe0ae1b69fd4f3061124.wav",
+      "bytes": 87548,
+      "provenance": "generators/stone_noise_generator/sources/provenance.json"
+    },
+    "stone_noise_generator/sources/kenney_impact_mining_004.wav": {
+      "sha256": "899f00b1fc5b054687003af9ac05b34e7c8068a00fa38e913f6e48f46e8c13fe",
+      "file": "audio/899f00b1fc5b054687003af9ac05b34e7c8068a00fa38e913f6e48f46e8c13fe.wav",
+      "bytes": 73310,
+      "provenance": "generators/stone_noise_generator/sources/provenance.json"
+    },
+    "stone_noise_generator/sources/rubberduck_break_rock_breaking_01.wav": {
+      "sha256": "1ca9485e635a93b824dcf841a640e74df0e6b5fd39fca7584e8ce5d653b0d333",
+      "file": "audio/1ca9485e635a93b824dcf841a640e74df0e6b5fd39fca7584e8ce5d653b0d333.wav",
+      "bytes": 101204,
+      "provenance": "generators/stone_noise_generator/sources/provenance.json"
+    },
+    "stone_noise_generator/sources/rubberduck_break_rock_breaking_02.wav": {
+      "sha256": "ab0ce3a30508f47048da20a3d8a1d4903636635d527dd9ef7635bba0c538a285",
+      "file": "audio/ab0ce3a30508f47048da20a3d8a1d4903636635d527dd9ef7635bba0c538a285.wav",
+      "bytes": 76338,
+      "provenance": "generators/stone_noise_generator/sources/provenance.json"
+    },
+    "stone_noise_generator/sources/rubberduck_break_rock_breaking_03.wav": {
+      "sha256": "6ccee3f6257a2c33aee220461985cdabeca19d7b9df8f52ee33363ef3459d88c",
+      "file": "audio/6ccee3f6257a2c33aee220461985cdabeca19d7b9df8f52ee33363ef3459d88c.wav",
+      "bytes": 40252,
+      "provenance": "generators/stone_noise_generator/sources/provenance.json"
+    },
+    "stone_noise_generator/sources/rubberduck_break_rock_falling_01.wav": {
+      "sha256": "36911e9df71a9504b5ae1ee88acd0c0c0d67f8f2936a09c3ad07b07268579cc9",
+      "file": "audio/36911e9df71a9504b5ae1ee88acd0c0c0d67f8f2936a09c3ad07b07268579cc9.wav",
+      "bytes": 80912,
+      "provenance": "generators/stone_noise_generator/sources/provenance.json"
+    },
+    "stone_noise_generator/sources/rubberduck_break_rock_falling_02.wav": {
+      "sha256": "e798595dc1fc7a5da5e39819f7e585515f1ba29b399ff37b517cb699f363eb33",
+      "file": "audio/e798595dc1fc7a5da5e39819f7e585515f1ba29b399ff37b517cb699f363eb33.wav",
+      "bytes": 44678,
+      "provenance": "generators/stone_noise_generator/sources/provenance.json"
+    },
+    "stone_noise_generator/sources/rubberduck_break_rock_falling_03.wav": {
+      "sha256": "151ba6ef3cb0b6bb3691e5e8d0bb618358793caadd98647e8c910fa2cdc4ff6f",
+      "file": "audio/151ba6ef3cb0b6bb3691e5e8d0bb618358793caadd98647e8c910fa2cdc4ff6f.wav",
+      "bytes": 75116,
+      "provenance": "generators/stone_noise_generator/sources/provenance.json"
+    },
+    "stone_noise_generator/sources/rubberduck_break_rock_falling_04.wav": {
+      "sha256": "e29decd03475ecf2022928fe711defe8a08a1b63a23237714983c46ec2ae42c8",
+      "file": "audio/e29decd03475ecf2022928fe711defe8a08a1b63a23237714983c46ec2ae42c8.wav",
+      "bytes": 28332,
+      "provenance": "generators/stone_noise_generator/sources/provenance.json"
+    },
+    "stone_noise_generator/sources/rubberduck_break_rock_falling_05.wav": {
+      "sha256": "c272a8cf3d7fd01ee43f77886a8a75ef40b146316f3714ba2903d34a767a36fd",
+      "file": "audio/c272a8cf3d7fd01ee43f77886a8a75ef40b146316f3714ba2903d34a767a36fd.wav",
+      "bytes": 49890,
+      "provenance": "generators/stone_noise_generator/sources/provenance.json"
+    },
+    "stone_noise_generator/sources/rubberduck_break_rock_falling_06.wav": {
+      "sha256": "e487a2e00731a68a8aa6be3c276af761e44e4ac8ebd287d0302ce0eb2dac001d",
+      "file": "audio/e487a2e00731a68a8aa6be3c276af761e44e4ac8ebd287d0302ce0eb2dac001d.wav",
+      "bytes": 41036,
+      "provenance": "generators/stone_noise_generator/sources/provenance.json"
+    },
+    "stone_noise_generator/sources/rubberduck_break_rock_falling_07.wav": {
+      "sha256": "12d92322eeb0acc1691885c59b82fa0f4e9fa41d64a77b1b918c4f25104fa209",
+      "file": "audio/12d92322eeb0acc1691885c59b82fa0f4e9fa41d64a77b1b918c4f25104fa209.wav",
+      "bytes": 31136,
+      "provenance": "generators/stone_noise_generator/sources/provenance.json"
+    },
+    "stone_noise_generator/sources/rubberduck_break_rock_falling_08.wav": {
+      "sha256": "ccc537e0b07abce4735ea9401a56ad91e83ecf5ed0de76df9f5bb4cce3ffb3bf",
+      "file": "audio/ccc537e0b07abce4735ea9401a56ad91e83ecf5ed0de76df9f5bb4cce3ffb3bf.wav",
+      "bytes": 34734,
+      "provenance": "generators/stone_noise_generator/sources/provenance.json"
+    },
+    "stone_noise_generator/sources/rubberduck_break_rock_falling_09.wav": {
+      "sha256": "2b9014bbfc03c915834b6c6eef48e56ef653d437092f5cdf64765b8da9089cab",
+      "file": "audio/2b9014bbfc03c915834b6c6eef48e56ef653d437092f5cdf64765b8da9089cab.wav",
+      "bytes": 60462,
+      "provenance": "generators/stone_noise_generator/sources/provenance.json"
+    },
+    "stone_noise_generator/sources/rubberduck_sfx2_stones_01.wav": {
+      "sha256": "fff40ec7580b7691f589aa32a4065bf224504a1df70bfb0ffc09226736b5471d",
+      "file": "audio/fff40ec7580b7691f589aa32a4065bf224504a1df70bfb0ffc09226736b5471d.wav",
+      "bytes": 43212,
+      "provenance": "generators/stone_noise_generator/sources/provenance.json"
+    },
+    "stone_noise_generator/sources/rubberduck_sfx2_stones_02.wav": {
+      "sha256": "ca718c5e440247f48c8af2106a3f9139c1ddb94b3d2d3b2c35afae0c2572962a",
+      "file": "audio/ca718c5e440247f48c8af2106a3f9139c1ddb94b3d2d3b2c35afae0c2572962a.wav",
+      "bytes": 49064,
+      "provenance": "generators/stone_noise_generator/sources/provenance.json"
+    },
+    "stone_noise_generator/sources/rubberduck_sfx2_stones_03.wav": {
+      "sha256": "d3bd5581e70325e953c69b9a28b18fbd62854d16d3d8989f4490fb4db565db84",
+      "file": "audio/d3bd5581e70325e953c69b9a28b18fbd62854d16d3d8989f4490fb4db565db84.wav",
+      "bytes": 47222,
+      "provenance": "generators/stone_noise_generator/sources/provenance.json"
+    },
+    "unarmed_foley_generator/sources/independent_nu_hit_02.wav": {
+      "sha256": "3e59aed4da4be8d80e13b347b31af0acb5e84c99637eafa4f7241ff5a881592d",
+      "file": "audio/3e59aed4da4be8d80e13b347b31af0acb5e84c99637eafa4f7241ff5a881592d.wav",
+      "bytes": 103852,
+      "provenance": "generators/unarmed_foley_generator/sources/provenance.json"
+    },
+    "unarmed_foley_generator/sources/independent_nu_hit_07.wav": {
+      "sha256": "96859017e07d0299170435ae9a3e188acb14fce36bf0b46b18422f497887313f",
+      "file": "audio/96859017e07d0299170435ae9a3e188acb14fce36bf0b46b18422f497887313f.wav",
+      "bytes": 99244,
+      "provenance": "generators/unarmed_foley_generator/sources/provenance.json"
+    },
+    "unarmed_foley_generator/sources/independent_nu_hit_08.wav": {
+      "sha256": "ba1ce929ba044bd525b0ee5782358f000935c6cdc365267ad20a3ed6ce3cbf74",
+      "file": "audio/ba1ce929ba044bd525b0ee5782358f000935c6cdc365267ad20a3ed6ce3cbf74.wav",
+      "bytes": 136108,
+      "provenance": "generators/unarmed_foley_generator/sources/provenance.json"
+    },
+    "unarmed_foley_generator/sources/independent_nu_hit_20.wav": {
+      "sha256": "ff6b05f98464746526fdd2b25160eec7a9f76c98a5a2d10c32c9644ed8f1286c",
+      "file": "audio/ff6b05f98464746526fdd2b25160eec7a9f76c98a5a2d10c32c9644ed8f1286c.wav",
+      "bytes": 106156,
+      "provenance": "generators/unarmed_foley_generator/sources/provenance.json"
+    },
+    "unarmed_foley_generator/sources/independent_nu_hit_29.wav": {
+      "sha256": "d5a7cae1028ddb748bcd012816a9f20488c6727d11984c09263bb20ef5db0f53",
+      "file": "audio/d5a7cae1028ddb748bcd012816a9f20488c6727d11984c09263bb20ef5db0f53.wav",
+      "bytes": 80812,
+      "provenance": "generators/unarmed_foley_generator/sources/provenance.json"
+    },
+    "unarmed_foley_generator/sources/independent_nu_hit_34.wav": {
+      "sha256": "33b0f5a03779d179cef2c0935da829532647f26b024a10ed497744163c9440e5",
+      "file": "audio/33b0f5a03779d179cef2c0935da829532647f26b024a10ed497744163c9440e5.wav",
+      "bytes": 101548,
+      "provenance": "generators/unarmed_foley_generator/sources/provenance.json"
+    },
+    "wood_noise_generator/sources/rubberduck_break_wood_breaking_01.wav": {
+      "sha256": "57b6992167e0a3a60db23540f04a038eb88d89ecd03e11d0880d7e6601e2906e",
+      "file": "audio/57b6992167e0a3a60db23540f04a038eb88d89ecd03e11d0880d7e6601e2906e.wav",
+      "bytes": 26366,
+      "provenance": "generators/wood_noise_generator/sources/provenance.json"
+    },
+    "wood_noise_generator/sources/rubberduck_break_wood_breaking_02.wav": {
+      "sha256": "4af67517860de00cbe24dadf798138749eadf55e2deed97710ef8e9d330c41e8",
+      "file": "audio/4af67517860de00cbe24dadf798138749eadf55e2deed97710ef8e9d330c41e8.wav",
+      "bytes": 22008,
+      "provenance": "generators/wood_noise_generator/sources/provenance.json"
+    },
+    "wood_noise_generator/sources/rubberduck_break_wood_breaking_03.wav": {
+      "sha256": "4533a85e0a4dfd04edfaf36e51620525640369a4d056db3d837748303ad0beac",
+      "file": "audio/4533a85e0a4dfd04edfaf36e51620525640369a4d056db3d837748303ad0beac.wav",
+      "bytes": 43052,
+      "provenance": "generators/wood_noise_generator/sources/provenance.json"
+    },
+    "wood_noise_generator/sources/rubberduck_break_wood_falling_01.wav": {
+      "sha256": "1a7b043f4b08e33a0fb8991fce6970ed6232016dba48f785c28f59d7d3a4c9c1",
+      "file": "audio/1a7b043f4b08e33a0fb8991fce6970ed6232016dba48f785c28f59d7d3a4c9c1.wav",
+      "bytes": 61554,
+      "provenance": "generators/wood_noise_generator/sources/provenance.json"
+    },
+    "wood_noise_generator/sources/rubberduck_break_wood_hit_01.wav": {
+      "sha256": "c3797f05af0b6a11c6c54b7e33d6f0f79958fcabe8c470b9463c4898ee1ba98d",
+      "file": "audio/c3797f05af0b6a11c6c54b7e33d6f0f79958fcabe8c470b9463c4898ee1ba98d.wav",
+      "bytes": 21922,
+      "provenance": "generators/wood_noise_generator/sources/provenance.json"
+    },
+    "wood_noise_generator/sources/rubberduck_break_wood_hit_02.wav": {
+      "sha256": "8d433b29cffde366720f0d50cc600032f4b729fee1fd91d3313ab2f30815ff74",
+      "file": "audio/8d433b29cffde366720f0d50cc600032f4b729fee1fd91d3313ab2f30815ff74.wav",
+      "bytes": 24906,
+      "provenance": "generators/wood_noise_generator/sources/provenance.json"
+    }
+  }
+}

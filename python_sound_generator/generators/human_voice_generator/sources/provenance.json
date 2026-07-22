@@ -1,0 +1,82 @@
+{
+  "source_audio_policy": "CC0 or public domain only",
+  "retrieved_utc": "2026-07-16",
+  "conversion": "Decoded with FFmpeg to mono 44100 Hz signed 16-bit PCM WAV; no content processing (no EQ, no level change, no effects) was applied to the bundled files. The HaelDB clips were downmixed stereo->mono and the cicifyre clips were converted 32-bit float->16-bit; that is format only. All trimming, segmentation, retuning, decay, and layering happen at render time in engine.py, so the bundled files stay comparable to what each source page serves.",
+  "verification": "Every collection's licence was read from its own OpenGameArt source page (not from a search result and not from a mirror), and each download's SHA-256 is recorded as retrieved. The repo has been burned before by mirror-vs-source licence mismatches, so a search hit was never treated as a licence.",
+  "excluded": [
+    {
+      "name": "11 male human pain/death sounds (Michel Baradari)",
+      "source_page": "https://opengameart.org/content/11-male-human-paindeath-sounds",
+      "reason": "The obvious first hit for a human pain/death voice, and exactly the kind of thing to reach for. Licensed CC-BY 3.0 on its own OpenGameArt page (author Michel Baradari, submitted by qubodup), which fails the CC0-only policy. Rejected on licence, not on quality."
+    },
+    {
+      "name": "VoiceBosch audio packs (EFFORT / DAMAGE / DEATH, male)",
+      "source_page": "https://opengameart.org/content/effort-sounds-male-audio-pack",
+      "reason": "A whole family of high-quality male effort, damage, and death vocalizations (also on itch.io as VoiceBosch). Every one is CC-BY-SA 4.0 on its own OpenGameArt page -- confirmed on the EFFORT and DEATH pages -- so all three fail the CC0-only policy. Would have covered effort and death outright; rejected on licence."
+    },
+    {
+      "name": "SpliceSound - female inhale/exhale/sigh breathing (Freesound 218309)",
+      "source_page": "https://freesound.org/people/SpliceSound/sounds/218309/",
+      "reason": "The cleanest candidate found for the `breath` cue. Freesound gates the download master behind a login and serves only a lossy preview; policy forbids bundling a lossy preview as if it were a master, and OpenGameArt had no clean CC0 isolated breath. So `breath` is left ABSENT in engine.py -- it refuses to render and names this recording -- rather than approximated from a grunt tail. Reach for a downloaded CC0 breath master to lift it."
+    },
+    {
+      "name": "creature_foley_generator's grunt / hurt / breath cues",
+      "source_page": "local: ../creature_foley_generator",
+      "reason": "Not a licensing exclusion. It has pain, defeat, breath, and grunt cues, but they are built from a rubberduck CREATURE library -- monster vocalizations, not human. Fantasy Adventure's player/hurt prompt is explicit: 'a single very brief nonverbal HUMAN pain grunt ... No monster voice.' Kept here so nobody wires the creature grunts into a human hurt and wonders why it reads as a monster."
+    }
+  ],
+  "collections": [
+    {
+      "name": "grunts of male death and pain",
+      "author": "thebardofblasphemy",
+      "license": "CC0 (Public Domain)",
+      "source_page": "https://opengameart.org/content/grunts-male-death-and-pain",
+      "original_file": "death pain grunts.wav",
+      "original_sha256": "3f00fba827f20ff9ccea1bc07d2c21ab8d3a36e81b48a6005cf8459f02779586",
+      "note": "~50 s of one man's voice 'attempting to sound injured or dying', ~19 grunts and groans separated by silence. The primary hurt and death bank; engine.py cuts individual grunts out of it at render time.",
+      "files": [
+        {
+          "file": "thebardofblasphemy_death_pain_grunts.wav",
+          "original": "death pain grunts.wav"
+        }
+      ]
+    },
+    {
+      "name": "Male Grunt/Yelling sounds",
+      "author": "HaelDB",
+      "license": "CC0 (source page also offers OGA-BY 3.0; used here under CC0)",
+      "source_page": "https://opengameart.org/content/male-gruntyelling-sounds",
+      "original_archive": "yelling sounds.zip",
+      "original_archive_sha256": "e9100a4e3b9dcd146993089970dc6097dcf9935fa4683b196040012bad65d67a",
+      "selection": "Nine of ~60: the six short grunts (3grunt1-6), used for hurt and effort, and one yell from each of three vocalists (1yell1/2yell1/3yell1) for shout. The screams were left for a future scream cue. Recorded on a Neumann mic + Avalon preamp per the source page. Dual-licensed OGA-BY 3.0 / CC0 on its own page; where a work is offered under multiple licences the user may choose one, and CC0 is chosen and recorded here.",
+      "files": [
+        {"file": "haeldb_grunt_01.wav", "original": "yelling sounds/3grunt1.wav"},
+        {"file": "haeldb_grunt_02.wav", "original": "yelling sounds/3grunt2.wav"},
+        {"file": "haeldb_grunt_03.wav", "original": "yelling sounds/3grunt3.wav"},
+        {"file": "haeldb_grunt_04.wav", "original": "yelling sounds/3grunt4.wav"},
+        {"file": "haeldb_grunt_05.wav", "original": "yelling sounds/3grunt5.wav"},
+        {"file": "haeldb_grunt_06.wav", "original": "yelling sounds/3grunt6.wav"},
+        {"file": "haeldb_yell_01.wav", "original": "yelling sounds/1yell1.wav"},
+        {"file": "haeldb_yell_02.wav", "original": "yelling sounds/2yell1.wav"},
+        {"file": "haeldb_yell_03.wav", "original": "yelling sounds/3yell1.wav"}
+      ]
+    },
+    {
+      "name": "Female RPG Voice Starter Pack",
+      "author": "cicifyre",
+      "license": "CC0",
+      "source_page": "https://opengameart.org/content/female-rpg-voice-starter-pack",
+      "original_archive": "RPG Voice Starter Pack.zip",
+      "original_archive_sha256": "6ad46457e66c25e1318f2d45251afc549df22c3cab05b553dd6717ca2a1c7d04",
+      "selection": "Six of ~90: only the wordless reactions from Type 1 -- damaged1-3 (a hurt reaction) and jump1-3 (an effort reaction). At ~0.3 s each they are far too short to be the spoken word 'damaged'; they are grunts. The spell names (fire, heal, aqua, ...) and the spoken action lines are speech and were deliberately left out: this is a non-verbal generator. The female voice for hurt and effort.",
+      "files": [
+        {"file": "cicifyre_damaged_01.wav", "original": "RPG Voice Starter Pack/Type 1/damaged1.wav"},
+        {"file": "cicifyre_damaged_02.wav", "original": "RPG Voice Starter Pack/Type 1/damaged2.wav"},
+        {"file": "cicifyre_damaged_03.wav", "original": "RPG Voice Starter Pack/Type 1/damaged3.wav"},
+        {"file": "cicifyre_jump_01.wav", "original": "RPG Voice Starter Pack/Type 1/jump1.wav"},
+        {"file": "cicifyre_jump_02.wav", "original": "RPG Voice Starter Pack/Type 1/jump2.wav"},
+        {"file": "cicifyre_jump_03.wav", "original": "RPG Voice Starter Pack/Type 1/jump3.wav"}
+      ]
+    }
+  ]
+}

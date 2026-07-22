@@ -1,0 +1,129 @@
+<!doctype html>
+<!-- SPDX-License-Identifier: MIT -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Music Sound Generator Recorder</title>
+  </head>
+  <body>
+    <pre id="status">booting</pre>
+    <!--
+      This project-authored recorder imports the external @strudel/web API and
+      routes the audio graph into a
+      MediaStreamDestination, records that stream with MediaRecorder to webm,
+      evaluates a Strudel pattern, waits N seconds, then writes RESULT_JSON with
+      a base64 data URL for the driver to pull out.
+
+      music_sound_generator writes one `<cue>.cue.js` file per cue next to this
+      template at render time; that file sets `window.__CUE__ = {name, code,
+      seconds}`. Loading a global-assignment script (rather than fetching JSON)
+      sidesteps every dev-server mime/transform quirk for the pattern payload.
+    -->
+    <script type="module">
+      import { initStrudel, evaluate, hush, getAudioContext } from '@strudel/web';
+
+      const status = document.getElementById('status');
+      const params = new URLSearchParams(location.search);
+      const cueName = params.get('cue') || '';
+
+      function setStatus(text) {
+        status.textContent = text;
+      }
+
+      function dataUrlFromBlob(blob) {
+        return new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = () => resolve(reader.result);
+          reader.onerror = () => reject(reader.error);
+          reader.readAsDataURL(blob);
+        });
+      }
+
+      function loadCue(name) {
+        // A plain global-assignment script, written per cue by engine.py. No
+        // fetch(), so no JSON-transform surprises from the dev server.
+        return new Promise((resolve, reject) => {
+          const el = document.createElement('script');
+          el.src = './' + name + '.cue.js';
+          el.onload = () => {
+            if (window.__CUE__ && typeof window.__CUE__.code === 'string') {
+              resolve(window.__CUE__);
+            } else {
+              reject(new Error('cue payload ' + name + '.cue.js set no code'));
+            }
+          };
+          el.onerror = () => reject(new Error('could not load ' + name + '.cue.js'));
+          document.head.appendChild(el);
+        });
+      }
+
+      async function main() {
+        if (!cueName) throw new Error('no ?cue= given');
+        setStatus('loading ' + cueName);
+        const cue = await loadCue(cueName);
+        const seconds = Number(params.get('seconds') || cue.seconds);
+        if (!(seconds > 0)) throw new Error('bad seconds: ' + seconds);
+
+        setStatus('initializing ' + cueName);
+        const ctx = getAudioContext();
+        const capture = ctx.createMediaStreamDestination();
+        const nativeConnect = AudioNode.prototype.connect;
+        let captureConnected = false;
+
+        // Route the graph's master connection into the capture node once, in
+        // addition to the speakers. This is the trick that lets a headless page
+        // record what SuperDough is playing.
+        AudioNode.prototype.connect = function (...args) {
+          if (args[0] === ctx.destination && !captureConnected) {
+            nativeConnect.call(this, capture);
+            captureConnected = true;
+          }
+          return nativeConnect.apply(this, args);
+        };
+
+        await initStrudel({ sync: false });
+        await ctx.resume();
+
+        const chunks = [];
+        const mimeType = MediaRecorder.isTypeSupported('audio/webm;codecs=opus')
+          ? 'audio/webm;codecs=opus'
+          : 'audio/webm';
+        const recorder = new MediaRecorder(capture.stream, { mimeType });
+        recorder.ondataavailable = (event) => {
+          if (event.data.size > 0) {
+            chunks.push(event.data);
+          }
+        };
+
+        const done = new Promise((resolve) => {
+          recorder.onstop = resolve;
+        });
+
+        recorder.start(250);
+        setStatus('recording ' + cueName + ' ' + seconds + 's');
+        await evaluate(cue.code, true);
+        await new Promise((resolve) => setTimeout(resolve, seconds * 1000));
+        hush();
+        recorder.stop();
+        await done;
+
+        const blob = new Blob(chunks, { type: mimeType });
+        const dataUrl = await dataUrlFromBlob(blob);
+        setStatus(
+          'RESULT_JSON:' +
+            JSON.stringify({
+              cue: cueName,
+              seconds,
+              mimeType,
+              size: blob.size,
+              dataUrl,
+            }),
+        );
+      }
+
+      main().catch((error) => {
+        setStatus('ERROR_JSON:' + JSON.stringify({ message: String(error?.message || error), stack: error?.stack || '' }));
+      });
+    </script>
+  </body>
+</html>

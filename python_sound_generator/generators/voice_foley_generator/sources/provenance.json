@@ -1,0 +1,37 @@
+{
+  "source_audio_policy": "CC0 or public domain only",
+  "retrieved_utc": "2026-07-16",
+  "conversion": "Decoded with FFmpeg to mono 44100 Hz signed 16-bit PCM WAV; no content processing was applied to the bundled files. Silence splitting, trimming, retuning, filtering, and layering happen at render time.",
+  "verification": "Each license was read from its OpenGameArt source page. HaelDB offers the collection under both OGA-BY 3.0 and CC0; this project uses the explicit CC0 option.",
+  "collections": [
+    {
+      "name": "Male Grunt/Yelling sounds",
+      "author": "HaelDB",
+      "license": "CC0",
+      "source_page": "https://opengameart.org/content/male-gruntyelling-sounds",
+      "original_archive": "yelling sounds.zip",
+      "original_archive_sha256": "e9100a4e3b9dcd146993089970dc6097dcf9935fa4683b196040012bad65d67a",
+      "selection": "Six files explicitly named grunt were selected from the 63-file, four-performer archive. Files named yell were excluded because the target cues require brief nonverbal effort and explicitly exclude screams.",
+      "files": [
+        {"file": "haeldb_male_grunt_01.wav", "original": "yelling sounds/3grunt1.wav"},
+        {"file": "haeldb_male_grunt_02.wav", "original": "yelling sounds/3grunt2.wav"},
+        {"file": "haeldb_male_grunt_03.wav", "original": "yelling sounds/3grunt3.wav"},
+        {"file": "haeldb_male_grunt_04.wav", "original": "yelling sounds/3grunt4.wav"},
+        {"file": "haeldb_male_grunt_05.wav", "original": "yelling sounds/3grunt5.wav"},
+        {"file": "haeldb_male_grunt_06.wav", "original": "yelling sounds/3grunt6.wav"}
+      ]
+    },
+    {
+      "name": "Female Hurt Grunts & Groans",
+      "author": "Nocturnal_Vanguard / AuraVoice",
+      "license": "CC0",
+      "source_page": "https://opengameart.org/content/female-hurt-grunts-groans",
+      "original_file": "female_hurt_grunts_groans_1.ogg",
+      "original_sha256": "80a9fb09203bb8feb065ba15197609b118cbe167c9a2264670a31ee22c384adb",
+      "selection": "The source is a 13-second reel of isolated performances. Render-time activity detection selects one utterance rather than treating the reel as a single cue.",
+      "files": [
+        {"file": "nocturnal_vanguard_female_hurt.wav", "original": "female_hurt_grunts_groans_1.ogg"}
+      ]
+    }
+  ]
+}

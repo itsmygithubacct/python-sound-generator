@@ -1,0 +1,52 @@
+{
+  "source_audio_policy": "CC0 or public domain only",
+  "retrieved_utc": "2026-07-14",
+  "conversion": "Decoded with FFmpeg to mono 44100 Hz signed 16-bit PCM WAV; no content processing was applied to the bundled source files.",
+  "collections": [
+    {
+      "name": "Door open, door close",
+      "author": "Iwan Gabovitch",
+      "license": "CC0 1.0",
+      "source_page": "https://opengameart.org/content/door-open-door-close",
+      "original_archive": "door.7z",
+      "original_sha256": "81e87d4f7ea2227076b25dc6e595378d3a35ae7e6a45817a051cfbcd17b13ea1",
+      "bundled_files": "iwan_door-*.wav"
+    },
+    {
+      "name": "100 CC0 SFX",
+      "author": "rubberduck",
+      "license": "CC0 1.0",
+      "source_page": "https://opengameart.org/content/100-cc0-sfx",
+      "original_archive": "100-CC0-SFX_0.zip",
+      "original_sha256": "a5c135878c132f1c59cca54e60061c296cd0ac27ad031ca2c41b8cd5cab3c706",
+      "bundled_files": "rubberduck_*.wav"
+    },
+    {
+      "name": "Various Sound Effects",
+      "author": "laleksic",
+      "license": "CC0 1.0",
+      "source_page": "https://opengameart.org/content/various-sound-effects",
+      "original_archive": "sounds_8.zip",
+      "original_sha256": "82c945e5f3c97e4d38dbf18fa27bcea78dbed73b4078c5bbafc04ad89b4096db",
+      "bundled_files": "laleksic_*.wav"
+    },
+    {
+      "name": "Squeaky door",
+      "author": "leonmire",
+      "license": "Public domain",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Squeaky_door.ogg",
+      "original_file": "Squeaky_door.ogg",
+      "original_sha256": "b60b97c3f73c9754fc36b58cea4862d50ff800f12632c9b55bc6f8132e93d9c5",
+      "bundled_files": "leonmire_squeaky_door.wav"
+    },
+    {
+      "name": "Squeaky door hinge",
+      "author": "MKFI",
+      "license": "Public domain",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Squeaky_door_hinge.ogg",
+      "original_file": "Squeaky_door_hinge.ogg",
+      "original_sha256": "7263bddb13deb0d03b04ffd6cb07d9ba1edb1066354c3ee8d0bf7f32917684f3",
+      "bundled_files": "mkfi_squeaky_hinge.wav"
+    }
+  ]
+}

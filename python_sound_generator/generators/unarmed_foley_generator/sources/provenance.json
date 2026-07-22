@@ -1,0 +1,63 @@
+{
+  "source_audio_policy": "CC0 or public domain only",
+  "retrieved_utc": "2026-07-15",
+  "conversion": "Decoded with FFmpeg to mono 44100 Hz signed 16-bit PCM WAV; no content processing was applied to the bundled source files. Trimming, retuning, and filtering happen at render time in engine.py so the bundled files stay comparable to what the source page serves.",
+  "verification": "Every collection's license was read from its source page rather than from search results, and each archive's SHA-256 is recorded as downloaded.",
+  "audio_quality_note": "The bundled files are named hitNN.mp3.flac upstream: the author distributed FLAC wrapped around audio that had already been through MP3. They are lossy-sourced and no decoding here can undo that. Kept anyway, by ear: for a sub-second impact under a game mix the artifacts are inaudible, and this pack had the dry boxing character that the lossless alternatives did not.",
+  "excluded": [
+    {
+      "name": "Punches, hits, swords and squishes",
+      "source_page": "https://opengameart.org/content/punches-hits-swords-and-squishes",
+      "reason": "CC-BY-SA 3.0, and assembled from ~35 Freesound uploads whose per-item licenses are a mix of CC-BY 3.0 and CC0. Fails the CC0-only policy twice over: the collection license is share-alike, and the parts are not uniformly licensed."
+    },
+    {
+      "name": "Impact (qubodup)",
+      "source_page": "https://opengameart.org/content/impact",
+      "reason": "CC0 and licensing-clean, but rejected on character after listening: qubodupImpactMeat01/02 are wet flesh squishes. They are right for gore or a gib and wrong for boxing, where the hit is a dry thud. Reconsider these if a gore cue is ever wanted."
+    },
+    {
+      "name": "Punch (qubodup)",
+      "source_page": "https://opengameart.org/content/punch",
+      "reason": "CC0 and licensing-clean, with the cleanest chain of anything considered (qubodup's own punching-bag recording, CC0 on both OpenGameArt and Freesound, true FLAC rather than transcoded). Rejected on character in favour of the pack below, which sounded closer to a fistfight. Worth revisiting first if the bundled sources ever need replacing."
+    }
+  ],
+  "collections": [
+    {
+      "name": "37 hits/punches",
+      "author": "Independent.nu",
+      "submitted_by": "qubodup",
+      "license": "CC0 1.0",
+      "source_page": "https://opengameart.org/content/37-hitspunches",
+      "submitted": "2009-08-13",
+      "original_archive": "independent_nu_ljudbank-hits_and_punches.7z",
+      "original_archive_sha256": "641c65d2e1a00002171c23e2c6fa14e925ae4c12db09d3f79d130a4538916032",
+      "selection": "The archive holds 37 hits. Six are bundled: the low-end-heaviest of the set, chosen by measuring each one's spectral balance from its onset and keeping those with the most energy below 1 kHz. The brighter, slappier hits in the archive were left out by ear -- a block's sharpness is better reached by filtering a thud than by mixing in a recording that fights it.",
+      "files": [
+        {
+          "file": "independent_nu_hit_02.wav",
+          "original": "hits/hit02.mp3.flac"
+        },
+        {
+          "file": "independent_nu_hit_07.wav",
+          "original": "hits/hit07.mp3.flac"
+        },
+        {
+          "file": "independent_nu_hit_08.wav",
+          "original": "hits/hit08.mp3.flac"
+        },
+        {
+          "file": "independent_nu_hit_20.wav",
+          "original": "hits/hit20.mp3.flac"
+        },
+        {
+          "file": "independent_nu_hit_29.wav",
+          "original": "hits/hit29.mp3.flac"
+        },
+        {
+          "file": "independent_nu_hit_34.wav",
+          "original": "hits/hit34.mp3.flac"
+        }
+      ]
+    }
+  ]
+}

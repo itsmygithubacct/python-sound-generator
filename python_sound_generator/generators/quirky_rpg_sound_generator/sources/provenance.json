@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "source_audio_policy": "CC0 1.0 recordings already approved and bundled by their material-owning providers",
+  "storage_policy": "No WAV is duplicated in this provider. Logical source paths resolve to the existing owning provider or the shared content-addressed asset catalog.",
+  "selection_policy": "Only physical cloth, gear, body contact, panel movement, and latch edges use recordings. Every recording is aggressively filtered, bit-reduced, and sample-held to fit the original cartridge-like palette.",
+  "collections": [
+    {
+      "name": "RPG Sound Pack",
+      "author": "artisticdude",
+      "license": "CC0 1.0",
+      "source_page": "https://opengameart.org/content/rpg-sound-pack",
+      "owner_provenance": "generators/creature_foley_generator/sources/provenance.json",
+      "quirky_rpg_use": "cartridge-treated clothing and carried gear for equip",
+      "logical_files": [
+        "creature_foley_generator/sources/artisticdude_cloth.wav",
+        "creature_foley_generator/sources/artisticdude_cloth_heavy.wav",
+        "creature_foley_generator/sources/artisticdude_armor_light.wav",
+        "creature_foley_generator/sources/artisticdude_chainmail.wav"
+      ]
+    },
+    {
+      "name": "37 hits/punches",
+      "author": "Independent.nu",
+      "license": "CC0 1.0",
+      "source_page": "https://opengameart.org/content/37-hitspunches",
+      "owner_provenance": "generators/unarmed_foley_generator/sources/provenance.json",
+      "quirky_rpg_use": "cartridge-treated ordinary, player, and critical body impacts",
+      "logical_files": [
+        "unarmed_foley_generator/sources/independent_nu_hit_02.wav",
+        "unarmed_foley_generator/sources/independent_nu_hit_07.wav",
+        "unarmed_foley_generator/sources/independent_nu_hit_08.wav",
+        "unarmed_foley_generator/sources/independent_nu_hit_20.wav",
+        "unarmed_foley_generator/sources/independent_nu_hit_29.wav",
+        "unarmed_foley_generator/sources/independent_nu_hit_34.wav"
+      ]
+    },
+    {
+      "name": "Wood panel and plank scrape recordings",
+      "author": "LampEight and RutgerMuller",
+      "license": "CC0 1.0",
+      "source_page": "See generators/wood_noise_generator/sources/provenance.json for both source pages",
+      "owner_provenance": "generators/wood_noise_generator/sources/provenance.json",
+      "quirky_rpg_use": "cartridge-treated door-panel movement",
+      "logical_files": [
+        "wood_noise_generator/sources/lampeight_wood_panel_scrape.wav",
+        "wood_noise_generator/sources/rutgermuller_wood_plank_scraping.wav"
+      ]
+    },
+    {
+      "name": "Various Sound Effects",
+      "author": "laleksic",
+      "license": "CC0 1.0",
+      "source_page": "https://opengameart.org/content/various-sound-effects",
+      "owner_provenance": "generators/door_sound_generator/sources/provenance.json",
+      "quirky_rpg_use": "cartridge-treated door latch",
+      "logical_files": [
+        "door_sound_generator/sources/laleksic_lock.wav"
+      ]
+    }
+  ]
+}

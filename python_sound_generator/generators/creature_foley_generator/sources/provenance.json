@@ -1,0 +1,441 @@
+{
+  "source_audio_policy": "CC0 or public domain only",
+  "retrieved_utc": "2026-07-15",
+  "conversion": "Decoded with FFmpeg to mono 44100 Hz signed 16-bit PCM WAV; no content processing was applied to the bundled source files.",
+  "verification": "Every collection's license was read from its source page rather than from search results, and each archive's SHA-256 is recorded as downloaded.",
+  "excluded": [
+    {
+      "name": "Animal Sounds",
+      "source_page": "https://opengameart.org/content/animal-sounds",
+      "reason": "An OpenGameArt collection that curates other submitters' work under mixed per-item licenses with no single license on the collection page."
+    },
+    {
+      "name": "Proprietary commercial-game creature audio",
+      "source_page": "not applicable (rejected proprietary reference)",
+      "reason": "Proprietary shipped game assets are never usable as source."
+    }
+  ],
+  "collections": [
+    {
+      "name": "80 CC0 creature SFX",
+      "author": "rubberduck",
+      "license": "CC0 1.0",
+      "source_page": "https://opengameart.org/content/80-cc0-creature-sfx",
+      "original_archive": "80-CC0-creature-SFX.zip",
+      "original_archive_sha256": "5d4002eea42f278e76543bb36e8ddd2cb978588a13271984191d8228f5d26768",
+      "files": [
+        {
+          "bundled": "rubberduck_creature_breath.wav",
+          "original": "breath.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_bug_01.wav",
+          "original": "bug_01.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_bug_03.wav",
+          "original": "bug_03.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_burble_01.wav",
+          "original": "burble_01.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_burble_02.wav",
+          "original": "burble_02.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_cute_01.wav",
+          "original": "cute_01.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_cute_03.wav",
+          "original": "cute_03.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_cute_05.wav",
+          "original": "cute_05.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_cute_08.wav",
+          "original": "cute_08.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_eat_01.wav",
+          "original": "eat_01.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_eat_03.wav",
+          "original": "eat_03.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_grunt_01.wav",
+          "original": "grunt_01.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_grunt_04.wav",
+          "original": "grunt_04.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_howl.wav",
+          "original": "howl.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_hurt_01.wav",
+          "original": "hurt_01.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_hurt_02.wav",
+          "original": "hurt_02.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_hurt_03.wav",
+          "original": "hurt_03.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_hurt_05.wav",
+          "original": "hurt_05.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_monster_01.wav",
+          "original": "monster_01.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_monster_03.wav",
+          "original": "monster_03.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_monster_06.wav",
+          "original": "monster_06.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_roar_01.wav",
+          "original": "roar_01.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_roar_02.wav",
+          "original": "roar_02.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_roar_03.wav",
+          "original": "roar_03.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_scream_01.wav",
+          "original": "scream_01.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_scream_02.wav",
+          "original": "scream_02.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_snore.wav",
+          "original": "snore.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_troll_01.wav",
+          "original": "troll_01.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_troll_03.wav",
+          "original": "troll_03.ogg"
+        }
+      ]
+    },
+    {
+      "name": "80 CC0 creature SFX #2",
+      "author": "rubberduck",
+      "license": "CC0 1.0",
+      "source_page": "https://opengameart.org/content/80-cc0-creture-sfx-2",
+      "original_archive": "80-CC0-creature-sfx-2.zip",
+      "original_archive_sha256": "6d251aeaaaa9c2fffed8fc2f64bab3104725ceabf9259a8441994e7a20cfe22f",
+      "files": [
+        {
+          "bundled": "rubberduck_creature_alien_08.wav",
+          "original": "alien_08.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_alien_12.wav",
+          "original": "alien_12.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_attack_01.wav",
+          "original": "attack_01.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_attack_02.wav",
+          "original": "attack_02.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_attack_03.wav",
+          "original": "attack_03.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_attack_05.wav",
+          "original": "attack_05.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_breath_02.wav",
+          "original": "breath_02.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_bug_05.wav",
+          "original": "bug_05.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_bug_09.wav",
+          "original": "bug_09.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_die_01.wav",
+          "original": "die_01.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_die_02.wav",
+          "original": "die_02.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_die_03.wav",
+          "original": "die_03.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_die_04.wav",
+          "original": "die_04.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_grunt_06.wav",
+          "original": "grunt_06.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_monster_08.wav",
+          "original": "monster_08.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_monster_12.wav",
+          "original": "monster_12.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_monster_18.wav",
+          "original": "monster_18.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_roar_04.wav",
+          "original": "roar_04.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_roar_05.wav",
+          "original": "roar_05.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_slime_01.wav",
+          "original": "slime_01.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_slime_05.wav",
+          "original": "slime_05.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_snore_02.wav",
+          "original": "snore_02.ogg"
+        },
+        {
+          "bundled": "rubberduck_creature_stomp_01.wav",
+          "original": "stomp_01.ogg"
+        }
+      ]
+    },
+    {
+      "name": "75 CC0 breaking / falling / hit SFX",
+      "author": "rubberduck",
+      "license": "CC0 1.0",
+      "source_page": "https://opengameart.org/content/75-cc0-breaking-falling-hit-sfx",
+      "original_archive": "sfx_breaking_and_falling.zip",
+      "original_archive_sha256": "e6ee04d91c5f4d30cfda1260d2c9d1faf96fda36319287215fbd07bcb1a80451",
+      "files": [
+        {
+          "bundled": "rubberduck_break_glass_breaking_01.wav",
+          "original": "bfh1_glass_breaking_01.ogg"
+        },
+        {
+          "bundled": "rubberduck_break_glass_breaking_03.wav",
+          "original": "bfh1_glass_breaking_03.ogg"
+        },
+        {
+          "bundled": "rubberduck_break_hit_01.wav",
+          "original": "bfh1_hit_01.ogg"
+        },
+        {
+          "bundled": "rubberduck_break_hit_03.wav",
+          "original": "bfh1_hit_03.ogg"
+        },
+        {
+          "bundled": "rubberduck_break_hit_05.wav",
+          "original": "bfh1_hit_05.ogg"
+        },
+        {
+          "bundled": "rubberduck_break_rock_breaking_01.wav",
+          "original": "bfh1_rock_breaking_01.ogg"
+        },
+        {
+          "bundled": "rubberduck_break_rock_breaking_02.wav",
+          "original": "bfh1_rock_breaking_02.ogg"
+        },
+        {
+          "bundled": "rubberduck_break_rock_falling_01.wav",
+          "original": "bfh1_rock_falling_01.ogg"
+        },
+        {
+          "bundled": "rubberduck_break_rock_falling_03.wav",
+          "original": "bfh1_rock_falling_03.ogg"
+        },
+        {
+          "bundled": "rubberduck_break_wood_breaking_01.wav",
+          "original": "bfh1_wood_breaking_01.ogg"
+        },
+        {
+          "bundled": "rubberduck_break_wood_breaking_02.wav",
+          "original": "bfh1_wood_breaking_02.ogg"
+        },
+        {
+          "bundled": "rubberduck_break_wood_breaking_03.wav",
+          "original": "bfh1_wood_breaking_03.ogg"
+        },
+        {
+          "bundled": "rubberduck_break_wood_falling_01.wav",
+          "original": "bfh1_wood_falling_01.ogg"
+        },
+        {
+          "bundled": "rubberduck_break_wood_hit_01.wav",
+          "original": "bfh1_wood_hit_01.ogg"
+        },
+        {
+          "bundled": "rubberduck_break_wood_hit_02.wav",
+          "original": "bfh1_wood_hit_02.ogg"
+        }
+      ]
+    },
+    {
+      "name": "RPG Sound Pack",
+      "author": "artisticdude",
+      "license": "CC0 1.0",
+      "source_page": "https://opengameart.org/content/rpg-sound-pack",
+      "original_archive": "rpg_sound_pack.zip",
+      "original_archive_sha256": "f80754a9c04854e30c9da89d0186540ad097309d98b41387b6e83029e2601421",
+      "files": [
+        {
+          "bundled": "artisticdude_armor_light.wav",
+          "original": "armor-light.wav"
+        },
+        {
+          "bundled": "artisticdude_bite_small_01.wav",
+          "original": "bite-small.wav"
+        },
+        {
+          "bundled": "artisticdude_bite_small_02.wav",
+          "original": "bite-small2.wav"
+        },
+        {
+          "bundled": "artisticdude_bite_small_03.wav",
+          "original": "bite-small3.wav"
+        },
+        {
+          "bundled": "artisticdude_chainmail.wav",
+          "original": "chainmail1.wav"
+        },
+        {
+          "bundled": "artisticdude_cloth.wav",
+          "original": "cloth.wav"
+        },
+        {
+          "bundled": "artisticdude_cloth_heavy.wav",
+          "original": "cloth-heavy.wav"
+        },
+        {
+          "bundled": "artisticdude_giant1.wav",
+          "original": "giant1.wav"
+        },
+        {
+          "bundled": "artisticdude_giant2.wav",
+          "original": "giant2.wav"
+        },
+        {
+          "bundled": "artisticdude_giant4.wav",
+          "original": "giant4.wav"
+        },
+        {
+          "bundled": "artisticdude_mnstr1.wav",
+          "original": "mnstr1.wav"
+        },
+        {
+          "bundled": "artisticdude_mnstr12.wav",
+          "original": "mnstr12.wav"
+        },
+        {
+          "bundled": "artisticdude_mnstr3.wav",
+          "original": "mnstr3.wav"
+        },
+        {
+          "bundled": "artisticdude_mnstr5.wav",
+          "original": "mnstr5.wav"
+        },
+        {
+          "bundled": "artisticdude_mnstr7.wav",
+          "original": "mnstr7.wav"
+        },
+        {
+          "bundled": "artisticdude_mnstr9.wav",
+          "original": "mnstr9.wav"
+        },
+        {
+          "bundled": "artisticdude_ogre1.wav",
+          "original": "ogre1.wav"
+        },
+        {
+          "bundled": "artisticdude_ogre3.wav",
+          "original": "ogre3.wav"
+        },
+        {
+          "bundled": "artisticdude_shade1.wav",
+          "original": "shade1.wav"
+        },
+        {
+          "bundled": "artisticdude_shade7.wav",
+          "original": "shade7.wav"
+        },
+        {
+          "bundled": "artisticdude_slime1.wav",
+          "original": "slime1.wav"
+        },
+        {
+          "bundled": "artisticdude_slime5.wav",
+          "original": "slime5.wav"
+        },
+        {
+          "bundled": "artisticdude_wolfman.wav",
+          "original": "wolfman.wav"
+        }
+      ]
+    },
+    {
+      "name": "Large Wings Flap",
+      "author": "AntumDeluge",
+      "license": "CC0 1.0",
+      "source_page": "https://opengameart.org/content/large-wings-flap",
+      "original_archive": "wings_flap_large.zip",
+      "original_archive_sha256": "f0907c3639f1cc828ac54c9527e8e458d0ca173626d050a8eb8df54a9e36c1b5",
+      "files": [
+        {
+          "bundled": "antum_wings_flap_large.wav",
+          "original": "wings_flap_large.flac"
+        }
+      ],
+      "upstream_source": {
+        "name": "fast simple chop 5.aif",
+        "author": "dave.des",
+        "license": "CC0 1.0",
+        "source_page": "https://freesound.org/s/127197/",
+        "note": "The bundled flap is AntumDeluge's CC0 derivative of this CC0 Freesound recording; both links were checked before bundling because a CC0 badge on a derivative is only valid when the upstream permits it."
+      }
+    }
+  ]
+}

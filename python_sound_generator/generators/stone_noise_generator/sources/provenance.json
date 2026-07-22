@@ -1,0 +1,135 @@
+{
+  "source_audio_policy": "CC0 or public domain only",
+  "retrieved_utc": "2026-07-15",
+  "conversion": "Decoded with FFmpeg to mono 44100 Hz signed 16-bit PCM WAV; no content processing was applied to the bundled source files. Trimming, retuning, darkening and layering happen at render time in engine.py so the bundled files stay comparable to what the source page serves.",
+  "verification": "Every collection's license was read from its own source page rather than from search results, and each archive's SHA-256 is recorded as downloaded.",
+  "provenance_note": "These twenty files are not a fresh download. Each is byte-identical to the corresponding file in the copied projectile source bank, and the archive SHA-256 values below are the ones recorded when that vetted bank was fetched. Provider-local copies preserve legacy source-relative loading; package checks keep the files and their provenance together.",
+  "coverage_note": "Twenty recordings span four families: struck (Kenney mining), loose contact (Rubberduck stones), fracture (rock breaking), and debris (rock falling). Fifteen are small and bright, with measured centroids of 1.3-7.1 kHz and under 15 percent of their energy below 500 Hz. The five kenney_impact_mining recordings are a useful exception: they peak at 59-98 Hz with 22-85 percent of their energy below 80 Hz. Two modeled gaps remain: no source was recorded from a large mass, so scale still uses varispeed, and no source contains sustained stone-on-stone grinding, so the grind cue is granular.",
+  "excluded": [
+    {
+      "name": "felixblume_roll_gravel.wav / erwil_gravel_turn.wav",
+      "source_page": "see vehicle_foley_generator/sources/provenance.json",
+      "reason": "Already bundled and vetted CC0 on this machine, and gravel is squarely this generator's material. Not used anyway: both are recordings of a tire on gravel, and vehicle_foley_generator's own provenance records that engine bleed is audible in six of its twelve files. A material library has to ship the material and not the vehicle that happened to be driving over it. Revisit only if a gravel bed is ever wanted that is allowed to have a car in it."
+    },
+    {
+      "name": "Freesound results for rock / stone / rubble generally",
+      "source_page": "https://freesound.org/",
+      "reason": "Freesound mixes CC0, CC-BY and Sampling+ per sound, and a search result is not a licence. Nothing was taken from it here. If the large-mass and grind gaps are ever filled from Freesound, read each sound's own page, audition the public HQ preview first, and download second -- the order vehicle_foley_generator worked out."
+    }
+  ],
+  "collections": [
+    {
+      "name": "Impact Sounds",
+      "author": "Kenney",
+      "license": "CC0 1.0",
+      "source_page": "https://kenney.nl/assets/impact-sounds",
+      "original_archive": "kenney_impact-sounds.zip",
+      "original_archive_sha256": "029d734af1582474edf3a694d1b0cebc97c1c152f2f39fa34d4c2bafc5de77f8",
+      "note": "A tool going into rock, and the only recording of stone here with any weight in it. Peaks at 59-98 Hz against the rubberduck stones' 3.5-4.2 kHz, which is why the two are always layered rather than chosen between: mining is all body and no crack, stones are all crack and no body, and a struck rock is both. The same archive aircraft_spacecraft_generator and projectile_sounds both vetted; item 11 uses these for stone and dirt contact.",
+      "files": [
+        {
+          "file": "kenney_impact_mining_000.wav",
+          "original": "impactMining_000.ogg"
+        },
+        {
+          "file": "kenney_impact_mining_001.wav",
+          "original": "impactMining_001.ogg"
+        },
+        {
+          "file": "kenney_impact_mining_002.wav",
+          "original": "impactMining_002.ogg"
+        },
+        {
+          "file": "kenney_impact_mining_003.wav",
+          "original": "impactMining_003.ogg"
+        },
+        {
+          "file": "kenney_impact_mining_004.wav",
+          "original": "impactMining_004.ogg"
+        }
+      ]
+    },
+    {
+      "name": "100 CC0 SFX #2",
+      "author": "rubberduck",
+      "license": "CC0 1.0",
+      "source_page": "https://opengameart.org/content/100-cc0-sfx-2",
+      "original_archive": "sfx_100_v2.zip",
+      "original_archive_sha256": "0fc61b4494e2e893c0c015ced4877b3f689c7d84a48cb61daecd7ddb52db797b",
+      "note": "Loose stones knocking together. The closest thing here to bare contact -- stone touching stone without breaking -- so these carry `strike` and the grains `grind` is built from.",
+      "files": [
+        {
+          "file": "rubberduck_sfx2_stones_01.wav",
+          "original": "sfx100v2_stones_01.ogg"
+        },
+        {
+          "file": "rubberduck_sfx2_stones_02.wav",
+          "original": "sfx100v2_stones_02.ogg"
+        },
+        {
+          "file": "rubberduck_sfx2_stones_03.wav",
+          "original": "sfx100v2_stones_03.ogg"
+        }
+      ]
+    },
+    {
+      "name": "75 CC0 breaking / falling / hit SFX",
+      "author": "rubberduck",
+      "license": "CC0 1.0",
+      "source_page": "https://opengameart.org/content/75-cc0-breaking-falling-hit-sfx",
+      "original_archive": "sfx_breaking_and_falling.zip",
+      "original_archive_sha256": "e6ee04d91c5f4d30cfda1260d2c9d1faf96fda36319287215fbd07bcb1a80451",
+      "note": "The fracture and the debris. rock_breaking_* is stone failing and rock_falling_* is the pieces afterwards, which is exactly the split a material generator needs: one owns `crack` and `shatter`, the other owns `fall`, `scatter` and `rockfall`. The same archive creature_foley_generator, aircraft_spacecraft_generator and projectile_sounds all vetted; item 6 took five of the nine rock_falling takes and item 11 took all nine, which is the count kept here.",
+      "files": [
+        {
+          "file": "rubberduck_break_rock_breaking_01.wav",
+          "original": "bfh1_rock_breaking_01.ogg"
+        },
+        {
+          "file": "rubberduck_break_rock_breaking_02.wav",
+          "original": "bfh1_rock_breaking_02.ogg"
+        },
+        {
+          "file": "rubberduck_break_rock_breaking_03.wav",
+          "original": "bfh1_rock_breaking_03.ogg"
+        },
+        {
+          "file": "rubberduck_break_rock_falling_01.wav",
+          "original": "bfh1_rock_falling_01.ogg"
+        },
+        {
+          "file": "rubberduck_break_rock_falling_02.wav",
+          "original": "bfh1_rock_falling_02.ogg"
+        },
+        {
+          "file": "rubberduck_break_rock_falling_03.wav",
+          "original": "bfh1_rock_falling_03.ogg"
+        },
+        {
+          "file": "rubberduck_break_rock_falling_04.wav",
+          "original": "bfh1_rock_falling_04.ogg"
+        },
+        {
+          "file": "rubberduck_break_rock_falling_05.wav",
+          "original": "bfh1_rock_falling_05.ogg"
+        },
+        {
+          "file": "rubberduck_break_rock_falling_06.wav",
+          "original": "bfh1_rock_falling_06.ogg"
+        },
+        {
+          "file": "rubberduck_break_rock_falling_07.wav",
+          "original": "bfh1_rock_falling_07.ogg"
+        },
+        {
+          "file": "rubberduck_break_rock_falling_08.wav",
+          "original": "bfh1_rock_falling_08.ogg"
+        },
+        {
+          "file": "rubberduck_break_rock_falling_09.wav",
+          "original": "bfh1_rock_falling_09.ogg"
+        }
+      ]
+    }
+  ]
+}

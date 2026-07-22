@@ -1,0 +1,800 @@
+{
+ "source_audio_policy": "CC0 or public domain only",
+ "retrieved_utc": "2026-07-15",
+ "conversion": "Decoded with FFmpeg to mono 44100 Hz signed 16-bit PCM WAV; no content processing was applied to the bundled source files.",
+ "verification": "Every collection's license was read on its own source page rather than from search results, and every archive was downloaded here and its SHA-256 recorded from the bytes received. The 32 rubberduck wood files named in shared_source_bank are resolved from the byte-identical wood_noise_generator bank instead of being stored twice.",
+ "shared_source_bank": {
+  "package": "wood_noise_generator",
+  "provenance": "wood_noise_generator/sources/provenance.json",
+  "license": "CC0 1.0",
+  "file_count": 32,
+  "ownership": "General rubberduck wood contact, cracking, falling, slam, breaking, and hit recordings are owned by the material generator. Projectile-specific Kenney impactWood light/medium/heavy masters remain local to projectile_sounds."
+ },
+ "lossy_at_source": "The Independent.nu hits are FLAC wrapped around already-MP3 audio, so they carry MP3 artefacts no re-encode can remove. Kept anyway, by ear, exactly as unarmed_foley_generator kept them.",
+ "excluded": [
+  {
+   "name": "Car tire squeal skid loop",
+   "source_page": "https://opengameart.org/content/car-tire-squeal-skid-loop",
+   "reason": "CC-BY 3.0, not CC0. Reads as CC0-adjacent in search results, which is why licences are read on the page."
+  },
+  {
+   "name": "Punches, hits, swords and squishes",
+   "source_page": "https://opengameart.org/content/punches-hits-swords-and-squishes",
+   "reason": "CC-BY-SA 3.0 over mixed CC-BY/CC0 upstreams. Fails the CC0-only policy twice over. It is also the pack whose name most invites reaching for it; unarmed_foley_generator rejected it first, on the same grounds."
+  },
+  {
+   "name": "Freesound generally",
+   "source_page": "https://freesound.org/",
+   "reason": "Per-sound licensing mixes CC0, CC-BY and Sampling+. Nothing there may be assumed CC0 without reading its own page."
+  }
+ ],
+ "collections": [
+  {
+   "name": "Impact Sounds",
+   "author": "Kenney",
+   "license": "CC0 1.0",
+   "source_page": "https://kenney.nl/assets/impact-sounds",
+   "original_archive": "kenney_impact-sounds.zip",
+   "original_archive_sha256": "029d734af1582474edf3a694d1b0cebc97c1c152f2f39fa34d4c2bafc5de77f8",
+   "note": "The contact layer for four of the six materials. Metal, plate and tin for metal; wood and plank for wood; soft for dirt; mining for stone and dirt. Close-mic'd and dry, which is what a contact layer wants.",
+   "files": [
+    {
+     "bundled": "kenney_impact_metal_light_000.wav",
+     "original": "impactMetal_light_000.ogg"
+    },
+    {
+     "bundled": "kenney_impact_metal_light_001.wav",
+     "original": "impactMetal_light_001.ogg"
+    },
+    {
+     "bundled": "kenney_impact_metal_light_002.wav",
+     "original": "impactMetal_light_002.ogg"
+    },
+    {
+     "bundled": "kenney_impact_metal_light_003.wav",
+     "original": "impactMetal_light_003.ogg"
+    },
+    {
+     "bundled": "kenney_impact_metal_light_004.wav",
+     "original": "impactMetal_light_004.ogg"
+    },
+    {
+     "bundled": "kenney_impact_metal_medium_000.wav",
+     "original": "impactMetal_medium_000.ogg"
+    },
+    {
+     "bundled": "kenney_impact_metal_medium_001.wav",
+     "original": "impactMetal_medium_001.ogg"
+    },
+    {
+     "bundled": "kenney_impact_metal_medium_002.wav",
+     "original": "impactMetal_medium_002.ogg"
+    },
+    {
+     "bundled": "kenney_impact_metal_medium_003.wav",
+     "original": "impactMetal_medium_003.ogg"
+    },
+    {
+     "bundled": "kenney_impact_metal_medium_004.wav",
+     "original": "impactMetal_medium_004.ogg"
+    },
+    {
+     "bundled": "kenney_impact_metal_heavy_000.wav",
+     "original": "impactMetal_heavy_000.ogg"
+    },
+    {
+     "bundled": "kenney_impact_metal_heavy_001.wav",
+     "original": "impactMetal_heavy_001.ogg"
+    },
+    {
+     "bundled": "kenney_impact_metal_heavy_002.wav",
+     "original": "impactMetal_heavy_002.ogg"
+    },
+    {
+     "bundled": "kenney_impact_metal_heavy_003.wav",
+     "original": "impactMetal_heavy_003.ogg"
+    },
+    {
+     "bundled": "kenney_impact_metal_heavy_004.wav",
+     "original": "impactMetal_heavy_004.ogg"
+    },
+    {
+     "bundled": "kenney_impact_plate_light_000.wav",
+     "original": "impactPlate_light_000.ogg"
+    },
+    {
+     "bundled": "kenney_impact_plate_light_001.wav",
+     "original": "impactPlate_light_001.ogg"
+    },
+    {
+     "bundled": "kenney_impact_plate_light_002.wav",
+     "original": "impactPlate_light_002.ogg"
+    },
+    {
+     "bundled": "kenney_impact_plate_light_003.wav",
+     "original": "impactPlate_light_003.ogg"
+    },
+    {
+     "bundled": "kenney_impact_plate_light_004.wav",
+     "original": "impactPlate_light_004.ogg"
+    },
+    {
+     "bundled": "kenney_impact_plate_medium_000.wav",
+     "original": "impactPlate_medium_000.ogg"
+    },
+    {
+     "bundled": "kenney_impact_plate_medium_001.wav",
+     "original": "impactPlate_medium_001.ogg"
+    },
+    {
+     "bundled": "kenney_impact_plate_medium_002.wav",
+     "original": "impactPlate_medium_002.ogg"
+    },
+    {
+     "bundled": "kenney_impact_plate_medium_003.wav",
+     "original": "impactPlate_medium_003.ogg"
+    },
+    {
+     "bundled": "kenney_impact_plate_medium_004.wav",
+     "original": "impactPlate_medium_004.ogg"
+    },
+    {
+     "bundled": "kenney_impact_plate_heavy_000.wav",
+     "original": "impactPlate_heavy_000.ogg"
+    },
+    {
+     "bundled": "kenney_impact_plate_heavy_001.wav",
+     "original": "impactPlate_heavy_001.ogg"
+    },
+    {
+     "bundled": "kenney_impact_plate_heavy_002.wav",
+     "original": "impactPlate_heavy_002.ogg"
+    },
+    {
+     "bundled": "kenney_impact_plate_heavy_003.wav",
+     "original": "impactPlate_heavy_003.ogg"
+    },
+    {
+     "bundled": "kenney_impact_plate_heavy_004.wav",
+     "original": "impactPlate_heavy_004.ogg"
+    },
+    {
+     "bundled": "kenney_impact_tin_medium_000.wav",
+     "original": "impactTin_medium_000.ogg"
+    },
+    {
+     "bundled": "kenney_impact_tin_medium_001.wav",
+     "original": "impactTin_medium_001.ogg"
+    },
+    {
+     "bundled": "kenney_impact_tin_medium_002.wav",
+     "original": "impactTin_medium_002.ogg"
+    },
+    {
+     "bundled": "kenney_impact_tin_medium_003.wav",
+     "original": "impactTin_medium_003.ogg"
+    },
+    {
+     "bundled": "kenney_impact_tin_medium_004.wav",
+     "original": "impactTin_medium_004.ogg"
+    },
+    {
+     "bundled": "kenney_impact_wood_light_000.wav",
+     "original": "impactWood_light_000.ogg"
+    },
+    {
+     "bundled": "kenney_impact_wood_light_001.wav",
+     "original": "impactWood_light_001.ogg"
+    },
+    {
+     "bundled": "kenney_impact_wood_light_002.wav",
+     "original": "impactWood_light_002.ogg"
+    },
+    {
+     "bundled": "kenney_impact_wood_light_003.wav",
+     "original": "impactWood_light_003.ogg"
+    },
+    {
+     "bundled": "kenney_impact_wood_light_004.wav",
+     "original": "impactWood_light_004.ogg"
+    },
+    {
+     "bundled": "kenney_impact_wood_medium_000.wav",
+     "original": "impactWood_medium_000.ogg"
+    },
+    {
+     "bundled": "kenney_impact_wood_medium_001.wav",
+     "original": "impactWood_medium_001.ogg"
+    },
+    {
+     "bundled": "kenney_impact_wood_medium_002.wav",
+     "original": "impactWood_medium_002.ogg"
+    },
+    {
+     "bundled": "kenney_impact_wood_medium_003.wav",
+     "original": "impactWood_medium_003.ogg"
+    },
+    {
+     "bundled": "kenney_impact_wood_medium_004.wav",
+     "original": "impactWood_medium_004.ogg"
+    },
+    {
+     "bundled": "kenney_impact_wood_heavy_000.wav",
+     "original": "impactWood_heavy_000.ogg"
+    },
+    {
+     "bundled": "kenney_impact_wood_heavy_001.wav",
+     "original": "impactWood_heavy_001.ogg"
+    },
+    {
+     "bundled": "kenney_impact_wood_heavy_002.wav",
+     "original": "impactWood_heavy_002.ogg"
+    },
+    {
+     "bundled": "kenney_impact_wood_heavy_003.wav",
+     "original": "impactWood_heavy_003.ogg"
+    },
+    {
+     "bundled": "kenney_impact_wood_heavy_004.wav",
+     "original": "impactWood_heavy_004.ogg"
+    },
+    {
+     "bundled": "kenney_impact_plank_medium_000.wav",
+     "original": "impactPlank_medium_000.ogg"
+    },
+    {
+     "bundled": "kenney_impact_plank_medium_001.wav",
+     "original": "impactPlank_medium_001.ogg"
+    },
+    {
+     "bundled": "kenney_impact_plank_medium_002.wav",
+     "original": "impactPlank_medium_002.ogg"
+    },
+    {
+     "bundled": "kenney_impact_plank_medium_003.wav",
+     "original": "impactPlank_medium_003.ogg"
+    },
+    {
+     "bundled": "kenney_impact_plank_medium_004.wav",
+     "original": "impactPlank_medium_004.ogg"
+    },
+    {
+     "bundled": "kenney_impact_soft_medium_000.wav",
+     "original": "impactSoft_medium_000.ogg"
+    },
+    {
+     "bundled": "kenney_impact_soft_medium_001.wav",
+     "original": "impactSoft_medium_001.ogg"
+    },
+    {
+     "bundled": "kenney_impact_soft_medium_002.wav",
+     "original": "impactSoft_medium_002.ogg"
+    },
+    {
+     "bundled": "kenney_impact_soft_medium_003.wav",
+     "original": "impactSoft_medium_003.ogg"
+    },
+    {
+     "bundled": "kenney_impact_soft_medium_004.wav",
+     "original": "impactSoft_medium_004.ogg"
+    },
+    {
+     "bundled": "kenney_impact_soft_heavy_000.wav",
+     "original": "impactSoft_heavy_000.ogg"
+    },
+    {
+     "bundled": "kenney_impact_soft_heavy_001.wav",
+     "original": "impactSoft_heavy_001.ogg"
+    },
+    {
+     "bundled": "kenney_impact_soft_heavy_002.wav",
+     "original": "impactSoft_heavy_002.ogg"
+    },
+    {
+     "bundled": "kenney_impact_soft_heavy_003.wav",
+     "original": "impactSoft_heavy_003.ogg"
+    },
+    {
+     "bundled": "kenney_impact_soft_heavy_004.wav",
+     "original": "impactSoft_heavy_004.ogg"
+    },
+    {
+     "bundled": "kenney_impact_mining_000.wav",
+     "original": "impactMining_000.ogg"
+    },
+    {
+     "bundled": "kenney_impact_mining_001.wav",
+     "original": "impactMining_001.ogg"
+    },
+    {
+     "bundled": "kenney_impact_mining_002.wav",
+     "original": "impactMining_002.ogg"
+    },
+    {
+     "bundled": "kenney_impact_mining_003.wav",
+     "original": "impactMining_003.ogg"
+    },
+    {
+     "bundled": "kenney_impact_mining_004.wav",
+     "original": "impactMining_004.ogg"
+    }
+   ]
+  },
+  {
+   "name": "100 CC0 metal and wood SFX",
+   "author": "rubberduck",
+   "license": "CC0 1.0",
+   "source_page": "https://opengameart.org/content/100-cc0-metal-and-wood-sfx",
+   "original_archive": "100-CC0-wood-metal-SFX.zip",
+   "original_archive_sha256": "be6eba63b03409ac0c77787a956b1503a7c186403d04aef9725c52644a4b7878",
+   "note": "Wood with more body than Kenney's, and the cracking and breaking a struck plank answers with.",
+   "files": [
+    {
+     "bundled": "rubberduck_metal_hit_01.wav",
+     "original": "metal_hit_01.ogg"
+    },
+    {
+     "bundled": "rubberduck_metal_hit_02.wav",
+     "original": "metal_hit_02.ogg"
+    },
+    {
+     "bundled": "rubberduck_metal_hit_03.wav",
+     "original": "metal_hit_03.ogg"
+    },
+    {
+     "bundled": "rubberduck_metal_hit_04.wav",
+     "original": "metal_hit_04.ogg"
+    },
+    {
+     "bundled": "rubberduck_metal_hit_05.wav",
+     "original": "metal_hit_05.ogg"
+    },
+    {
+     "bundled": "rubberduck_metal_falling_01.wav",
+     "original": "metal_falling_01.ogg"
+    },
+    {
+     "bundled": "rubberduck_metal_falling_02.wav",
+     "original": "metal_falling_02.ogg"
+    },
+    {
+     "bundled": "rubberduck_wood_hit_01.wav",
+     "original": "wood_hit_01.ogg"
+    },
+    {
+     "bundled": "rubberduck_wood_hit_02.wav",
+     "original": "wood_hit_02.ogg"
+    },
+    {
+     "bundled": "rubberduck_wood_hit_03.wav",
+     "original": "wood_hit_03.ogg"
+    },
+    {
+     "bundled": "rubberduck_wood_hit_04.wav",
+     "original": "wood_hit_04.ogg"
+    },
+    {
+     "bundled": "rubberduck_wood_hit_05.wav",
+     "original": "wood_hit_05.ogg"
+    },
+    {
+     "bundled": "rubberduck_wood_hit_06.wav",
+     "original": "wood_hit_06.ogg"
+    },
+    {
+     "bundled": "rubberduck_wood_hit_07.wav",
+     "original": "wood_hit_07.ogg"
+    },
+    {
+     "bundled": "rubberduck_wood_hit_08.wav",
+     "original": "wood_hit_08.ogg"
+    },
+    {
+     "bundled": "rubberduck_wood_hit_09.wav",
+     "original": "wood_hit_09.ogg"
+    },
+    {
+     "bundled": "rubberduck_wood_cracking_01.wav",
+     "original": "wood_cracking_01.ogg"
+    },
+    {
+     "bundled": "rubberduck_wood_cracking_02.wav",
+     "original": "wood_cracking_02.ogg"
+    },
+    {
+     "bundled": "rubberduck_wood_cracking_03.wav",
+     "original": "wood_cracking_03.ogg"
+    },
+    {
+     "bundled": "rubberduck_wood_cracking_04.wav",
+     "original": "wood_cracking_04.ogg"
+    },
+    {
+     "bundled": "rubberduck_wood_falling_01.wav",
+     "original": "wood_falling_01.ogg"
+    },
+    {
+     "bundled": "rubberduck_wood_falling_02.wav",
+     "original": "wood_falling_02.ogg"
+    },
+    {
+     "bundled": "rubberduck_wood_falling_03.wav",
+     "original": "wood_falling_03.ogg"
+    },
+    {
+     "bundled": "rubberduck_wood_falling_04.wav",
+     "original": "wood_falling_04.ogg"
+    },
+    {
+     "bundled": "rubberduck_wood_falling_05.wav",
+     "original": "wood_falling_05.ogg"
+    },
+    {
+     "bundled": "rubberduck_wood_falling_06.wav",
+     "original": "wood_falling_06.ogg"
+    },
+    {
+     "bundled": "rubberduck_wood_slam_01.wav",
+     "original": "wood_slam_01.ogg"
+    },
+    {
+     "bundled": "rubberduck_wood_slam_02.wav",
+     "original": "wood_slam_02.ogg"
+    },
+    {
+     "bundled": "rubberduck_wood_slam_03.wav",
+     "original": "wood_slam_03.ogg"
+    },
+    {
+     "bundled": "rubberduck_wood_slam_04.wav",
+     "original": "wood_slam_04.ogg"
+    }
+   ]
+  },
+  {
+   "name": "100 CC0 SFX #2",
+   "author": "rubberduck",
+   "license": "CC0 1.0",
+   "source_page": "https://opengameart.org/content/100-cc0-sfx-2",
+   "original_archive": "sfx_100_v2.zip",
+   "original_archive_sha256": "0fc61b4494e2e893c0c015ced4877b3f689c7d84a48cb61daecd7ddb52db797b",
+   "note": "Stone contact and loose metal.",
+   "files": [
+    {
+     "bundled": "rubberduck_sfx2_stones_01.wav",
+     "original": "sfx100v2_stones_01.ogg"
+    },
+    {
+     "bundled": "rubberduck_sfx2_stones_02.wav",
+     "original": "sfx100v2_stones_02.ogg"
+    },
+    {
+     "bundled": "rubberduck_sfx2_stones_03.wav",
+     "original": "sfx100v2_stones_03.ogg"
+    },
+    {
+     "bundled": "rubberduck_sfx2_metal_01.wav",
+     "original": "sfx100v2_metal_01.ogg"
+    },
+    {
+     "bundled": "rubberduck_sfx2_metal_02.wav",
+     "original": "sfx100v2_metal_02.ogg"
+    },
+    {
+     "bundled": "rubberduck_sfx2_metal_03.wav",
+     "original": "sfx100v2_metal_03.ogg"
+    },
+    {
+     "bundled": "rubberduck_sfx2_metal_04.wav",
+     "original": "sfx100v2_metal_04.ogg"
+    },
+    {
+     "bundled": "rubberduck_sfx2_metal_05.wav",
+     "original": "sfx100v2_metal_05.ogg"
+    },
+    {
+     "bundled": "rubberduck_sfx2_metal_06.wav",
+     "original": "sfx100v2_metal_06.ogg"
+    },
+    {
+     "bundled": "rubberduck_sfx2_metal_hit_01.wav",
+     "original": "sfx100v2_metal_hit_01.ogg"
+    },
+    {
+     "bundled": "rubberduck_sfx2_metal_hit_02.wav",
+     "original": "sfx100v2_metal_hit_02.ogg"
+    }
+   ]
+  },
+  {
+   "name": "75 CC0 breaking / falling / hit SFX",
+   "author": "rubberduck",
+   "license": "CC0 1.0",
+   "source_page": "https://opengameart.org/content/75-cc0-breaking-falling-hit-sfx",
+   "original_archive": "sfx_breaking_and_falling.zip",
+   "original_archive_sha256": "e6ee04d91c5f4d30cfda1260d2c9d1faf96fda36319287215fbd07bcb1a80451",
+   "note": "Debris. The archive creature_foley_generator and aircraft_spacecraft_generator both vetted; its SHA-256 was re-verified against a fresh download here too.",
+   "files": [
+    {
+     "bundled": "rubberduck_break_rock_breaking_01.wav",
+     "original": "bfh1_rock_breaking_01.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_rock_breaking_02.wav",
+     "original": "bfh1_rock_breaking_02.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_rock_breaking_03.wav",
+     "original": "bfh1_rock_breaking_03.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_rock_falling_01.wav",
+     "original": "bfh1_rock_falling_01.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_rock_falling_02.wav",
+     "original": "bfh1_rock_falling_02.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_rock_falling_03.wav",
+     "original": "bfh1_rock_falling_03.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_rock_falling_04.wav",
+     "original": "bfh1_rock_falling_04.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_rock_falling_05.wav",
+     "original": "bfh1_rock_falling_05.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_rock_falling_06.wav",
+     "original": "bfh1_rock_falling_06.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_rock_falling_07.wav",
+     "original": "bfh1_rock_falling_07.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_rock_falling_08.wav",
+     "original": "bfh1_rock_falling_08.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_rock_falling_09.wav",
+     "original": "bfh1_rock_falling_09.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_metal_falling_01.wav",
+     "original": "bfh1_metal_falling_01.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_metal_falling_02.wav",
+     "original": "bfh1_metal_falling_02.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_metal_falling_03.wav",
+     "original": "bfh1_metal_falling_03.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_metal_falling_04.wav",
+     "original": "bfh1_metal_falling_04.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_metal_falling_05.wav",
+     "original": "bfh1_metal_falling_05.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_metal_hit_01.wav",
+     "original": "bfh1_metal_hit_01.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_metal_hit_02.wav",
+     "original": "bfh1_metal_hit_02.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_metal_hit_03.wav",
+     "original": "bfh1_metal_hit_03.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_metal_hit_04.wav",
+     "original": "bfh1_metal_hit_04.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_metal_hit_05.wav",
+     "original": "bfh1_metal_hit_05.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_metal_hit_06.wav",
+     "original": "bfh1_metal_hit_06.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_wood_breaking_01.wav",
+     "original": "bfh1_wood_breaking_01.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_wood_breaking_02.wav",
+     "original": "bfh1_wood_breaking_02.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_wood_breaking_03.wav",
+     "original": "bfh1_wood_breaking_03.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_wood_breaking_04.wav",
+     "original": "bfh1_wood_breaking_04.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_wood_falling_01.wav",
+     "original": "bfh1_wood_falling_01.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_wood_falling_02.wav",
+     "original": "bfh1_wood_falling_02.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_wood_hit_01.wav",
+     "original": "bfh1_wood_hit_01.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_wood_hit_02.wav",
+     "original": "bfh1_wood_hit_02.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_wood_hit_03.wav",
+     "original": "bfh1_wood_hit_03.ogg"
+    }
+   ]
+  },
+  {
+   "name": "40 CC0 water / splash / slime SFX",
+   "author": "rubberduck",
+   "license": "CC0 1.0",
+   "source_page": "https://opengameart.org/content/40-cc0-water-splash-slime-sfx",
+   "original_archive": "water-splash-slime-sfx.zip",
+   "original_archive_sha256": "7cd39abb49d4362a37ba18dc0e454c7dc1d08029d4e5b683149046bc237b2eba",
+   "note": "The water column, which nothing else on this machine had. The slime is the wet layer under a flesh impact -- its author recorded it from real slime, which is exactly the kind of thing no oscillator gets to.",
+   "files": [
+    {
+     "bundled": "rubberduck_splash_01.wav",
+     "original": "splash_01.ogg"
+    },
+    {
+     "bundled": "rubberduck_splash_02.wav",
+     "original": "splash_02.ogg"
+    },
+    {
+     "bundled": "rubberduck_splash_03.wav",
+     "original": "splash_03.ogg"
+    },
+    {
+     "bundled": "rubberduck_splash_04.wav",
+     "original": "splash_04.ogg"
+    },
+    {
+     "bundled": "rubberduck_splash_05.wav",
+     "original": "splash_05.ogg"
+    },
+    {
+     "bundled": "rubberduck_splash_06.wav",
+     "original": "splash_06.ogg"
+    },
+    {
+     "bundled": "rubberduck_splash_07.wav",
+     "original": "splash_07.ogg"
+    },
+    {
+     "bundled": "rubberduck_splash_08.wav",
+     "original": "splash_08.ogg"
+    },
+    {
+     "bundled": "rubberduck_splash_09.wav",
+     "original": "splash_09.ogg"
+    },
+    {
+     "bundled": "rubberduck_splash_10.wav",
+     "original": "splash_10.ogg"
+    },
+    {
+     "bundled": "rubberduck_splash_11.wav",
+     "original": "splash_11.ogg"
+    },
+    {
+     "bundled": "rubberduck_splash_12.wav",
+     "original": "splash_12.ogg"
+    },
+    {
+     "bundled": "rubberduck_splash_13.wav",
+     "original": "splash_13.ogg"
+    },
+    {
+     "bundled": "rubberduck_splash_14.wav",
+     "original": "splash_14.ogg"
+    },
+    {
+     "bundled": "rubberduck_splash_15.wav",
+     "original": "splash_15.ogg"
+    },
+    {
+     "bundled": "rubberduck_bubble_01.wav",
+     "original": "bubble_01.ogg"
+    },
+    {
+     "bundled": "rubberduck_bubble_02.wav",
+     "original": "bubble_02.ogg"
+    },
+    {
+     "bundled": "rubberduck_bubble_03.wav",
+     "original": "bubble_03.ogg"
+    },
+    {
+     "bundled": "rubberduck_slime_01.wav",
+     "original": "slime_01.ogg"
+    },
+    {
+     "bundled": "rubberduck_slime_02.wav",
+     "original": "slime_02.ogg"
+    },
+    {
+     "bundled": "rubberduck_slime_03.wav",
+     "original": "slime_03.ogg"
+    },
+    {
+     "bundled": "rubberduck_slime_04.wav",
+     "original": "slime_04.ogg"
+    },
+    {
+     "bundled": "rubberduck_slime_05.wav",
+     "original": "slime_05.ogg"
+    },
+    {
+     "bundled": "rubberduck_slime_06.wav",
+     "original": "slime_06.ogg"
+    },
+    {
+     "bundled": "rubberduck_slime_07.wav",
+     "original": "slime_07.ogg"
+    },
+    {
+     "bundled": "rubberduck_slime_08.wav",
+     "original": "slime_08.ogg"
+    }
+   ]
+  },
+  {
+   "name": "37 hits/punches",
+   "author": "Independent.nu",
+   "submitted_by": "qubodup",
+   "license": "CC0 1.0",
+   "source_page": "https://opengameart.org/content/37-hitspunches",
+   "original_archive": "independent_nu_ljudbank-hits_and_punches.7z",
+   "original_archive_sha256": "641c65d2e1a00002171c23e2c6fa14e925ae4c12db09d3f79d130a4538916032",
+   "note": "The flesh column. The archive holds 37 hits; these six are unarmed_foley_generator's selection -- the low-end-heaviest of the set, measured by spectral balance from the onset and signed off by ear there. Re-extracted from the archive here rather than copied, and the archive's SHA-256 matches the one that generator recorded.",
+   "files": [
+    {
+     "bundled": "independent_nu_hit02.wav",
+     "original": "hits/hit02.mp3.flac"
+    },
+    {
+     "bundled": "independent_nu_hit07.wav",
+     "original": "hits/hit07.mp3.flac"
+    },
+    {
+     "bundled": "independent_nu_hit08.wav",
+     "original": "hits/hit08.mp3.flac"
+    },
+    {
+     "bundled": "independent_nu_hit20.wav",
+     "original": "hits/hit20.mp3.flac"
+    },
+    {
+     "bundled": "independent_nu_hit29.wav",
+     "original": "hits/hit29.mp3.flac"
+    },
+    {
+     "bundled": "independent_nu_hit34.wav",
+     "original": "hits/hit34.mp3.flac"
+    }
+   ]
+  }
+ ]
+}

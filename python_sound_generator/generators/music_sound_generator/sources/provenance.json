@@ -1,0 +1,111 @@
+{
+ "source_audio_policy": "Synthesised-only Strudel output; no sample banks are used, so no sample-bank licence applies. No third-party audio recordings are bundled with this generator; if any ever were, the policy would be CC0 or public domain only.",
+ "retrieved_utc": "2026-07-16",
+ "pattern_authorship": {
+  "author": "itsmygithubacct",
+  "license": "MIT",
+  "origin": "Original project compositions. The first three patterns were composed on 2026-07-07 for an earlier MIT-licensed game project; exact-string searches found no matching upstream Strudel or public pattern source.",
+  "recorder": "Project-authored browser and Puppeteer integration that calls the external @strudel/web API; no Strudel implementation source is copied or bundled."
+ },
+ "tool": {
+  "name": "Strudel",
+  "license": "AGPL-3.0-or-later",
+  "role": "external live-coding tool driven headless; NOT linked or bundled into Python",
+  "workspace": "configured at runtime with STRUDEL_DIR; not bundled",
+  "how_invoked": "a vite dev server serves a recorder page; system Chrome (via puppeteer-core) loads it, and the page records the Web Audio graph with MediaRecorder. The audio is the OUTPUT of running the tool -- Python never imports Strudel.",
+  "note": "Strudel's AGPL-3.0 covers the tool's own source. This generator ships none of that source; it ships pattern text (below) and Python that launches the tool as a separate process."
+ },
+ "synthesis_policy": "Every cue uses only synthesised sources: s(\"sine\"/\"sawtooth\"/\"triangle\"/\"square\") and noise (\"white\"/\"pink\"/\"brown\"). No s(\"bd\"), s(\"piano\"), or any dough-samples / sample bank call appears in any pattern, so the rendered audio carries no sample-bank licence entanglement. This is enforced by test_no_cue_uses_a_sample_bank.",
+ "determinism": "A MediaRecorder real-time capture is NOT byte-deterministic: two takes of one pattern differ by scheduler jitter and opus encoding. This generator does not claim seeded byte-determinism. Each rendered WAV's SHA-256 is recorded in the manifest as an AS-RENDERED record, not a golden. What is pinned is the exact Strudel pattern text (hashed below), the tempo, and the configured external toolchain.",
+ "loop_seam": "Loop cues are recorded for an integer number of pattern cycles (seconds = cycles / cps), so the tempo grid lands on the loop point. Seamlessness comes from that cycle math, not from a crossfade. A captured WAV also carries a few ms of real-time latency at its head; the `verify` command reports both.",
+ "patterns": [
+  {
+   "cue": "battle_loop",
+   "source": "original project composition (accepted 2026-07-07 by ear)",
+   "original": true,
+   "loop": true,
+   "cps": 0.5,
+   "cycles": 12,
+   "record_seconds": 24.0,
+   "sha256": "addceafeb1d4152d072cde6e2001cf285029933b76189bf565ec361f67230533"
+  },
+  {
+   "cue": "thinking_loop",
+   "source": "original project composition (accepted 2026-07-07 by ear)",
+   "original": true,
+   "loop": true,
+   "cps": 0.28,
+   "cycles": 6,
+   "record_seconds": 21.428571,
+   "nominal_seconds": 20.0,
+   "note": "The original recorder named 20 s; 20 s is 5.6 cycles at 0.28 cps, which does not wrap cleanly. Recorded here as 6 cycles = 21.43 s, the whole-cycle length nearest the nominal, so the per-cycle content wraps clean.",
+   "sha256": "64a110f8488df75f354f9d318ac632907890b7d4998225f8c290755bc7085d8e"
+  },
+  {
+   "cue": "victory_fanfare",
+   "source": "original project composition (accepted 2026-07-07 by ear)",
+   "original": true,
+   "loop": false,
+   "cps": 0.72,
+   "record_seconds": 7.0,
+   "sha256": "4d9abbf1a0b062adc4dd7f103dc85e45a79d152ea790a87aedea80178afa45b4"
+  },
+  {
+   "cue": "menu_theme",
+   "source": "music_sound_generator (in-package, pure-synth)",
+   "original": true,
+   "loop": true,
+   "cps": 0.5,
+   "cycles": 8,
+   "record_seconds": 16.0,
+   "sha256": "dedc3e2e7ebac92ca894cee9e5e6e4ed25eddf48b9b0dd282d8634c14a65652c"
+  },
+  {
+   "cue": "tension_loop",
+   "source": "music_sound_generator (in-package, pure-synth)",
+   "original": true,
+   "loop": true,
+   "cps": 0.5,
+   "cycles": 8,
+   "record_seconds": 16.0,
+   "sha256": "dc64a3f9bc43a307e3c255e7b3c00994189db51d0463f43bf80d28b91ab625aa"
+  },
+  {
+   "cue": "defeat_sting",
+   "source": "music_sound_generator (in-package, pure-synth)",
+   "original": true,
+   "loop": false,
+   "cps": 0.5,
+   "record_seconds": 6.5,
+   "sha256": "ec407804239799345758578434b510e0dfe250743d9e6f3f764910c6c248640e"
+  },
+  {
+   "cue": "start_fanfare",
+   "source": "music_sound_generator (in-package, pure-synth)",
+   "original": true,
+   "loop": false,
+   "cps": 0.8,
+   "record_seconds": 2.6,
+   "sha256": "cee54a6c70596bc7a74abf98c6c9ef40ae1faffc16e9ec5a0514f9f880292aaa"
+  },
+  {
+   "cue": "win_fanfare",
+   "source": "music_sound_generator (in-package, pure-synth)",
+   "original": true,
+   "loop": false,
+   "cps": 0.75,
+   "record_seconds": 2.7,
+   "sha256": "ddbea5a43e605383c48f463d0238001152833d93dc4d74a6fc78be101bd06c63"
+  }
+ ],
+ "excluded": [
+  {
+   "name": "dough-samples and every s(\"...\") sample bank (s(\"bd\"), s(\"piano\"), drum machines, soundfonts)",
+   "reason": "Strudel can play sampled instruments, but every sample bank carries its own licence, and mixing those into the output would re-introduce exactly the sample-licence entanglement this project avoids. Pure-synth patterns have none, so no cue uses a sample call. This is the whole reason the patterns are oscillators-and-noise only."
+  },
+  {
+   "name": "Claiming a seeded byte-deterministic render",
+   "reason": "Tempting, because every sibling generator is byte-deterministic under a seed. It would be a lie here: the capture is a real-time MediaRecorder pass with opus encoding, so the bytes vary between takes. The honest pin is the pattern text and workspace, with the output SHA recorded as a fact about one take."
+  }
+ ]
+}

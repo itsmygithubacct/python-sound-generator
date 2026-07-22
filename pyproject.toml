@@ -1,0 +1,69 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python-sound-generator"
+version = "0.2.0"
+description = "A modular CLI for procedural and CC0-derived game audio"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE", "ASSET_LICENSES.md"]
+authors = [{ name = "itsmygithubacct" }]
+keywords = ["audio", "foley", "game-audio", "procedural-audio", "sound-effects"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: Multimedia :: Sound/Audio :: Sound Synthesis",
+]
+dependencies = [
+  "numpy>=1.24",
+  "scipy>=1.10",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+dev = ["build>=1.2", "pytest>=8", "ruff>=0.15", "twine>=6"]
+
+[project.urls]
+Homepage = "https://github.com/itsmygithubacct/python-sound-generator"
+Repository = "https://github.com/itsmygithubacct/python-sound-generator.git"
+Issues = "https://github.com/itsmygithubacct/python-sound-generator/issues"
+
+[project.scripts]
+soundgen = "python_sound_generator.cli:main"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["python_sound_generator*"]
+
+[tool.setuptools.package-data]
+"*" = [
+  "assets/*",
+  "assets/**/*",
+  "sources/*",
+  "sources/**/*",
+  "sample_banks/*",
+  "sample_banks/**/*",
+  "recorder/*",
+]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]

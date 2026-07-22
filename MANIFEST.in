@@ -1,0 +1,6 @@
+include README.md
+include LICENSE
+include ASSET_LICENSES.md
+recursive-include python_sound_generator/generators *.wav *.json *.html *.mjs
+recursive-include python_sound_generator/assets *.wav *.json
+global-exclude __pycache__ *.py[cod]

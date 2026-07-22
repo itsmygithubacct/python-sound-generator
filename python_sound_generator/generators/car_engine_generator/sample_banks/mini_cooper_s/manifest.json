@@ -1,0 +1,181 @@
+{
+  "format_version": 1,
+  "name": "2019 Mini Cooper S contact recording",
+  "engine": "inline4",
+  "cylinders": 4,
+  "target_rms_db": -18.0,
+  "rpm_blend_octaves": 0.32,
+  "load_blend_width": 0.25,
+  "source": "https://freesound.org/s/669618/",
+  "license": "CC0 1.0",
+  "layers": [
+    {
+      "file": "samples/idle_0900.wav",
+      "label": "idle",
+      "rpm": 900,
+      "load": 0.10,
+      "loop_seconds": null,
+      "crossfade_ms": 100
+    },
+    {
+      "file": "samples/load_1530.wav",
+      "label": "acceleration 1530",
+      "rpm": 1530,
+      "load": 0.88,
+      "loop_seconds": null,
+      "crossfade_ms": 55
+    },
+    {
+      "file": "samples/load_2190.wav",
+      "label": "acceleration 2190",
+      "rpm": 2190,
+      "load": 0.88,
+      "loop_seconds": null,
+      "crossfade_ms": 55
+    },
+    {
+      "file": "samples/load_3150.wav",
+      "label": "acceleration 3150",
+      "rpm": 3150,
+      "load": 0.88,
+      "loop_seconds": null,
+      "crossfade_ms": 55
+    },
+    {
+      "file": "samples/load_3660.wav",
+      "label": "acceleration 3660",
+      "rpm": 3660,
+      "load": 0.88,
+      "loop_seconds": null,
+      "crossfade_ms": 55
+    },
+    {
+      "file": "samples/load_4290.wav",
+      "label": "acceleration 4290",
+      "rpm": 4290,
+      "load": 0.88,
+      "loop_seconds": null,
+      "crossfade_ms": 55
+    },
+    {
+      "file": "samples/load_4980.wav",
+      "label": "acceleration 4980",
+      "rpm": 4980,
+      "load": 0.88,
+      "loop_seconds": null,
+      "crossfade_ms": 55
+    },
+    {
+      "file": "samples/load_5700.wav",
+      "label": "acceleration 5700",
+      "rpm": 5700,
+      "load": 0.88,
+      "loop_seconds": null,
+      "crossfade_ms": 50
+    },
+    {
+      "file": "samples/cruise_1500.wav",
+      "label": "steady 1500",
+      "rpm": 1500,
+      "load": 0.45,
+      "loop_seconds": null,
+      "crossfade_ms": 75
+    },
+    {
+      "file": "samples/cruise_3690.wav",
+      "label": "steady 3690",
+      "rpm": 3690,
+      "load": 0.45,
+      "loop_seconds": null,
+      "crossfade_ms": 75
+    },
+    {
+      "file": "samples/cruise_4350.wav",
+      "label": "steady 4350",
+      "rpm": 4350,
+      "load": 0.45,
+      "loop_seconds": null,
+      "crossfade_ms": 75
+    },
+    {
+      "file": "samples/cruise_5550.wav",
+      "label": "steady 5550",
+      "rpm": 5550,
+      "load": 0.45,
+      "loop_seconds": null,
+      "crossfade_ms": 75
+    },
+    {
+      "file": "samples/overrun_1020.wav",
+      "label": "overrun 1020",
+      "rpm": 1020,
+      "load": 0.10,
+      "loop_seconds": null,
+      "crossfade_ms": 55
+    },
+    {
+      "file": "samples/overrun_1650.wav",
+      "label": "overrun 1650",
+      "rpm": 1650,
+      "load": 0.10,
+      "loop_seconds": null,
+      "crossfade_ms": 55
+    },
+    {
+      "file": "samples/overrun_2340.wav",
+      "label": "overrun 2340",
+      "rpm": 2340,
+      "load": 0.10,
+      "loop_seconds": null,
+      "crossfade_ms": 55
+    },
+    {
+      "file": "samples/overrun_2790.wav",
+      "label": "overrun 2790",
+      "rpm": 2790,
+      "load": 0.10,
+      "loop_seconds": null,
+      "crossfade_ms": 55
+    },
+    {
+      "file": "samples/overrun_3510.wav",
+      "label": "overrun 3510",
+      "rpm": 3510,
+      "load": 0.10,
+      "loop_seconds": null,
+      "crossfade_ms": 55
+    },
+    {
+      "file": "samples/overrun_4170.wav",
+      "label": "overrun 4170",
+      "rpm": 4170,
+      "load": 0.10,
+      "loop_seconds": null,
+      "crossfade_ms": 55
+    },
+    {
+      "file": "samples/overrun_4890.wav",
+      "label": "overrun 4890",
+      "rpm": 4890,
+      "load": 0.10,
+      "loop_seconds": null,
+      "crossfade_ms": 55
+    },
+    {
+      "file": "samples/overrun_5280.wav",
+      "label": "overrun 5280",
+      "rpm": 5280,
+      "load": 0.10,
+      "loop_seconds": null,
+      "crossfade_ms": 55
+    },
+    {
+      "file": "samples/overrun_5610.wav",
+      "label": "overrun 5610",
+      "rpm": 5610,
+      "load": 0.10,
+      "loop_seconds": null,
+      "crossfade_ms": 55
+    }
+  ]
+}

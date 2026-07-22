@@ -1,0 +1,182 @@
+{
+  "source_audio_policy": "CC0 or public domain only",
+  "retrieved_utc": "2026-07-15",
+  "conversion": "Decoded with FFmpeg to mono 44100 Hz signed 16-bit PCM WAV; no content processing was applied to the bundled source files. Trimming, retuning, filtering and layering happen at render time in engine.py so the bundled files stay comparable to what the source page serves.",
+  "verification": "The collection's licence was read from its own source page on 2026-07-15 (https://opengameart.org/content/40-cc0-water-splash-slime-sfx, CC0, author rubberduck). The archive was re-downloaded from that page and its SHA-256 recomputed: 7cd39abb49d4362a37ba18dc0e454c7dc1d08029d4e5b683149046bc237b2eba, byte-identical to the hash projectile_sounds recorded when it fetched the same archive. The provenance chain therefore verifies end to end rather than being taken on trust from a sibling generator.",
+  "provenance_note": "This provider deliberately reads recordings from two locations. Its six loop beds are bundled locally because no other runtime provider owns them. Its eighteen splash and bubble files come from projectile_sounds/sources at render time so the vetted bank is not duplicated. Run `sources` to inspect the resolution of each file. This cross-provider dependency is explicit in engine.py and checked by the unified package diagnostics.",
+  "coverage_note": "The projectile provider selected 26 of the archive's 40 files for arrival impacts. Among the remaining files were loop_rain, loop_water_01-03 and loop_bubbles_1/_02: the six beds used by sustained water cues here. 'Already vetted' describes a licence, not a complete selection. Two modeled gaps remain: there is no dedicated drip recording, so engine.drip retunes a small splash, and there is no bundled CC0 surf, so environment_ambience_generator retains its approved procedural ocean cue.",
+  "excluded": [
+    {
+      "name": "rubberduck_slime_01-08 (and slime_09-16 in the archive)",
+      "source_page": "https://opengameart.org/content/40-cc0-water-splash-slime-sfx",
+      "reason": "CC0 and already bundled in projectile_sounds/sources/, so free to use. Not used: slime is not water. Its author recorded it from real slime and item 11 uses it correctly as the wet layer under a flesh impact. A water generator reaching for it would be borrowing a different material because it happened to be adjacent in the zip. The eight untaken slime takes in the archive are left there for the same reason."
+    },
+    {
+      "name": "environment_ambience_generator's ocean",
+      "source_page": "n/a -- procedural, in this repository",
+      "reason": "Not replaced, because it passed its audition on 2026-07-15 when the other five water cues did not. It is also the cue this generator could least improve: its 90 s default exists so its wave sets do not repeat audibly, and nothing here is 90 s of CC0 surf. Item 4 keeps it."
+    },
+    {
+      "name": "Freesound results for drip / water generally",
+      "source_page": "https://freesound.org/",
+      "reason": "Freesound mixes CC0, CC-BY and Sampling+ per sound, and a search result is not a licence. Nothing was taken from it. A real drip recording is the one source this generator genuinely lacks; if it is ever fetched from there, read the sound's own page, audition the public HQ preview first, and download second."
+    }
+  ],
+  "collections": [
+    {
+      "name": "40 CC0 water / splash / slime SFX",
+      "author": "rubberduck",
+      "license": "CC0 1.0",
+      "source_page": "https://opengameart.org/content/40-cc0-water-splash-slime-sfx",
+      "original_archive": "water-splash-slime-sfx.zip",
+      "original_archive_sha256": "7cd39abb49d4362a37ba18dc0e454c7dc1d08029d4e5b683149046bc237b2eba",
+      "note": "The whole water column. The six loop_* files are bundled here and were previously unused by anything; the splash and bubble files are read from projectile_sounds/sources/ rather than copied. Same archive, same hash, one licence.",
+      "files": [
+        {
+          "file": "rubberduck_loop_water_01.wav",
+          "original": "loop_water_01.ogg",
+          "bundled_in": "here",
+          "carries": "the water body under every entry; aquarium; surface; pour"
+        },
+        {
+          "file": "rubberduck_loop_water_02.wav",
+          "original": "loop_water_02.ogg",
+          "bundled_in": "here",
+          "carries": "as above; the lowest of the three (0.44 of its energy below 500 Hz)"
+        },
+        {
+          "file": "rubberduck_loop_water_03.wav",
+          "original": "loop_water_03.ogg",
+          "bundled_in": "here",
+          "carries": "as above; the brightest of the three"
+        },
+        {
+          "file": "rubberduck_loop_bubbles_01.wav",
+          "original": "loop_bubbles_1.ogg",
+          "bundled_in": "here",
+          "carries": "the bubbles bed; the aquarium's airstone"
+        },
+        {
+          "file": "rubberduck_loop_bubbles_02.wav",
+          "original": "loop_bubbles_02.ogg",
+          "bundled_in": "here",
+          "carries": "as above"
+        },
+        {
+          "file": "rubberduck_loop_rain.wav",
+          "original": "loop_rain.ogg",
+          "bundled_in": "here",
+          "carries": "rain, entire. The whole cue is this one recording retuned"
+        },
+        {
+          "file": "rubberduck_splash_01.wav",
+          "original": "splash_01.ogg",
+          "bundled_in": "projectile_sounds",
+          "carries": "entry, light (centroid 5.8 kHz)"
+        },
+        {
+          "file": "rubberduck_splash_02.wav",
+          "original": "splash_02.ogg",
+          "bundled_in": "projectile_sounds",
+          "carries": "entry, mid"
+        },
+        {
+          "file": "rubberduck_splash_03.wav",
+          "original": "splash_03.ogg",
+          "bundled_in": "projectile_sounds",
+          "carries": "entry, heavy (peaks 132 Hz)"
+        },
+        {
+          "file": "rubberduck_splash_04.wav",
+          "original": "splash_04.ogg",
+          "bundled_in": "projectile_sounds",
+          "carries": "entry, heavy -- the largest. Peaks 92 Hz, 0.86 below 500 Hz"
+        },
+        {
+          "file": "rubberduck_splash_05.wav",
+          "original": "splash_05.ogg",
+          "bundled_in": "projectile_sounds",
+          "carries": "entry, mid"
+        },
+        {
+          "file": "rubberduck_splash_06.wav",
+          "original": "splash_06.ogg",
+          "bundled_in": "projectile_sounds",
+          "carries": "entry, light"
+        },
+        {
+          "file": "rubberduck_splash_07.wav",
+          "original": "splash_07.ogg",
+          "bundled_in": "projectile_sounds",
+          "carries": "entry, heavy"
+        },
+        {
+          "file": "rubberduck_splash_08.wav",
+          "original": "splash_08.ogg",
+          "bundled_in": "projectile_sounds",
+          "carries": "entry, light -- the smallest. Peaks 8.6 kHz; the drip is built from it"
+        },
+        {
+          "file": "rubberduck_splash_09.wav",
+          "original": "splash_09.ogg",
+          "bundled_in": "projectile_sounds",
+          "carries": "entry, heavy"
+        },
+        {
+          "file": "rubberduck_splash_10.wav",
+          "original": "splash_10.ogg",
+          "bundled_in": "projectile_sounds",
+          "carries": "entry, mid"
+        },
+        {
+          "file": "rubberduck_splash_11.wav",
+          "original": "splash_11.ogg",
+          "bundled_in": "projectile_sounds",
+          "carries": "entry, mid"
+        },
+        {
+          "file": "rubberduck_splash_12.wav",
+          "original": "splash_12.ogg",
+          "bundled_in": "projectile_sounds",
+          "carries": "entry, mid"
+        },
+        {
+          "file": "rubberduck_splash_13.wav",
+          "original": "splash_13.ogg",
+          "bundled_in": "projectile_sounds",
+          "carries": "entry, light"
+        },
+        {
+          "file": "rubberduck_splash_14.wav",
+          "original": "splash_14.ogg",
+          "bundled_in": "projectile_sounds",
+          "carries": "entry, light"
+        },
+        {
+          "file": "rubberduck_splash_15.wav",
+          "original": "splash_15.ogg",
+          "bundled_in": "projectile_sounds",
+          "carries": "entry, light"
+        },
+        {
+          "file": "rubberduck_bubble_01.wav",
+          "original": "bubble_01.ogg",
+          "bundled_in": "projectile_sounds",
+          "carries": "bubble events: a pop, a burst"
+        },
+        {
+          "file": "rubberduck_bubble_02.wav",
+          "original": "bubble_02.ogg",
+          "bundled_in": "projectile_sounds",
+          "carries": "as above"
+        },
+        {
+          "file": "rubberduck_bubble_03.wav",
+          "original": "bubble_03.ogg",
+          "bundled_in": "projectile_sounds",
+          "carries": "as above"
+        }
+      ]
+    }
+  ]
+}

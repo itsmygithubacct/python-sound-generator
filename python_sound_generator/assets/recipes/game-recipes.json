@@ -1,0 +1,61 @@
+{
+  "games": {
+    "cyber-runner": {
+      "cues": [
+        {"count": 3, "cue": "terminal_key", "id": "ui.cursor", "output": "ui-cursor", "seed": 12001},
+        {"count": 2, "cue": "terminal_confirm", "id": "ui.confirm", "output": "ui-confirm", "seed": 12002},
+        {"count": 2, "cue": "hack_start", "id": "hack.start", "output": "hack-start", "seed": 12003},
+        {"count": 2, "cue": "hack_success", "id": "hack.success", "output": "hack-success", "seed": 12004},
+        {"count": 2, "cue": "objective_update", "id": "mission.update", "output": "mission-update", "seed": 12005},
+        {"count": 2, "cue": "scan_ping", "id": "world.scan", "output": "world-scan", "seed": 12006}
+      ],
+      "intensity": 0.82,
+      "provider": "cyberpunk",
+      "style": "noir",
+      "style_axis": "style"
+    },
+    "fantasy-quest": {
+      "cues": [
+        {"count": 2, "cue": "dialogue_open", "id": "dialogue.open", "output": "dialogue-open", "seed": 13001},
+        {"count": 2, "cue": "door_unlock", "id": "world.unlock", "output": "world-unlock", "seed": 13002},
+        {"count": 3, "cue": "encounter", "id": "battle.encounter", "output": "battle-encounter", "seed": 13003},
+        {"count": 2, "cue": "purchase", "id": "service.purchase", "output": "service-purchase", "seed": 13004},
+        {"count": 2, "cue": "save_game", "id": "system.save", "output": "system-save", "seed": 13005},
+        {"count": 2, "cue": "rest", "id": "service.rest", "output": "service-rest", "seed": 13006}
+      ],
+      "intensity": 0.78,
+      "provider": "rpg",
+      "style": "fantasy",
+      "style_axis": "theme"
+    },
+    "suburban-odyssey": {
+      "cues": [
+        {"count": 3, "cue": "cursor_move", "id": "ui.cursor", "output": "ui-cursor", "seed": 14001},
+        {"count": 2, "cue": "dialogue_open", "id": "dialogue.open", "output": "dialogue-open", "seed": 14002},
+        {"count": 2, "cue": "phone_ring", "id": "world.phone", "output": "world-phone", "seed": 14003},
+        {"count": 2, "cue": "door_transition", "id": "world.door", "output": "world-door", "seed": 14004},
+        {"count": 3, "cue": "battle_start", "id": "battle.encounter", "output": "battle-encounter", "seed": 14005},
+        {"count": 2, "cue": "strange_event", "id": "story.strange", "output": "story-strange", "seed": 14006}
+      ],
+      "intensity": 0.74,
+      "provider": "quirky-rpg",
+      "style": "suburban",
+      "style_axis": "style"
+    },
+    "fantasy-adventure": {
+      "cues": [
+        {"count": 3, "cue": "item_pickup", "id": "item.pickup", "output": "item-pickup", "seed": 11001},
+        {"count": 2, "cue": "door_unlock", "id": "world.unlock", "output": "world-unlock", "seed": 11002},
+        {"count": 2, "cue": "secret_found", "id": "world.secret", "output": "world-secret", "seed": 11003},
+        {"count": 2, "cue": "encounter", "id": "battle.encounter", "output": "battle-encounter", "seed": 11004},
+        {"count": 2, "cue": "save_game", "id": "system.save", "output": "system-save", "seed": 11005}
+      ],
+      "intensity": 0.8,
+      "provider": "rpg",
+      "style": "retro",
+      "style_axis": "theme"
+    }
+  },
+  "schema_version": "soundgen.recipe.v1",
+  "sources": []
+}

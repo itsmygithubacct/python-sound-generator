@@ -1,0 +1,114 @@
+{
+  "source_audio_policy": "CC0 or public domain only",
+  "verification": "Every master was downloaded from its own Freesound page, preserved intact during source preparation, and hashed before an audition candidate was derived. Only trims accepted by ear on 2026-07-16 are present here.",
+  "audition_results": "completed 2026-07-16; archived outside the runtime package",
+  "shotgun_audition_results": "completed 2026-07-16; archived outside the runtime package",
+  "artillery_audition_results": "completed 2026-07-16; archived outside the runtime package",
+  "sources": [
+    {
+      "file": "bolt_rifle.wav",
+      "sha256": "95701b660229e6e59251ffe417e3a99f6ea2d8a3b9db732a75f56156c197beea",
+      "source_page": "https://freesound.org/people/Danwardvs/sounds/204204/",
+      "license": "CC0 1.0",
+      "master": "204204__danwardvs__22-bolt.wav",
+      "master_sha256": "6f1e2d775e86deac6d212ebf5054eadc26c05a2163f29601aed3de8587efd6fb",
+      "segment_seconds": [0.02, 1.22],
+      "audition_scope": "complete rifle-bolt replacement"
+    },
+    {
+      "file": "magazine_out_ar15.wav",
+      "sha256": "1d28f20fd0e1831fced39b15b743f13efd68413bbbf727f60d2653facc6594e9",
+      "source_page": "https://freesound.org/people/wadaltmon/sounds/263513/",
+      "license": "CC0 1.0",
+      "master": "263513__wadaltmon__ar15-various-sounds.wav",
+      "master_sha256": "394b2313169f8f5ef0e9f520b6e1300e2fc12bdb1e4028b80d310e7b2bfd6404",
+      "segment_seconds": [2.12, 2.52],
+      "audition_scope": "complete magazine-out replacement"
+    },
+    {
+      "file": "magazine_in_ar15.wav",
+      "sha256": "d3a8fefb9c8732b41a52eb1f9180ac8fe5cca94f915277d55e388421f1b74f65",
+      "source_page": "https://freesound.org/people/wadaltmon/sounds/263513/",
+      "license": "CC0 1.0",
+      "master": "263513__wadaltmon__ar15-various-sounds.wav",
+      "master_sha256": "394b2313169f8f5ef0e9f520b6e1300e2fc12bdb1e4028b80d310e7b2bfd6404",
+      "segment_seconds": [2.78, 3.16],
+      "audition_scope": "complete magazine-in replacement"
+    },
+    {
+      "file": "charging_handle_ar15.wav",
+      "sha256": "35ae31478ecf0b68ff93311258a074898310191b9f18997a3f61de90dcf80472",
+      "source_page": "https://freesound.org/people/wadaltmon/sounds/263513/",
+      "license": "CC0 1.0",
+      "master": "263513__wadaltmon__ar15-various-sounds.wav",
+      "master_sha256": "394b2313169f8f5ef0e9f520b6e1300e2fc12bdb1e4028b80d310e7b2bfd6404",
+      "segment_seconds": [3.35, 3.98],
+      "audition_scope": "complete charging-handle replacement"
+    },
+    {
+      "file": "reload_rifle_ar15.wav",
+      "sha256": "0674a3c4bcdb2ffb4f76fa228000845f5689c7b08ac268b6464b43eeeaee3ab3",
+      "source_page": "https://freesound.org/people/wadaltmon/sounds/263513/",
+      "license": "CC0 1.0",
+      "master": "263513__wadaltmon__ar15-various-sounds.wav",
+      "master_sha256": "394b2313169f8f5ef0e9f520b6e1300e2fc12bdb1e4028b80d310e7b2bfd6404",
+      "segment_seconds": [2.12, 3.98],
+      "audition_scope": "complete rifle-reload replacement"
+    },
+    {
+      "file": "pump_shotgun.wav",
+      "sha256": "6e9098af1a1d1782db7dec2a8dd3491eb161c3f0b1a61a980fafdef4b415b048",
+      "source_page": "https://freesound.org/people/shelbyshark/sounds/513354/",
+      "license": "CC0 1.0",
+      "master": "513354__shelbyshark__racking-shotgun.wav",
+      "master_sha256": "40e11f4cda5472e29da92859e74c9b7914c1c4322d6023583551d06f226a3e38",
+      "segment_seconds": [7.5, 8.65],
+      "audition_scope": "accepted pump-action ingredient; not a complete shotgun reload"
+    },
+    {
+      "file": "reload_shotgun.wav",
+      "sha256": "132232142fbbe39d69fbe44d39ac0730456f1b552655b0b21f551d987b4625ea",
+      "source_page": "https://freesound.org/people/shelbyshark/sounds/513348/",
+      "license": "CC0 1.0",
+      "master": "513348__shelbyshark__load-shotgun.wav",
+      "master_sha256": "49acb7b9512a5c0608ded1b889ed076bdde8fb769b2e454e4fd224e450e59dbe",
+      "segment_seconds": [5.75, 10.38],
+      "component_source": "gunshot_sounds_generator/sources/pump_shotgun.wav",
+      "component_sha256": "6e9098af1a1d1782db7dec2a8dd3491eb161c3f0b1a61a980fafdef4b415b048",
+      "audition_scope": "complete shotgun-reload replacement; shell-loading take and previously accepted pump both passed individually and as one sequence"
+    },
+    {
+      "file": "reload_revolver_ruger_gp100.wav",
+      "sha256": "9265a3fc22473b60b3af8c2d51c72fee1d85199bf1b9e622901ceac718bcb73c",
+      "source_page": "https://freesound.org/people/AugustSandberg/sounds/508744/",
+      "license": "CC0 1.0",
+      "master": "508744__augustsandberg__revolver-reload.wav",
+      "master_sha256": "da69eea8ad382dc9347f34c41ad1fab0cb431494b52cf70fdb6f19ead8c82e28",
+      "segment_seconds": [8.65, 21.3],
+      "audition_scope": "complete revolver-reload replacement"
+    },
+    {
+      "file": "breech_close_12g.wav",
+      "sha256": "122423546dd8d57bcaba241b5d987383a6a07bcdc4deac184b3a06ee219441ff",
+      "source_page": "https://freesound.org/people/FOSSarts/sounds/741045/",
+      "license": "CC0 1.0",
+      "master": "741045__fossarts__diablo-12g-pistol-6-inch-closing-breech-1.wav",
+      "master_sha256": "c2d42caf1e26dd65637bed8d80f1fe19dbb46b96ec81a47a83a6c99925e24c9e",
+      "segment_seconds": [1.05, 2.86],
+      "audition_scope": "accepted physical-breech ingredient; not a complete or artillery-scale reload"
+    },
+    {
+      "file": "reload_artillery.wav",
+      "sha256": "1307cd82ea8c60fd94a61447c5273397adb641099a8f45f682b8381f402c1e24",
+      "source_page": "https://freesound.org/people/craigsmith/sounds/438483/",
+      "license": "CC0 1.0",
+      "master": "438483__craigsmith__g31-45-very-heavy-metal-sliding-door.wav",
+      "master_sha256": "d26671d0238a71dd84a1bbc2aa8d4b8fc0d3a5c861371a7d7d03ee085088e678",
+      "segment_seconds": [1.2, 4.7],
+      "component_source": "gunshot_sounds_generator/sources/breech_close_12g.wav",
+      "component_sha256": "122423546dd8d57bcaba241b5d987383a6a07bcdc4deac184b3a06ee219441ff",
+      "component_segment_seconds": [0.38, 0.53],
+      "audition_scope": "complete artillery-reload action; accepted heavy breech movement resolving into a short physical click, with all spoken slate excluded"
+    }
+  ]
+}

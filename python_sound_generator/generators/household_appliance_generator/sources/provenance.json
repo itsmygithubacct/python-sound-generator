@@ -1,0 +1,114 @@
+{
+  "source_audio_policy": "Bundled audio must be real CC0/public-domain Foley. Lossy previews, merely royalty-free files, and synthetic stand-ins are excluded.",
+  "retrieved_utc": "2026-07-17T11:07:35Z",
+  "verification": "The collection page was read directly on 2026-07-17. It identifies Bret Bernhoft as the author, says the sounds were recorded and edited by the uploader, and marks the asset license Creative Commons Zero v1.0 Universal. Each master was downloaded from that page's own itch.io upload entry and hashed before conversion.",
+  "originals": "Unedited downloaded masters were retained outside the runtime package during source preparation; hashes below identify them exactly.",
+  "collections": [
+    {
+      "name": "Common Household Sound Effects",
+      "author": "Bret Bernhoft",
+      "license": "CC0 1.0 Universal",
+      "source_page": "https://bretbernhoft.itch.io/common-household-sound-effects",
+      "files": [
+        {
+          "file": "bret_air_conditioner.wav",
+          "original": "airconditioner01.wav",
+          "upload_id": 15606919,
+          "master_sha256": "3d75e715bee4c7341f323d2d26f6b527cbfb9a39ec4eeedf0a6d44867c850662",
+          "master_bytes": 51475652,
+          "master_duration_seconds": 145.905918,
+          "excerpt_start_seconds": 64.0,
+          "excerpt_duration_seconds": 20.0,
+          "sha256": "afe522daa81b192214173b7979ba8aabf3526d7601e8b1024abe0f14463eb0e8",
+          "selection": "Stable compressor and circulating-fan operation."
+        },
+        {
+          "file": "bret_air_fryer.wav",
+          "original": "airfryer01.wav",
+          "upload_id": 15606920,
+          "master_sha256": "d27e45f111cc4a15f30d7583eb5e7fd0bf4c6d0a91ca1d371400980839e343a5",
+          "master_bytes": 43391252,
+          "master_duration_seconds": 122.990952,
+          "excerpt_start_seconds": 90.0,
+          "excerpt_duration_seconds": 22.0,
+          "sha256": "47a55835fd2f835763a90a78d5b9af903dac2427fc356987c61cd52405108dd1",
+          "selection": "The master's steadiest sustained convection-fan section."
+        },
+        {
+          "file": "bret_can_opener.wav",
+          "original": "electriccanopener01.wav",
+          "upload_id": 15606923,
+          "master_sha256": "aff63c1d9abed3b79931a966a103b202bb90e97910e6f94c963fb01370465e4f",
+          "master_bytes": 9550444,
+          "master_duration_seconds": 27.070295,
+          "excerpt_start_seconds": 5.0,
+          "excerpt_duration_seconds": 20.0,
+          "sha256": "607a4b293ce5f489a351dd2d3304a780681383f664a0bd9c275e83a1b5575456",
+          "selection": "Active motor, gears, and cutter after the opening room tone."
+        },
+        {
+          "file": "bret_microwave_01.wav",
+          "original": "microwave01.wav",
+          "upload_id": 15606929,
+          "master_sha256": "cdacaa1db168aaec80cd5fd6baec44c93293e558c31ea669067dc3a7bf497841",
+          "master_bytes": 44369708,
+          "master_duration_seconds": 125.764354,
+          "excerpt_start_seconds": 50.0,
+          "excerpt_duration_seconds": 22.0,
+          "sha256": "1caa2e8538348803dbab90d22de4e093d8bf62a27fe8f818c4d47b57dbd21bb3",
+          "selection": "Active transformer, turntable, and fan from the first microwave perspective."
+        },
+        {
+          "file": "bret_microwave_02.wav",
+          "original": "microwave02.wav",
+          "upload_id": 16086128,
+          "master_sha256": "f01187620f0f88b1cb0eb5fbbce4d1d964e267bc540a4c41aec1d85ea0d96c7b",
+          "master_bytes": 44427172,
+          "master_duration_seconds": 125.927234,
+          "excerpt_start_seconds": 4.0,
+          "excerpt_duration_seconds": 22.0,
+          "sha256": "41922d8ad35943b0af9d6dfb25ea1454cfb9d4d612e571660aa3387e4bbe563c",
+          "selection": "A second real microwave take, retained for seeded source variation."
+        },
+        {
+          "file": "bret_range_hood.wav",
+          "original": "kitchenstovefan01.wav",
+          "upload_id": 17089858,
+          "master_sha256": "bdfd8c9363e86e88ab3352785e67a22999ea594a8c2df73a13c18d6808cd8125",
+          "master_bytes": 42336044,
+          "master_duration_seconds": 120.0,
+          "excerpt_start_seconds": 2.0,
+          "excerpt_duration_seconds": 20.0,
+          "sha256": "e835573c15755a688de47fcf8bf38e1a4c4ebb3f40b322c597d05434364563dd",
+          "selection": "Stable stove extraction-fan operation."
+        },
+        {
+          "file": "bret_vacuum.wav",
+          "original": "vacuumcleaner01.wav",
+          "upload_id": 15606926,
+          "master_sha256": "d024cb3839fe14bbb9cb5291ad21ee4d35c3175b1a2b22ffea8ee3351879201a",
+          "master_bytes": 43645532,
+          "master_duration_seconds": 123.711701,
+          "excerpt_start_seconds": 8.0,
+          "excerpt_duration_seconds": 20.0,
+          "sha256": "0cd7d81a4214a227e737ffb3910d1c3e3d9cf96e7ddcdaece031d9644ea95d64",
+          "selection": "Strong, steady suction and floor-contact section."
+        },
+        {
+          "file": "bret_washer.wav",
+          "original": "washer01.wav",
+          "upload_id": 15606931,
+          "master_sha256": "a68aa1b7a76d1d1236abd7b060c79682e459ed46143c671bc512d194e3bcb811",
+          "master_bytes": 41916276,
+          "master_duration_seconds": 118.810181,
+          "excerpt_start_seconds": 8.0,
+          "excerpt_duration_seconds": 22.0,
+          "sha256": "a708f106f6b62baa0f906813d8f423f5682c48dae94c99b9ecb7c99c9aa61676",
+          "selection": "The active wash section with drum, water, motor, and cabinet movement."
+        }
+      ]
+    }
+  ],
+  "conversion": "Each 44.1 kHz stereo 32-bit PCM master was trimmed to the recorded window above, averaged to mono, and encoded as 44.1 kHz signed 16-bit PCM with ffmpeg. No denoising, synthesis, time stretch, or lossy encoding was used in the bundled source.",
+  "coverage_note": "Every public cue is recording-backed. This first bank covers the seven appliances for which verified masters were selected; it does not relabel one machine as an unrecorded blender, refrigerator, dishwasher, dryer, toaster, or kettle."
+}

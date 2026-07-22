@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "selected_utc": "2026-07-22",
+  "status": "integrated_and_verified",
+  "verified_utc": "2026-07-22",
+  "license_policy": "CC0 1.0 or public domain only",
+  "master_policy": "Original lossless downloads only; Freesound MP3/OGG previews are research artifacts and are not accepted.",
+  "download_directory": "downloads",
+  "integration": {
+    "runtime_excerpts": 15,
+    "rpg_provider_excerpts": 12,
+    "cyberpunk_provider_excerpts": 3,
+    "quirky_rpg_provider_excerpts": 0,
+    "provider_ledgers": [
+      "python_sound_generator/generators/rpg_sound_generator/sources/provenance.json",
+      "python_sound_generator/generators/cyberpunk_sound_generator/sources/provenance.json",
+      "python_sound_generator/generators/quirky_rpg_sound_generator/sources/provenance.json"
+    ],
+    "verification": {
+      "tests_passed": 160,
+      "providers_clean": 32,
+      "provider_excerpt_checksums_verified": true,
+      "wheel_contains_all_runtime_excerpts": true,
+      "wheel_excludes_original_masters": true,
+      "installed_wheel_smoke_rendered": [
+        "rpg:potion_drink",
+        "cyberpunk:implant_activate",
+        "quirky-rpg:door_transition",
+        "ninja:katana_clash"
+      ]
+    }
+  },
+  "sources": [
+    {
+      "sound_id": 565799,
+      "title": "Coins",
+      "author": "dvdfu",
+      "license": "CC0 1.0",
+      "source_page": "https://freesound.org/people/dvdfu/sounds/565799/",
+      "original_sha256": "6c3e0726dfca126c33d20de4fbb58970d45a75275b93b28218ed1ef20a7d1a8a",
+      "expected_master": {
+        "container": "WAV",
+        "duration_seconds": 16.638,
+        "sample_rate_hz": 44100,
+        "bit_depth": 16,
+        "channels": 1,
+        "filename_must_contain": "565799"
+      },
+      "preview_audit": "Multiple isolated real takes: light and heavy coins into a small bag, a floor toss, and bouncing landings.",
+      "integrated_uses": [
+        "rpg:coin_pickup",
+        "rpg:purchase",
+        "rpg:item_drop (coin/material variation)"
+      ]
+    },
+    {
+      "sound_id": 434143,
+      "title": "Cork pop.wav",
+      "author": "mfearnley",
+      "license": "CC0 1.0",
+      "source_page": "https://freesound.org/people/mfearnley/sounds/434143/",
+      "original_sha256": "7b28a2964dde3e79c76a2d53d150ce95049e1442dddfa687e30b7bce0fa6af78",
+      "expected_master": {
+        "container": "WAV",
+        "duration_seconds": 13.48,
+        "sample_rate_hz": 48000,
+        "bit_depth": 24,
+        "channels": 2,
+        "filename_must_contain": "434143"
+      },
+      "preview_audit": "Several separable real cork pops plus subtle liquid movement; no mouth-made substitute.",
+      "integrated_uses": [
+        "rpg:potion_drink"
+      ]
+    },
+    {
+      "sound_id": 573654,
+      "title": "Wooden Chest Open.wav",
+      "author": "The_Frisbee_of_Peace",
+      "license": "CC0 1.0",
+      "source_page": "https://freesound.org/people/The_Frisbee_of_Peace/sounds/573654/",
+      "original_sha256": "5d79f7f8bbd3e61a4cf0068f75549520cc8058d3e4d5c842233d3f0dfef52deb",
+      "expected_master": {
+        "container": "WAV",
+        "duration_seconds": 2.33,
+        "sample_rate_hz": 48000,
+        "bit_depth": 32,
+        "channels": 2,
+        "filename_must_contain": "573654"
+      },
+      "preview_audit": "Compact raw recording of an actual wooden chest opening, with a usable lid/hinge movement.",
+      "integrated_uses": [
+        "rpg:chest_open"
+      ]
+    },
+    {
+      "sound_id": 411219,
+      "title": "Drink and gulp",
+      "author": "AndersHolm",
+      "license": "CC0 1.0",
+      "source_page": "https://freesound.org/people/AndersHolm/sounds/411219/",
+      "original_sha256": "550f06f69d068efb23e5b78572a124fa94720bcca151e693e002e6346dfc7fa5",
+      "expected_master": {
+        "container": "WAV",
+        "duration_seconds": 2.966,
+        "sample_rate_hz": 44100,
+        "bit_depth": 24,
+        "channels": 2,
+        "filename_must_contain": "411219"
+      },
+      "preview_audit": "Short real sip followed by a distinct swallow; two clean regions suitable for a compact potion cue.",
+      "integrated_uses": [
+        "rpg:potion_drink"
+      ]
+    },
+    {
+      "sound_id": 824121,
+      "title": "ServoMotor.wav",
+      "author": "derjuli",
+      "license": "CC0 1.0",
+      "source_page": "https://freesound.org/people/derjuli/sounds/824121/",
+      "original_sha256": "6f4827139a3e1cb45bfcb5a7e0017b24b3861020c366300c269781bdad73102a",
+      "expected_master": {
+        "container": "WAV",
+        "duration_seconds": 18.039,
+        "sample_rate_hz": 48000,
+        "bit_depth": 16,
+        "channels": 2,
+        "filename_must_contain": "824121"
+      },
+      "preview_audit": "Raw operating servo with several separated movement bursts; distinct from the existing keyboard, latch, and metal-impact sources.",
+      "integrated_uses": [
+        "cyberpunk:implant_activate"
+      ]
+    }
+  ],
+  "approved_existing_reuse": [
+    {
+      "source": "computer_sounds_generator/sources/key_cc0.wav",
+      "integrated_uses": [
+        "cyberpunk:terminal_key"
+      ]
+    },
+    {
+      "source": "creature_foley_generator/sources/artisticdude_cloth.wav and approved armor variants",
+      "integrated_uses": [
+        "rpg:item_equip",
+        "quirky-rpg:equip"
+      ]
+    },
+    {
+      "source": "unarmed_foley_generator approved body-impact bank",
+      "integrated_uses": [
+        "quirky-rpg:player_hit",
+        "quirky-rpg:enemy_hit",
+        "quirky-rpg:critical_hit"
+      ]
+    },
+    {
+      "source": "door_sound_generator/sources/laleksic_lock.wav and approved wood/door banks",
+      "integrated_uses": [
+        "rpg:door_unlock",
+        "quirky-rpg:door_transition"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "source_audio_policy": "CC0 1.0 or public domain only",
+  "retrieved_utc": "2026-07-22",
+  "storage_policy": "Unique approved excerpts remain in this provider; reused recordings resolve through their provenance-owning provider or the shared content-addressed asset catalog.",
+  "conversion": "Original Freesound masters are preserved outside the runtime package. Approved regions were decoded with FFmpeg, downmixed to mono, resampled to 44100 Hz, edge-faded, and written as signed 16-bit PCM WAV with metadata removed. No synthetic replacement transients were added.",
+  "selection_policy": "Recordings reinforce only physical edges: dropped objects, carried gear, coins, a cork and swallow, a wooden chest, and a lock. Musical, progression, dialogue, encounter, save, and rest identities remain procedural.",
+  "collections": [
+    {
+      "name": "Coins",
+      "author": "dvdfu",
+      "license": "CC0 1.0",
+      "source_page": "https://freesound.org/people/dvdfu/sounds/565799/",
+      "original_file": "565799__dvdfu__coins.wav",
+      "original_sha256": "6c3e0726dfca126c33d20de4fbb58970d45a75275b93b28218ed1ef20a7d1a8a",
+      "rpg_use": "coin pickup, purchase, and coin/material drop variations",
+      "files": [
+        {
+          "file": "dvdfu_coin_bag_01.wav",
+          "source_start_seconds": 0.155,
+          "source_duration_seconds": 0.3,
+          "sha256": "b8c3acb428050d1c89860045b7c4ce7380b93c6293dd22331dc18d1aa32729df"
+        },
+        {
+          "file": "dvdfu_coin_bag_02.wav",
+          "source_start_seconds": 1.165,
+          "source_duration_seconds": 0.32,
+          "sha256": "ea48c5cd2be05b30ea1b92845162fb42e199419096edfaa962b8ba85e4027266"
+        },
+        {
+          "file": "dvdfu_coin_bag_03.wav",
+          "source_start_seconds": 3.66,
+          "source_duration_seconds": 0.43,
+          "sha256": "cc6542382f9da4e54e83448069a0c76b2a068c9c6763f673585b5d296e8b3a8d"
+        },
+        {
+          "file": "dvdfu_coin_bag_04.wav",
+          "source_start_seconds": 4.37,
+          "source_duration_seconds": 0.5,
+          "sha256": "7b8c5a767e5e320f0befb6487a8beb20c9fe15dcdd7feb65ffc2a3b67608e4a6"
+        },
+        {
+          "file": "dvdfu_coin_floor_01.wav",
+          "source_start_seconds": 7.66,
+          "source_duration_seconds": 0.74,
+          "sha256": "4509df8203d98038a42f5d8b2d89b3de7ef8f778269ede126d4d9864e67b02f9"
+        },
+        {
+          "file": "dvdfu_coin_floor_02.wav",
+          "source_start_seconds": 8.55,
+          "source_duration_seconds": 0.86,
+          "sha256": "9748be65448c6272b09caf6b807e6154e8bd628efc1280ad2b9d4a2605c0a9e0"
+        },
+        {
+          "file": "dvdfu_coin_floor_03.wav",
+          "source_start_seconds": 9.6,
+          "source_duration_seconds": 1.04,
+          "sha256": "89d6fa61a0326e14e09da413dc42e760614161b3cdf487e693901441966856e6"
+        }
+      ]
+    },
+    {
+      "name": "Cork pop.wav",
+      "author": "mfearnley",
+      "license": "CC0 1.0",
+      "source_page": "https://freesound.org/people/mfearnley/sounds/434143/",
+      "original_file": "434143__mfearnley__cork-pop.wav",
+      "original_sha256": "7b28a2964dde3e79c76a2d53d150ce95049e1442dddfa687e30b7bce0fa6af78",
+      "rpg_use": "dry physical cork variations for potion drinking",
+      "files": [
+        {
+          "file": "mfearnley_cork_pop_01.wav",
+          "source_start_seconds": 0.64,
+          "source_duration_seconds": 0.62,
+          "sha256": "385669dae58f16f6b2231f309543eba47605901013d1da1753f1d1dfd7be5d2b"
+        },
+        {
+          "file": "mfearnley_cork_pop_02.wav",
+          "source_start_seconds": 2.04,
+          "source_duration_seconds": 0.64,
+          "sha256": "7211776062a38e0dc817167a18ad95ea43b6f38a1dee2dce7cacea6582269559"
+        },
+        {
+          "file": "mfearnley_cork_pop_03.wav",
+          "source_start_seconds": 3.4,
+          "source_duration_seconds": 0.68,
+          "sha256": "bb8825bcfa1708b6abd9b12fba60cb0e9b02f4ac2893dc5a07e771923c83a2a4"
+        }
+      ]
+    },
+    {
+      "name": "Wooden Chest Open.wav",
+      "author": "The_Frisbee_of_Peace",
+      "license": "CC0 1.0",
+      "source_page": "https://freesound.org/people/The_Frisbee_of_Peace/sounds/573654/",
+      "original_file": "573654__the_frisbee_of_peace__wooden-chest-open.wav",
+      "original_sha256": "5d79f7f8bbd3e61a4cf0068f75549520cc8058d3e4d5c842233d3f0dfef52deb",
+      "rpg_use": "wooden lid, hinge, and opening movement beneath the treasure motif",
+      "files": [
+        {
+          "file": "frisbee_wooden_chest_open.wav",
+          "source_start_seconds": 0.02,
+          "source_duration_seconds": 1.64,
+          "sha256": "9263825db0997bdff65d3086d64ce30b54c709e53086a098b1d57d5adfe4495e"
+        }
+      ]
+    },
+    {
+      "name": "Drink and gulp",
+      "author": "AndersHolm",
+      "license": "CC0 1.0",
+      "source_page": "https://freesound.org/people/AndersHolm/sounds/411219/",
+      "original_file": "411219__andersholm__drink-and-gulp.wav",
+      "original_sha256": "550f06f69d068efb23e5b78572a124fa94720bcca151e693e002e6346dfc7fa5",
+      "rpg_use": "isolated swallow beneath the procedural potion bubbles",
+      "files": [
+        {
+          "file": "andersholm_gulp.wav",
+          "source_start_seconds": 1.46,
+          "source_duration_seconds": 0.55,
+          "sha256": "5dec2fc48124578c74f8d19a3a1060e68ce92b684069bcf4e4f3d141d7d3f599"
+        }
+      ]
+    },
+    {
+      "name": "RPG Sound Pack",
+      "author": "artisticdude",
+      "license": "CC0 1.0",
+      "source_page": "https://opengameart.org/content/rpg-sound-pack",
+      "owner_provenance": "generators/creature_foley_generator/sources/provenance.json",
+      "rpg_use": "item equipment cloth, armor, and carried-gear movement",
+      "logical_files": [
+        "creature_foley_generator/sources/artisticdude_cloth.wav",
+        "creature_foley_generator/sources/artisticdude_cloth_heavy.wav",
+        "creature_foley_generator/sources/artisticdude_armor_light.wav",
+        "creature_foley_generator/sources/artisticdude_chainmail.wav"
+      ]
+    },
+    {
+      "name": "100 CC0 metal and wood SFX",
+      "author": "rubberduck",
+      "license": "CC0 1.0",
+      "source_page": "https://opengameart.org/content/100-cc0-metal-and-wood-sfx",
+      "owner_provenance": "generators/wood_noise_generator/sources/provenance.json",
+      "rpg_use": "wooden item-drop contact variations",
+      "logical_files": [
+        "wood_noise_generator/sources/rubberduck_wood_hit_01.wav",
+        "wood_noise_generator/sources/rubberduck_wood_hit_04.wav",
+        "wood_noise_generator/sources/rubberduck_wood_hit_07.wav"
+      ]
+    },
+    {
+      "name": "Impact Sounds",
+      "author": "Kenney",
+      "license": "CC0 1.0",
+      "source_page": "https://kenney.nl/assets/impact-sounds",
+      "owner_provenance": "generators/aircraft_spacecraft_generator/sources/provenance.json",
+      "rpg_use": "light metal item-drop contact variations",
+      "logical_files": [
+        "aircraft_spacecraft_generator/sources/kenney_impact_metal_light_000.wav through kenney_impact_metal_light_004.wav"
+      ]
+    },
+    {
+      "name": "Various Sound Effects",
+      "author": "laleksic",
+      "license": "CC0 1.0",
+      "source_page": "https://opengameart.org/content/various-sound-effects",
+      "owner_provenance": "generators/door_sound_generator/sources/provenance.json",
+      "rpg_use": "door-unlock mechanism",
+      "logical_files": [
+        "door_sound_generator/sources/laleksic_lock.wav"
+      ]
+    }
+  ]
+}

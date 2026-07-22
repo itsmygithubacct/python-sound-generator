@@ -1,0 +1,231 @@
+{
+  "source_audio_policy": "CC0 or public domain only",
+  "retrieved_utc": "2026-07-15",
+  "verification": "Every sound's license was read from its Freesound source page rather than from search results. Each original's SHA-256 is recorded as downloaded. Note that audible-edge's tire squeals are also mirrored on OpenGameArt under CC-BY 3.0; the Freesound originals used here are the author's own CC0 release, which is why they are admissible under this policy.",
+  "conversion": "Decoded with FFmpeg to mono 44100 Hz signed 16-bit PCM WAV, then excerpted. This departs from the sibling door and creature banks, which apply no content processing: the full originals total 388 MB (one is 11 minutes) and bundling them whole was not reasonable. Every excerpt's in/out point is recorded below against the original's SHA-256, so each cut is auditable. No processing beyond the decode and the trim was applied.",
+  "originals": "Full unedited originals were retained outside the runtime package during source preparation; the hashes below identify them exactly.",
+  "sign_off": "Every bundled excerpt was auditioned and approved by ear on 2026-07-15, as was every rejection recorded above.",
+  "excluded": [
+    {
+      "name": "Rubber Skid",
+      "author": "shatterstars",
+      "source_page": "https://freesound.org/s/492071/",
+      "license": "CC0 1.0",
+      "reason": "CC0 and admissible, but rejected by ear: it reads as someone sliding on glass rather than a car. Its original is also a lossy mp3 rather than a lossless master."
+    },
+    {
+      "name": "Car tire squeal skid loop / Car Tire Skid Squealing / Stunt Rally sounds",
+      "source_page": "https://opengameart.org/content/car-tire-squeal-skid-loop",
+      "reason": "The obvious OpenGameArt tire candidates are CC-BY 3.0 and CC-BY-SA, which this policy does not admit. Sourced the CC0 Freesound equivalents instead."
+    },
+    {
+      "name": "Mud Splat",
+      "author": "Breviceps",
+      "source_page": "https://freesound.org/s/445109/",
+      "license": "CC0 1.0",
+      "reason": "CC0 and admissible, but dropped: its siblings in the same pack are titled Cartoon Splat, and craigsmith's wheels-spinning recording covers mud with a real car instead."
+    },
+    {
+      "name": "SFX_stone_pebble_gravel / wet splat squish 01",
+      "source_page": "https://freesound.org/s/669451/",
+      "license": "CC0 1.0",
+      "reason": "CC0 and admissible; rejected by ear while sourcing spray Foley."
+    },
+    {
+      "name": "MudSquelch and other mud-underfoot recordings",
+      "source_page": "https://freesound.org/s/207142/",
+      "license": "CC0 1.0",
+      "reason": "Rejected for vehicles on physics, not quality: a foot in mud is suction -- weight pressing down and releasing -- where a tire throws mud outward. Kept only as an excluded lead for the footsteps domain."
+    }
+  ],
+  "collections": [
+    {
+      "name": "Chrysler LHS tire squeal 01 (04-25-2009)",
+      "author": "audible-edge (Tom Haigh)",
+      "license": "CC0 1.0",
+      "source_page": "https://freesound.org/s/71736/",
+      "original_file": "71736__audible-edge__chrysler-lhs-tire-squeal-01-04-25-2009.wav",
+      "original_sha256": "5249889e2410fa07f9b249645a758d5301de890d5f1ff29157e06d50657bd33c",
+      "bundled_file": "audibleedge_squeal_01.wav",
+      "excerpt_seconds": [
+        2.5,
+        7.5
+      ],
+      "bundled_sha256": "c508f2ac3d85d2353f460e8765c519e4bb2253b58995150f1ce0be784976fb51",
+      "used_for": "skid, drift"
+    },
+    {
+      "name": "Chrysler LHS tire squeal 02 (04-25-2009)",
+      "author": "audible-edge (Tom Haigh)",
+      "license": "CC0 1.0",
+      "source_page": "https://freesound.org/s/71737/",
+      "original_file": "71737__audible-edge__chrysler-lhs-tire-squeal-02-04-25-2009.wav",
+      "original_sha256": "44a7ee84c44a1286252e871a582299690d3002556532f566c85b561d73f71e69",
+      "bundled_file": "audibleedge_squeal_02.wav",
+      "excerpt_seconds": [
+        3.9,
+        7.5
+      ],
+      "bundled_sha256": "4d6580fe638f4942f9d6bbe4b1d6043e903246ca78113fb79f2d14497e3d7613",
+      "used_for": "skid, drift"
+    },
+    {
+      "name": "Chrysler LHS tire squeal 03 (04-25-2009)",
+      "author": "audible-edge (Tom Haigh)",
+      "license": "CC0 1.0",
+      "source_page": "https://freesound.org/s/71738/",
+      "original_file": "71738__audible-edge__chrysler-lhs-tire-squeal-03-04-25-2009.wav",
+      "original_sha256": "6dd839fa59832d4f20409f0d80015a6f79c8dda27206a967429bf03cb05e4e6d",
+      "bundled_file": "audibleedge_squeal_03.wav",
+      "excerpt_seconds": [
+        1.2,
+        10.0
+      ],
+      "bundled_sha256": "cbc2134b487b3521112aff97af531d62ac0924a0a034d36a9f825f74d84396dd",
+      "used_for": "skid, drift"
+    },
+    {
+      "name": "Chrysler LHS tire squeal 04 (04-25-2009)",
+      "author": "audible-edge (Tom Haigh)",
+      "license": "CC0 1.0",
+      "source_page": "https://freesound.org/s/71739/",
+      "original_file": "71739__audible-edge__chrysler-lhs-tire-squeal-04-04-25-2009.wav",
+      "original_sha256": "2dab5c01060a1e4250747036a016e9607e7ff9dc84a499089403fac51494bbe3",
+      "bundled_file": "audibleedge_squeal_04.wav",
+      "excerpt_seconds": [
+        2.2,
+        14.9
+      ],
+      "bundled_sha256": "285147c2358338155968ccf4a654fb44cc850b1df1117f87cbe6442c318f1a53",
+      "used_for": "skid, drift"
+    },
+    {
+      "name": "Car Driving Interior",
+      "author": "squareal",
+      "license": "CC0 1.0",
+      "source_page": "https://freesound.org/s/237374/",
+      "original_file": "237374__squareal__car-driving-interior.wav",
+      "original_sha256": "ced451ee4981e8c9330844ee4acbf85b02e2a28f9fa51e9d475c2f925e848215",
+      "bundled_file": "squareal_roll_asphalt.wav",
+      "excerpt_seconds": [
+        52.0,
+        58.0
+      ],
+      "bundled_sha256": "51565b8757c64b7d8999a812e3d6614d2f32eccf78284479701b2ca9cbbc2e2a",
+      "used_for": "roll (asphalt, concrete)",
+      "caveat": "Interior perspective: carries cabin tone as well as engine. Engine is audible in this recording. car_engine_generator owns the engine layer, so a renderer using this must expect to fight it or high-pass it out."
+    },
+    {
+      "name": "Car driving at fast speed on dirt road, recorded with microphone through the window",
+      "author": "felix.blume",
+      "license": "CC0 1.0",
+      "source_page": "https://freesound.org/s/685233/",
+      "original_file": "685233__felixblume__car-driving-at-fast-speed-on-dirt-road-recorded-with-microphone-through-the-window.wav",
+      "original_sha256": "a5b53aae32ceb135e7cb37f4ba3eac4d67e250bb4e049d5010ab22f3b8b44688",
+      "bundled_file": "felixblume_roll_dirt.wav",
+      "excerpt_seconds": [
+        4.0,
+        10.0
+      ],
+      "bundled_sha256": "a7c9b0230627a68e6ec3927aeaf908bf86ef22459930bae4b4c248c37cb3a2ec",
+      "used_for": "roll (dirt)",
+      "caveat": "Engine is audible in this recording. car_engine_generator owns the engine layer, so a renderer using this must expect to fight it or high-pass it out."
+    },
+    {
+      "name": "Car driving in exterior, Toyota Landcruiser 4x4, motor, dirt road, gravel, puddle, mud, offroad, microphone outside the window",
+      "author": "felix.blume",
+      "license": "CC0 1.0",
+      "source_page": "https://freesound.org/s/668552/",
+      "original_file": "668552__felixblume__car-driving-in-exterior-toyota-landcruiser-4x4-motor-dirt-road-gravel-puddle-mud-offroad-microphone-outside-the-window.wav",
+      "original_sha256": "0c2553baf62dc4a0f00fd71edd4ad2df0bb1de94367687f0a161c697d0e091ea",
+      "bundled_file": "felixblume_roll_gravel.wav",
+      "excerpt_seconds": [
+        628.8,
+        634.8
+      ],
+      "bundled_sha256": "59846293da80804876b32eeb85308f4039a13d0814accd9442a229516b98bcc9",
+      "used_for": "roll (gravel), spray (gravel, mud)",
+      "caveat": "Engine is audible in this recording. car_engine_generator owns the engine layer, so a renderer using this must expect to fight it or high-pass it out."
+    },
+    {
+      "name": "Cars and trucks passing by on a wet road",
+      "author": "klau78",
+      "license": "CC0 1.0",
+      "source_page": "https://freesound.org/s/648786/",
+      "original_file": "648786__klau78__cars-and-trucks-passing-by-on-a-wet-road.wav",
+      "original_sha256": "f511fb33a026c9d6c82a350db13974091f3d75c52132e9f99b8a594bdda35b8f",
+      "bundled_file": "klau78_roll_wet.wav",
+      "excerpt_seconds": [
+        3.5,
+        9.5
+      ],
+      "bundled_sha256": "db7d26f8038c3fdf547cca92e43565a03e83eb6515471c60d011edf2ec37eaa0",
+      "used_for": "roll (wet)",
+      "caveat": "Roadside pass-by of other vehicles, not an onboard recording: the perspective differs from the asphalt and dirt beds, and it is the least steady of the four (relative spread 0.16). Those vehicles have engines, so this carries engine too."
+    },
+    {
+      "name": "car turning on gravel (with a bit of birds) (Megan Renault)",
+      "author": "erwil",
+      "license": "CC0 1.0",
+      "source_page": "https://freesound.org/s/545828/",
+      "original_file": "545828__erwil__car-turning-on-gravel-with-a-bit-of-birds-megan-renault.flac",
+      "original_sha256": "53b3096e71942eefaccc979ea59f8a7fa0399161c83d25b3b04bd81d54e4db6f",
+      "bundled_file": "erwil_gravel_turn.wav",
+      "excerpt_seconds": [
+        2.0,
+        6.5
+      ],
+      "bundled_sha256": "0008760f5ae97481bce73170ee51135d1b8b78aae5c97398c38ff38051928d28",
+      "used_for": "spray (gravel)",
+      "caveat": "Birdsong is present in the source; check any loop built from this for it."
+    },
+    {
+      "name": "Distant car tire screeching",
+      "author": "LukaCafuka",
+      "license": "CC0 1.0",
+      "source_page": "https://freesound.org/s/752837/",
+      "original_file": "752837__lukacafuka__distant-car-tire-screeching.wav",
+      "original_sha256": "37c8c4fb54d9332a561081170b550364da489adc5832902bb155b281c30f2cfd",
+      "bundled_file": "lukacafuka_screech_distant.wav",
+      "excerpt_seconds": [
+        1.5,
+        8.0
+      ],
+      "bundled_sha256": "0cb0dcc68a02feb695a0286c3814d7e5489f382056445aced3ede6cec8e67235",
+      "used_for": "skid (distant variant)",
+      "caveat": "Distant perspective: carries street reverb. A far-off skid, not a dry close one."
+    },
+    {
+      "name": "57 chevy drive away and distant tire squeal_1-2",
+      "author": "aaronsawyer1",
+      "license": "CC0 1.0",
+      "source_page": "https://freesound.org/s/101347/",
+      "original_file": "101347__aaronsawyer1__57-chevy-drive-away-and-distant-tire-squeal_1-2.aiff",
+      "original_sha256": "067281faf436e03fd5b5526578b4499322e20b771e5f054490e8250e741380a7",
+      "bundled_file": "aaronsawyer_squeal_chevy.wav",
+      "excerpt_seconds": [
+        23.0,
+        28.0
+      ],
+      "bundled_sha256": "3a070f1243a1cf23f5968714e17de5361f17178038ee300b266f6c3850edb14c",
+      "used_for": "skid (distant variant)",
+      "caveat": "Signed off by ear with the engine baked in, deliberately. Engine is audible in this recording. car_engine_generator owns the engine layer, so a renderer using this must expect to fight it or high-pass it out."
+    },
+    {
+      "name": "S07-20 car stuck in mud; medium distance engine revs; wheels spin",
+      "author": "craigsmith",
+      "license": "CC0 1.0",
+      "source_page": "https://freesound.org/s/675266/",
+      "original_file": "675266__craigsmith__s07-20-car-stuck-in-mud-medium-distance-engine-revs-wheels-spin.wav",
+      "original_sha256": "6390ae1fa0caed006609c69f984acb8c0f0ae3b05109f01e2247b12a56c7617a",
+      "bundled_file": "craigsmith_mud_spin.wav",
+      "excerpt_seconds": [
+        76.5,
+        82.5
+      ],
+      "bundled_sha256": "43196677e54b83e0ccef98c9082e50919abbeca697b59894bb565ad4fc38170e",
+      "used_for": "spray (mud)",
+      "caveat": "The only recording in CC0 of a tire actually throwing mud: searches for car mud spray and tire mud return nothing at all. Engine bleed is the heaviest in this bank -- the title says medium distance engine revs -- and it was signed off by ear on that basis."
+    }
+  ]
+}

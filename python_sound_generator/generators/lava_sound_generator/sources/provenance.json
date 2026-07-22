@@ -1,0 +1,38 @@
+{
+  "source_audio_policy": "CC0 or public domain only",
+  "retrieved_utc": "2026-07-16",
+  "conversion": "The one bundled file is decoded to mono 44100 Hz signed 16-bit PCM WAV; no content processing is applied to it. Slowing, de-flickering, filtering, looping, and every synthesized bubble happen at render time in engine.py so the bundled file stays comparable to what the source page serves.",
+  "verification": "The fireplace bed's licence was read from its own source page (not a search result, not a mirror). It is bundled here by copy from the sibling fire_sound_generator, which sourced the same file first; the original download's SHA-256 recorded there is carried over, and the decoded copy's own SHA-256 is recorded as bundled_sha256.",
+  "hybrid_note": "Lava is a hybrid. The recorded half is the roar bed below; the synthesized half is the bubbles, which are not recorded at all. A bubble surfacing has a rate, and a rate is not a period -- so the bubbles are procedural (resonant exp-decay tones, gliding down, with a wet noise burst) and only the chaotic aperiodic roar is a recording. That split is why only one file is bundled.",
+  "excluded": [
+    {
+      "name": "25 CC0 mud sfx (rubberduck)",
+      "source_page": "https://opengameart.org/content/25-cc0-mud-sfx",
+      "reason": "The obvious recording to reach for: thick mud bubbles bursting, slowed, is the classic lava-bubble Foley, and it is CC0 (noted so by fire_sound_generator's README, which scoped lava before this generator existed). Not bundled, and not for a licensing reason -- the bubbles here are synthesized. A bubble is a clean resonant transient with a rate, which is exactly what procedural DSP does well, so no bubble recording is bundled at all. Reach for this first if a recorded-bubble variant is ever wanted."
+    },
+    {
+      "name": "environment_ambience_generator's procedural lava loop",
+      "source_page": "local: ../environment_ambience_generator",
+      "reason": "Not a licensing exclusion. That package had a fully-synthesized lava loop -- roar and all -- and it was removed alongside its fire on 2026-07-15. The roar is the part synthesis lost on (chaotic, broadband, correlated across frequency in ways filtered noise is not), which is why the roar here is a recording. Kept in the record so nobody re-derives a lava roar from oscillators and wonders why it was not done that way."
+    }
+  ],
+  "collections": [
+    {
+      "name": "Fireplace Sound loop",
+      "author": "PagDev",
+      "license": "CC0",
+      "source_page": "https://opengameart.org/content/fireplace-sound-loop",
+      "original_file": "fire.wav",
+      "original_sha256": "85ca0cc60d0c037fff8b185e31ad1fcdbda6ce45eee17c3ee1318d1b8f59e330",
+      "bundled_sha256": "16cfece8740d3549474fae1b2b36c5f2a0c496d11f93027790e61f353e2e7c15",
+      "borrowed_from": "fire_sound_generator/sources/pagdev_fireplace.wav (same CC0 origin; copied so lava is self-contained)",
+      "note": "29 s of wood burning -- fire's burning bed, which at its lowest scale is most of what lava is: a slow viscous roar. Every sustained cue and the roar under every event is built from it, slowed and de-flickered into molten rock.",
+      "files": [
+        {
+          "file": "pagdev_fireplace.wav",
+          "original": "fire.wav"
+        }
+      ]
+    }
+  ]
+}

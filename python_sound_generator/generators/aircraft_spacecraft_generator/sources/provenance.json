@@ -1,0 +1,395 @@
+{
+ "source_audio_policy": "CC0 or public domain only",
+ "retrieved_utc": "2026-07-15",
+ "conversion": "Decoded with FFmpeg to mono 44100 Hz signed 16-bit PCM WAV; no content processing was applied to the bundled source files.",
+ "verification": "Every collection's license was read from its own source page rather than from search results, and each archive's SHA-256 is recorded as downloaded.",
+ "excluded": [
+  {
+   "name": "Car tire squeal skid loop",
+   "source_page": "https://opengameart.org/content/car-tire-squeal-skid-loop",
+   "reason": "CC-BY 3.0 (Tom Haigh / audible-edge), not CC0. It is the best-matching tire recording found and requires attribution, which this policy does not accept."
+  },
+  {
+   "name": "Freesound results for tire / skid / crash generally",
+   "source_page": "https://freesound.org/",
+   "reason": "Freesound mixes CC0, CC-BY and Sampling+ per sound. Only 536769 was confirmed CC0 on its own page and used; the rest were not checked and must not be assumed CC0."
+  }
+ ],
+ "collections": [
+  {
+   "name": "Impact Sounds",
+   "author": "Kenney",
+   "license": "CC0 1.0",
+   "source_page": "https://kenney.nl/assets/impact-sounds",
+   "original_archive": "kenney_impact-sounds.zip",
+   "original_archive_sha256": "029d734af1582474edf3a694d1b0cebc97c1c152f2f39fa34d4c2bafc5de77f8",
+   "note": "Metal, plate and tin impacts: the closest CC0 material to a stressed-skin airframe being struck.",
+   "files": [
+    {
+     "bundled": "kenney_impact_metal_light_000.wav",
+     "original": "impactMetal_light_000.ogg"
+    },
+    {
+     "bundled": "kenney_impact_metal_light_001.wav",
+     "original": "impactMetal_light_001.ogg"
+    },
+    {
+     "bundled": "kenney_impact_metal_light_002.wav",
+     "original": "impactMetal_light_002.ogg"
+    },
+    {
+     "bundled": "kenney_impact_metal_light_003.wav",
+     "original": "impactMetal_light_003.ogg"
+    },
+    {
+     "bundled": "kenney_impact_metal_light_004.wav",
+     "original": "impactMetal_light_004.ogg"
+    },
+    {
+     "bundled": "kenney_impact_metal_medium_000.wav",
+     "original": "impactMetal_medium_000.ogg"
+    },
+    {
+     "bundled": "kenney_impact_metal_medium_001.wav",
+     "original": "impactMetal_medium_001.ogg"
+    },
+    {
+     "bundled": "kenney_impact_metal_medium_002.wav",
+     "original": "impactMetal_medium_002.ogg"
+    },
+    {
+     "bundled": "kenney_impact_metal_medium_003.wav",
+     "original": "impactMetal_medium_003.ogg"
+    },
+    {
+     "bundled": "kenney_impact_metal_medium_004.wav",
+     "original": "impactMetal_medium_004.ogg"
+    },
+    {
+     "bundled": "kenney_impact_metal_heavy_000.wav",
+     "original": "impactMetal_heavy_000.ogg"
+    },
+    {
+     "bundled": "kenney_impact_metal_heavy_001.wav",
+     "original": "impactMetal_heavy_001.ogg"
+    },
+    {
+     "bundled": "kenney_impact_metal_heavy_002.wav",
+     "original": "impactMetal_heavy_002.ogg"
+    },
+    {
+     "bundled": "kenney_impact_metal_heavy_003.wav",
+     "original": "impactMetal_heavy_003.ogg"
+    },
+    {
+     "bundled": "kenney_impact_metal_heavy_004.wav",
+     "original": "impactMetal_heavy_004.ogg"
+    },
+    {
+     "bundled": "kenney_impact_plate_light_000.wav",
+     "original": "impactPlate_light_000.ogg"
+    },
+    {
+     "bundled": "kenney_impact_plate_light_001.wav",
+     "original": "impactPlate_light_001.ogg"
+    },
+    {
+     "bundled": "kenney_impact_plate_light_002.wav",
+     "original": "impactPlate_light_002.ogg"
+    },
+    {
+     "bundled": "kenney_impact_plate_light_003.wav",
+     "original": "impactPlate_light_003.ogg"
+    },
+    {
+     "bundled": "kenney_impact_plate_light_004.wav",
+     "original": "impactPlate_light_004.ogg"
+    },
+    {
+     "bundled": "kenney_impact_plate_medium_000.wav",
+     "original": "impactPlate_medium_000.ogg"
+    },
+    {
+     "bundled": "kenney_impact_plate_medium_001.wav",
+     "original": "impactPlate_medium_001.ogg"
+    },
+    {
+     "bundled": "kenney_impact_plate_medium_002.wav",
+     "original": "impactPlate_medium_002.ogg"
+    },
+    {
+     "bundled": "kenney_impact_plate_medium_003.wav",
+     "original": "impactPlate_medium_003.ogg"
+    },
+    {
+     "bundled": "kenney_impact_plate_medium_004.wav",
+     "original": "impactPlate_medium_004.ogg"
+    },
+    {
+     "bundled": "kenney_impact_plate_heavy_000.wav",
+     "original": "impactPlate_heavy_000.ogg"
+    },
+    {
+     "bundled": "kenney_impact_plate_heavy_001.wav",
+     "original": "impactPlate_heavy_001.ogg"
+    },
+    {
+     "bundled": "kenney_impact_plate_heavy_002.wav",
+     "original": "impactPlate_heavy_002.ogg"
+    },
+    {
+     "bundled": "kenney_impact_plate_heavy_003.wav",
+     "original": "impactPlate_heavy_003.ogg"
+    },
+    {
+     "bundled": "kenney_impact_plate_heavy_004.wav",
+     "original": "impactPlate_heavy_004.ogg"
+    },
+    {
+     "bundled": "kenney_impact_tin_medium_000.wav",
+     "original": "impactTin_medium_000.ogg"
+    },
+    {
+     "bundled": "kenney_impact_tin_medium_001.wav",
+     "original": "impactTin_medium_001.ogg"
+    },
+    {
+     "bundled": "kenney_impact_tin_medium_002.wav",
+     "original": "impactTin_medium_002.ogg"
+    },
+    {
+     "bundled": "kenney_impact_tin_medium_003.wav",
+     "original": "impactTin_medium_003.ogg"
+    },
+    {
+     "bundled": "kenney_impact_tin_medium_004.wav",
+     "original": "impactTin_medium_004.ogg"
+    }
+   ]
+  },
+  {
+   "name": "100 CC0 metal and wood SFX",
+   "author": "rubberduck",
+   "license": "CC0 1.0",
+   "source_page": "https://opengameart.org/content/100-cc0-metal-and-wood-sfx",
+   "original_archive": "100-CC0-wood-metal-SFX.zip",
+   "original_archive_sha256": "be6eba63b03409ac0c77787a956b1503a7c186403d04aef9725c52644a4b7878",
+   "note": "metal_sheet_* is the tearing material: a large thin panel flexing and rending, which is what an airframe actually does.",
+   "files": [
+    {
+     "bundled": "rubberduck_metal_sheet_01.wav",
+     "original": "metal_sheet_01.ogg"
+    },
+    {
+     "bundled": "rubberduck_metal_sheet_02.wav",
+     "original": "metal_sheet_02.ogg"
+    },
+    {
+     "bundled": "rubberduck_metal_sheet_03.wav",
+     "original": "metal_sheet_03.ogg"
+    },
+    {
+     "bundled": "rubberduck_metal_sheet_04.wav",
+     "original": "metal_sheet_04.ogg"
+    },
+    {
+     "bundled": "rubberduck_metal_sheet_05.wav",
+     "original": "metal_sheet_05.ogg"
+    },
+    {
+     "bundled": "rubberduck_metal_sheet_06.wav",
+     "original": "metal_sheet_06.ogg"
+    },
+    {
+     "bundled": "rubberduck_metal_slam_01.wav",
+     "original": "metal_slam_01.ogg"
+    },
+    {
+     "bundled": "rubberduck_metal_hit_01.wav",
+     "original": "metal_hit_01.ogg"
+    },
+    {
+     "bundled": "rubberduck_metal_hit_02.wav",
+     "original": "metal_hit_02.ogg"
+    },
+    {
+     "bundled": "rubberduck_metal_hit_03.wav",
+     "original": "metal_hit_03.ogg"
+    },
+    {
+     "bundled": "rubberduck_metal_hit_04.wav",
+     "original": "metal_hit_04.ogg"
+    },
+    {
+     "bundled": "rubberduck_metal_hit_05.wav",
+     "original": "metal_hit_05.ogg"
+    },
+    {
+     "bundled": "rubberduck_metal_falling_01.wav",
+     "original": "metal_falling_01.ogg"
+    },
+    {
+     "bundled": "rubberduck_metal_falling_02.wav",
+     "original": "metal_falling_02.ogg"
+    }
+   ]
+  },
+  {
+   "name": "100 CC0 SFX #2",
+   "author": "rubberduck",
+   "license": "CC0 1.0",
+   "source_page": "https://opengameart.org/content/100-cc0-sfx-2",
+   "original_archive": "sfx_100_v2.zip",
+   "original_archive_sha256": "0fc61b4494e2e893c0c015ced4877b3f689c7d84a48cb61daecd7ddb52db797b",
+   "note": "Stones for a footpad arriving on regolith; metal for debris.",
+   "files": [
+    {
+     "bundled": "rubberduck_sfx2_stones_01.wav",
+     "original": "sfx100v2_stones_01.ogg"
+    },
+    {
+     "bundled": "rubberduck_sfx2_stones_02.wav",
+     "original": "sfx100v2_stones_02.ogg"
+    },
+    {
+     "bundled": "rubberduck_sfx2_stones_03.wav",
+     "original": "sfx100v2_stones_03.ogg"
+    },
+    {
+     "bundled": "rubberduck_sfx2_metal_01.wav",
+     "original": "sfx100v2_metal_01.ogg"
+    },
+    {
+     "bundled": "rubberduck_sfx2_metal_02.wav",
+     "original": "sfx100v2_metal_02.ogg"
+    },
+    {
+     "bundled": "rubberduck_sfx2_metal_03.wav",
+     "original": "sfx100v2_metal_03.ogg"
+    },
+    {
+     "bundled": "rubberduck_sfx2_metal_04.wav",
+     "original": "sfx100v2_metal_04.ogg"
+    },
+    {
+     "bundled": "rubberduck_sfx2_metal_05.wav",
+     "original": "sfx100v2_metal_05.ogg"
+    },
+    {
+     "bundled": "rubberduck_sfx2_metal_06.wav",
+     "original": "sfx100v2_metal_06.ogg"
+    },
+    {
+     "bundled": "rubberduck_sfx2_metal_hit_01.wav",
+     "original": "sfx100v2_metal_hit_01.ogg"
+    },
+    {
+     "bundled": "rubberduck_sfx2_metal_hit_02.wav",
+     "original": "sfx100v2_metal_hit_02.ogg"
+    }
+   ]
+  },
+  {
+   "name": "75 CC0 breaking / falling / hit SFX",
+   "author": "rubberduck",
+   "license": "CC0 1.0",
+   "source_page": "https://opengameart.org/content/75-cc0-breaking-falling-hit-sfx",
+   "original_archive": "sfx_breaking_and_falling.zip",
+   "original_archive_sha256": "e6ee04d91c5f4d30cfda1260d2c9d1faf96fda36319287215fbd07bcb1a80451",
+   "note": "Debris. The same archive creature_foley_generator vetted; its recorded SHA-256 was re-verified against a fresh download.",
+   "files": [
+    {
+     "bundled": "rubberduck_break_metal_falling_01.wav",
+     "original": "bfh1_metal_falling_01.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_metal_falling_02.wav",
+     "original": "bfh1_metal_falling_02.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_metal_falling_03.wav",
+     "original": "bfh1_metal_falling_03.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_metal_falling_04.wav",
+     "original": "bfh1_metal_falling_04.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_metal_falling_05.wav",
+     "original": "bfh1_metal_falling_05.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_metal_hit_01.wav",
+     "original": "bfh1_metal_hit_01.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_metal_hit_02.wav",
+     "original": "bfh1_metal_hit_02.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_metal_hit_03.wav",
+     "original": "bfh1_metal_hit_03.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_metal_hit_04.wav",
+     "original": "bfh1_metal_hit_04.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_metal_hit_05.wav",
+     "original": "bfh1_metal_hit_05.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_metal_hit_06.wav",
+     "original": "bfh1_metal_hit_06.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_rock_falling_01.wav",
+     "original": "bfh1_rock_falling_01.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_rock_falling_02.wav",
+     "original": "bfh1_rock_falling_02.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_rock_falling_03.wav",
+     "original": "bfh1_rock_falling_03.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_rock_falling_04.wav",
+     "original": "bfh1_rock_falling_04.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_rock_falling_05.wav",
+     "original": "bfh1_rock_falling_05.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_rock_breaking_01.wav",
+     "original": "bfh1_rock_breaking_01.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_rock_breaking_02.wav",
+     "original": "bfh1_rock_breaking_02.ogg"
+    },
+    {
+     "bundled": "rubberduck_break_rock_breaking_03.wav",
+     "original": "bfh1_rock_breaking_03.ogg"
+    }
+   ]
+  },
+  {
+   "name": "Tire.ogg",
+   "author": "egomassive",
+   "license": "CC0 1.0",
+   "source_page": "https://freesound.org/people/egomassive/sounds/536769/",
+   "original_archive": "536769__egomassive__tire.ogg",
+   "original_archive_sha256": "6a6ddbb1b27059bc661aed73f0fbc1bed1ae1828427470cb692a8298805a029e",
+   "note": "Rubber losing grip on tarmac. Derived by its author from RutgerMuller's CC0 'Tires Squeaking' and released CC0 in turn. Freesound requires a login to download, so this file was fetched by hand rather than by script.",
+   "files": [
+    {
+     "bundled": "egomassive_tire.wav",
+     "original": "536769__egomassive__tire.ogg"
+    }
+   ]
+  }
+ ]
+}

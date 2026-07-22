@@ -1,0 +1,254 @@
+{
+ "source_audio_policy": "CC0 or public domain only",
+ "retrieved_utc": "2026-07-15",
+ "conversion": "Decoded with FFmpeg to mono 44100 Hz signed 16-bit PCM WAV; no content processing was applied to the bundled source files. Trimming, retuning, filtering and layering happen at render time in engine.py so the bundled files stay comparable to what the source page serves.",
+ "verification": "Every collection's license was read from its own source page rather than from search results, and each archive's SHA-256 is recorded as downloaded. The two rubberduck archives were re-downloaded for this generator and their SHA-256 matched the values aircraft_spacecraft_generator recorded on the same day, byte for byte.",
+ "scope_note": "This generator owns what wood is -- contact, ring, fracture, and debris -- at the material/event boundary. Two adjacencies are deliberately not crossed: door_sound_generator owns door creaks (which are hinges: metal friction, not timber) and wooden doors closing, and footstep_generator owns a foot on a wooden floor.",
+ "collections": [
+  {
+   "name": "100 CC0 metal and wood SFX",
+   "author": "rubberduck",
+   "license": "CC0 1.0",
+   "source_page": "https://opengameart.org/content/100-cc0-metal-and-wood-sfx",
+   "original_archive": "100-CC0-wood-metal-SFX.zip",
+   "original_archive_sha256": "be6eba63b03409ac0c77787a956b1503a7c186403d04aef9725c52644a4b7878",
+   "selection": "Every wood recording in the archive except wood_close_* and wood_misc_*. The metal half is aircraft_spacecraft_generator's and is not duplicated here.",
+   "files": [
+    {
+     "file": "rubberduck_wood_breaking_01.wav",
+     "original": "wood_breaking_01.ogg"
+    },
+    {
+     "file": "rubberduck_wood_breaking_02.wav",
+     "original": "wood_breaking_02.ogg"
+    },
+    {
+     "file": "rubberduck_wood_cracking_01.wav",
+     "original": "wood_cracking_01.ogg"
+    },
+    {
+     "file": "rubberduck_wood_cracking_02.wav",
+     "original": "wood_cracking_02.ogg"
+    },
+    {
+     "file": "rubberduck_wood_cracking_03.wav",
+     "original": "wood_cracking_03.ogg"
+    },
+    {
+     "file": "rubberduck_wood_cracking_04.wav",
+     "original": "wood_cracking_04.ogg"
+    },
+    {
+     "file": "rubberduck_wood_falling_01.wav",
+     "original": "wood_falling_01.ogg"
+    },
+    {
+     "file": "rubberduck_wood_falling_02.wav",
+     "original": "wood_falling_02.ogg"
+    },
+    {
+     "file": "rubberduck_wood_falling_03.wav",
+     "original": "wood_falling_03.ogg"
+    },
+    {
+     "file": "rubberduck_wood_falling_04.wav",
+     "original": "wood_falling_04.ogg"
+    },
+    {
+     "file": "rubberduck_wood_falling_05.wav",
+     "original": "wood_falling_05.ogg"
+    },
+    {
+     "file": "rubberduck_wood_falling_06.wav",
+     "original": "wood_falling_06.ogg"
+    },
+    {
+     "file": "rubberduck_wood_hammer_01.wav",
+     "original": "wood_hammer_01.ogg"
+    },
+    {
+     "file": "rubberduck_wood_hammer_02.wav",
+     "original": "wood_hammer_02.ogg"
+    },
+    {
+     "file": "rubberduck_wood_hit_01.wav",
+     "original": "wood_hit_01.ogg"
+    },
+    {
+     "file": "rubberduck_wood_hit_02.wav",
+     "original": "wood_hit_02.ogg"
+    },
+    {
+     "file": "rubberduck_wood_hit_03.wav",
+     "original": "wood_hit_03.ogg"
+    },
+    {
+     "file": "rubberduck_wood_hit_04.wav",
+     "original": "wood_hit_04.ogg"
+    },
+    {
+     "file": "rubberduck_wood_hit_05.wav",
+     "original": "wood_hit_05.ogg"
+    },
+    {
+     "file": "rubberduck_wood_hit_06.wav",
+     "original": "wood_hit_06.ogg"
+    },
+    {
+     "file": "rubberduck_wood_hit_07.wav",
+     "original": "wood_hit_07.ogg"
+    },
+    {
+     "file": "rubberduck_wood_hit_08.wav",
+     "original": "wood_hit_08.ogg"
+    },
+    {
+     "file": "rubberduck_wood_hit_09.wav",
+     "original": "wood_hit_09.ogg"
+    },
+    {
+     "file": "rubberduck_wood_slam_01.wav",
+     "original": "wood_slam_01.ogg"
+    },
+    {
+     "file": "rubberduck_wood_slam_02.wav",
+     "original": "wood_slam_02.ogg"
+    },
+    {
+     "file": "rubberduck_wood_slam_03.wav",
+     "original": "wood_slam_03.ogg"
+    },
+    {
+     "file": "rubberduck_wood_slam_04.wav",
+     "original": "wood_slam_04.ogg"
+    },
+    {
+     "file": "rubberduck_wood_squeak_01.wav",
+     "original": "wood_squeak_01.ogg"
+    },
+    {
+     "file": "rubberduck_wood_squeak_02.wav",
+     "original": "wood_squeak_02.ogg"
+    }
+   ]
+  },
+  {
+   "name": "75 CC0 breaking / falling / hit SFX",
+   "author": "rubberduck",
+   "license": "CC0 1.0",
+   "source_page": "https://opengameart.org/content/75-cc0-breaking-falling-hit-sfx",
+   "original_archive": "sfx_breaking_and_falling.zip",
+   "original_archive_sha256": "e6ee04d91c5f4d30cfda1260d2c9d1faf96fda36319287215fbd07bcb1a80451",
+   "selection": "The archive's nine wood recordings. Its rock and metal are aircraft_spacecraft_generator's, and its glass belongs to whatever generator claims glass.",
+   "files": [
+    {
+     "file": "rubberduck_break_wood_breaking_01.wav",
+     "original": "bfh1_wood_breaking_01.ogg"
+    },
+    {
+     "file": "rubberduck_break_wood_breaking_02.wav",
+     "original": "bfh1_wood_breaking_02.ogg"
+    },
+    {
+     "file": "rubberduck_break_wood_breaking_03.wav",
+     "original": "bfh1_wood_breaking_03.ogg"
+    },
+    {
+     "file": "rubberduck_break_wood_breaking_04.wav",
+     "original": "bfh1_wood_breaking_04.ogg"
+    },
+    {
+     "file": "rubberduck_break_wood_falling_01.wav",
+     "original": "bfh1_wood_falling_01.ogg"
+    },
+    {
+     "file": "rubberduck_break_wood_falling_02.wav",
+     "original": "bfh1_wood_falling_02.ogg"
+    },
+    {
+     "file": "rubberduck_break_wood_hit_01.wav",
+     "original": "bfh1_wood_hit_01.ogg"
+    },
+    {
+     "file": "rubberduck_break_wood_hit_02.wav",
+     "original": "bfh1_wood_hit_02.ogg"
+    },
+    {
+     "file": "rubberduck_break_wood_hit_03.wav",
+     "original": "bfh1_wood_hit_03.ogg"
+    }
+   ]
+  },
+  {
+   "name": "Tree Creaking",
+   "author": "AntumDeluge",
+   "license": "CC0 1.0",
+   "source_page": "https://opengameart.org/content/tree-creaking",
+   "original_archive": "tree_creak.flac",
+   "original_archive_sha256": "9bab7c7f68850136c43fb91216c7c1760ac2bda22b2a31659905c559a464d422",
+   "upstream": "https://freesound.org/people/Department64/sounds/95262/",
+   "upstream_license": "CC0 1.0",
+   "selection": "The only sustained wood recording used here, and the reason `creak` exists as a cue rather than a 0.4 s squeak. The file runs 6.58 s and creaks for 4.46 s of that -- the tail is room tone, which engine.py trims on load, because `creak` cuts a window at random and an untrimmed bed rendered silence on about a third of seeds. Even trimmed it is six times longer than anything in the rubberduck archives, whose longest wood recording is 0.74 s. It is a tree bending in wind, which is timber under load: exactly what the cue wants.",
+   "licence_chain_note": "AntumDeluge's page credits Department64 and releases CC0; the upstream Freesound original (95262, tree_creak_04.wav) was checked on its own page and is CC0 as well. That check is not a formality: vehicle_foley_generator's tire squeals are CC-BY on OpenGameArt and CC0 on Freesound, so a derived work's licence says nothing about its source's. Clean at both ends. The OGA FLAC is bundled rather than the Freesound original because it is lossless, already normalised, and needs no login.",
+   "files": [
+    {
+     "file": "antumdeluge_tree_creak.wav",
+     "original": "tree_creak.flac"
+    }
+   ]
+  },
+  {
+   "name": "Wood Plank Scraping Close-Mic Long",
+   "author": "RutgerMuller",
+   "license": "CC0 1.0",
+   "source_page": "https://freesound.org/people/RutgerMuller/sounds/104013/",
+   "original_archive": "104013__rutgermuller__wood-plank-scraping-close-mic-long.aiff",
+   "original_archive_sha256": "7e87fc0680da9a70beedd2937f70f96d6465ab372d77a1c997937652ee67888b",
+   "selection": "One of two sources for `scrape`, the only sustained-friction cue. 4.14 s of a plank dragged close-mic'd. Approved by ear on 2026-07-15 from Freesound's public HQ preview; the master arrives by hand because Freesound gates downloads behind a login, the same route egomassive_tire took into aircraft_spacecraft_generator. The lossy preview was never bundled -- this is the login-gated master, re-encoded to mono 44.1 kHz.",
+   "files": [
+    {
+     "file": "rutgermuller_wood_plank_scraping.wav",
+     "original": "104013__rutgermuller__wood-plank-scraping-close-mic-long.aiff"
+    }
+   ]
+  },
+  {
+   "name": "Wood panel board debris pull scrape",
+   "author": "LampEight",
+   "license": "CC0 1.0",
+   "source_page": "https://freesound.org/people/LampEight/sounds/400652/",
+   "original_archive": "400652__lampeight__wood-panel-board-debris-pull-scrape.wav",
+   "original_archive_sha256": "6c53590b3408b745e7b22e5a56ac4baca312a5c5270831867750a996bdde612f",
+   "selection": "The other `scrape` source, and the longer of the two at 19.57 s, which gives the cue's random window somewhere to move across seeds. Approved by ear on 2026-07-15 from the public HQ preview; login-gated master fetched by hand and re-encoded to mono 44.1 kHz.",
+   "files": [
+    {
+     "file": "lampeight_wood_panel_scrape.wav",
+     "original": "400652__lampeight__wood-panel-board-debris-pull-scrape.wav"
+    }
+   ]
+  }
+ ],
+ "pending": [],
+ "excluded": [
+  {
+   "name": "Scrapes (AntumDeluge)",
+   "source_page": "https://opengameart.org/content/scrapes",
+   "reason": "CC0 and licensing-clean, and the obvious first hit when searching OpenGameArt for a scrape. Rejected on material after reading its own page: the sounds are made by dragging an object across a cinder block. That is concrete, and bundling it would have put stone in a wood library under a wood name. This kind of mistake is only findable by reading the source page or listening, so it is recorded here."
+  },
+  {
+   "name": "Wood Chip Scraping On Wood Floor (Ev-Dawg)",
+   "source_page": "https://freesound.org/people/Ev-Dawg/sounds/342941/",
+   "reason": "CC0 and genuinely wood on wood. Auditioned by ear on 2026-07-15 from the HQ preview alongside the two scrapes above and rejected: at 2.09 s it is too short to give a sustained scrape's window anywhere to move, and two approved sources already cover the cue."
+  },
+  {
+   "name": "wood_close_01/02 (rubberduck, 100 CC0 metal and wood SFX)",
+   "source_page": "https://opengameart.org/content/100-cc0-metal-and-wood-sfx",
+   "reason": "CC0 and in a bundled archive, so excluded by scope rather than by licence: a wooden door closing is door_sound_generator's, which already ships nine door recordings and a wood material registry. Duplicating it here would give the repository two owners of the same sound."
+  },
+  {
+   "name": "wood_misc_01..09 (rubberduck, 100 CC0 metal and wood SFX)",
+   "source_page": "https://opengameart.org/content/100-cc0-metal-and-wood-sfx",
+   "reason": "CC0 and in a bundled archive. Not bundled because nobody has heard them and their name says nothing: 'misc' could be a scrape, a rattle, a drawer, or a door. Bundling unheard audio and assigning it to a cue is how a wrong sound reaches a game. They are the first place to look if `scrape` ever needs a third source or a rattle cue is wanted -- audition them first."
+  }
+ ]
+}

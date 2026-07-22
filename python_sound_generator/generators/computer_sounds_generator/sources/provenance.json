@@ -1,0 +1,119 @@
+{
+  "source_audio_policy": "CC0 or public domain only",
+  "retrieved_utc": "2026-07-17",
+  "conversion": "Approved masters are preserved outside the generator. Bundled excerpts were decoded with FFmpeg, downmixed to mono, resampled to 44100 Hz, and written as signed 16-bit PCM WAV with metadata removed. No synthetic coloration or replacement transients were added.",
+  "collections": [
+    {
+      "name": "Hard Drive 7200RPM Spin Up, Idle and Spin Down",
+      "author": "conath",
+      "license": "CC0 1.0",
+      "source_page": "https://freesound.org/s/465592/",
+      "original_file": "465592__conath__hard-drive-7200rpm-spin-up-idle-and-spin-down-wav.wav",
+      "original_sha256": "abf9c2f20f10e10ed26b9773cbe4d64b40d686cc871038c73bce67e8f2bf436d",
+      "selection": "Approved by ear 2026-07-17 for the drive idle, spin-up, and spin-down cues.",
+      "files": [
+        {
+          "file": "drive_idle_cc0.wav",
+          "source_start_seconds": 8.0,
+          "source_duration_seconds": 12.0,
+          "sha256": "0a377611ec263356da4f4565f6188e9a3a128e9857edc9eb8cb87e9859302526"
+        },
+        {
+          "file": "drive_spin_up_cc0.wav",
+          "source_start_seconds": 0.0,
+          "source_duration_seconds": 8.0,
+          "sha256": "7d00bae66b135cec4cda645b46e9fc0b1d4444995c66667a736497e2cd341bfc"
+        },
+        {
+          "file": "drive_spin_down_cc0.wav",
+          "source_start_seconds": 20.5,
+          "source_duration_seconds": 9.0,
+          "sha256": "269efd6781a23480a68f8c49f1202296d4a8f55087160a07728bba70462e4af5"
+        }
+      ]
+    },
+    {
+      "name": "Vintage Hard Drive Read and Idle",
+      "author": "Crinkem",
+      "license": "CC0 1.0",
+      "source_page": "https://freesound.org/s/493891/",
+      "original_file": "493891__crinkem__vintage-hard-drive-read-and-idle.wav",
+      "original_sha256": "55769ca5e5a1fe275046fb45f87a6088e7ebe1df60ea7f52702e9b4804bc70c9",
+      "selection": "Approved by ear 2026-07-17 for hard-drive read and seek activity.",
+      "files": [
+        {
+          "file": "seek_cc0.wav",
+          "source_start_seconds": 0.0,
+          "source_duration_seconds": 6.0,
+          "sha256": "3caf462d35d71df1fef41d61c81453e39bab036e50a5a4947e55bb23f96be3b8"
+        }
+      ]
+    },
+    {
+      "name": "Enter Key Press Mechanical Keyboard",
+      "author": "alpinemesh",
+      "license": "CC0 1.0",
+      "source_page": "https://freesound.org/s/627647/",
+      "original_file": "627647__alpinemesh__enter-key-press-mechanical-keyboard.wav",
+      "original_sha256": "6bd2ee414d9c1a53c508fdb3fb76422acc73fd06d0a55ea1a52c52290ad1c708",
+      "selection": "Approved by ear 2026-07-17 for the physical key cue.",
+      "files": [
+        {
+          "file": "key_cc0.wav",
+          "source_start_seconds": 0.0,
+          "source_duration_seconds": 0.18275,
+          "sha256": "e9de4698b3487ba9e84308b76e03aab1824530c51ad758bd1b1c0468c3681c6b"
+        }
+      ]
+    },
+    {
+      "name": "The Sound of dial-up Internet",
+      "author": "wtermini",
+      "license": "CC0 1.0",
+      "source_page": "https://freesound.org/s/546450/",
+      "original_file": "546450__wtermini__the-sound-of-dial-up-internet.mp3",
+      "original_sha256": "5b9046307ddee967ab673a5a5ea50b719da2eb811d34ef0655d36bed4670f9de",
+      "selection": "Approved by ear 2026-07-17 as the real dial-up modem handshake.",
+      "files": [
+        {
+          "file": "modem_cc0.wav",
+          "source_start_seconds": 0.0,
+          "source_duration_seconds": 28.6735,
+          "sha256": "a13f45cbf901ff099c4735307f56f475f46d13526df050177dba0a3d24dfa00f"
+        }
+      ]
+    },
+    {
+      "name": "Old PC startup, idle & shutdown",
+      "author": "nakkivene66",
+      "license": "CC0 1.0",
+      "source_page": "https://freesound.org/s/551405/",
+      "original_file": "551405__nakkivene66__old-pc-startup-idle-shutdown.wav",
+      "original_sha256": "688528214f32588d5e88d5922d93d3505aa1dc17566e0e211c69669b17f17896",
+      "selection": "Approved by ear 2026-07-17 for power-on and boot. The excerpt starts just before the physical switch and ends after the disk-drive checks.",
+      "files": [
+        {
+          "file": "pc_startup_cc0.wav",
+          "source_start_seconds": 2.8,
+          "source_duration_seconds": 20.5,
+          "sha256": "b2b0f74c5ecd15fa69acf8d43d87ad451b18609c12a0a8a5de77ab2609af3106"
+        }
+      ]
+    },
+    {
+      "name": "Various Sound Effects",
+      "author": "laleksic",
+      "license": "CC0 1.0",
+      "source_page": "https://opengameart.org/content/various-sound-effects",
+      "upstream_provenance": "../door_sound_generator/sources/provenance.json",
+      "selection": "The existing physical latching switch passed the 2026-07-17 audition unchanged.",
+      "files": [
+        {
+          "file": "switch_cc0.wav",
+          "original_bundled_file": "laleksic_lock.wav",
+          "sha256": "106ce2dd59976cc2c954eb06e69976dd8827e5c1aa129cc2a4466d915f1beca9"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "source_audio_policy": "CC0 or public domain only",
+  "retrieved_utc": "2026-07-15",
+  "conversion": "Decoded with FFmpeg to mono 44100 Hz signed 16-bit PCM WAV; no content processing was applied to the bundled source files. Trimming, retuning, filtering, and looping happen at render time in engine.py so the bundled files stay comparable to what each source page serves.",
+  "verification": "Every collection's license was read from its source page rather than from search results, and each download's SHA-256 is recorded as retrieved.",
+  "excluded": [
+    {
+      "name": "Punches, hits, swords and squishes",
+      "source_page": "https://opengameart.org/content/punches-hits-swords-and-squishes",
+      "reason": "Considered for the fire-explosion blast. CC-BY-SA 3.0 and assembled from ~35 Freesound uploads under a mix of CC-BY and CC0; fails the CC0-only policy twice over. Recorded here as well as in unarmed_foley_generator because its name is exactly what someone would search for."
+    },
+    {
+      "name": "environment_ambience_generator's procedural fire and lava",
+      "source_page": "local: ../environment_ambience_generator",
+      "reason": "Not a licensing exclusion. The synthesized fire bed was listened to on 2026-07-15 and rejected outright. Its lava left with it and is now replaced by the recorded mud Foley in this generator. Kept here so nobody re-derives either chaotic source from oscillators."
+    },
+    {
+      "name": "Fire Crackling (AntumDeluge)",
+      "source_page": "https://opengameart.org/content/fire-crackling",
+      "reason": "CC0 and licensing-clean, and it was bundled and built into a `crackle` cue -- pops with no roar, for layering under a scene. The cue was listened to on 2026-07-15 and cut, which orphaned this recording, so it was unbundled rather than left in sources/ unused. Reach for it first if a layerable crackle bed is ever wanted."
+    }
+  ],
+  "collections": [
+    {
+      "name": "Fireplace Sound loop",
+      "author": "PagDev",
+      "license": "CC0",
+      "source_page": "https://opengameart.org/content/fireplace-sound-loop",
+      "original_file": "fire.wav",
+      "original_sha256": "85ca0cc60d0c037fff8b185e31ad1fcdbda6ce45eee17c3ee1318d1b8f59e330",
+      "note": "29 s of wood burning, and the only long stationary bed here. Every sustained cue is built from it.",
+      "files": [
+        {
+          "file": "pagdev_fireplace.wav",
+          "original": "fire.wav"
+        }
+      ]
+    },
+    {
+      "name": "Fireball",
+      "author": "Julien Matthey",
+      "license": "CC0",
+      "source_page": "https://opengameart.org/content/fireball-1",
+      "upstream_source": {
+        "name": "JM_FX_Fireball 01",
+        "author": "Julien Matthey",
+        "license": "CC0",
+        "source_page": "https://freesound.org/s/105016/"
+      },
+      "original_file": "105016__julien-matthey__jm-fx-fireball-01.wav",
+      "original_sha256": "3992598c814de25c318780e506aeda673a7e410b7b3c4f0793883483ff9766b8",
+      "files": [
+        {
+          "file": "julien_matthey_fireball.wav",
+          "original": "105016__julien-matthey__jm-fx-fireball-01.wav"
+        }
+      ]
+    },
+    {
+      "name": "25 CC0 bang / firework SFX",
+      "author": "rubberduck",
+      "license": "CC0",
+      "source_page": "https://opengameart.org/content/25-cc0-bang-firework-sfx",
+      "original_archive": "25-CC0-bang-sfx.zip",
+      "original_archive_sha256": "c0c9ecc11e2dc0d190f0cced755569858234b8528286bc83becb6314c663407f",
+      "selection": "Five of 25: three bangs and two cannons, chosen by ear as the blast body under a fire explosion. The shots and fireworks were left out; a firework is a crack in the air and a fuel explosion is a whoomp.",
+      "files": [
+        {
+          "file": "rubberduck_bang_02.wav",
+          "original": "bang_02.ogg"
+        },
+        {
+          "file": "rubberduck_bang_05.wav",
+          "original": "bang_05.ogg"
+        },
+        {
+          "file": "rubberduck_bang_08.wav",
+          "original": "bang_08.ogg"
+        },
+        {
+          "file": "rubberduck_cannon_01.wav",
+          "original": "cannon_01.ogg"
+        },
+        {
+          "file": "rubberduck_cannon_03.wav",
+          "original": "cannon_03.ogg"
+        }
+      ]
+    },
+    {
+      "name": "25 CC0 mud sfx",
+      "author": "rubberduck",
+      "license": "CC0",
+      "source_page": "https://opengameart.org/content/25-cc0-mud-sfx",
+      "original_archive": "25-CC0-mud-sfx.zip",
+      "original_archive_sha256": "3f3dccc202c0a010053e1775ec257d0038b69291fc10fc49e8488a9355d4cfdf",
+      "selection": "All 25 compact mud events are bundled. Slowed to roughly 0.45x and low-passed, the thick impacts and bubbles become the physical body of the lava splash; the fire recording supplies only the heat hiss.",
+      "files": [
+        {"file": "rubberduck_mud_01.wav", "original": "mud_01.ogg"},
+        {"file": "rubberduck_mud_02.wav", "original": "mud_02.ogg"},
+        {"file": "rubberduck_mud_03.wav", "original": "mud_03.ogg"},
+        {"file": "rubberduck_mud_04.wav", "original": "mud_04.ogg"},
+        {"file": "rubberduck_mud_05.wav", "original": "mud_05.ogg"},
+        {"file": "rubberduck_mud_06.wav", "original": "mud_06.ogg"},
+        {"file": "rubberduck_mud_07.wav", "original": "mud_07.ogg"},
+        {"file": "rubberduck_mud_08.wav", "original": "mud_08.ogg"},
+        {"file": "rubberduck_mud_09.wav", "original": "mud_09.ogg"},
+        {"file": "rubberduck_mud_10.wav", "original": "mud_10.ogg"},
+        {"file": "rubberduck_mud_11.wav", "original": "mud_11.ogg"},
+        {"file": "rubberduck_mud_12.wav", "original": "mud_12.ogg"},
+        {"file": "rubberduck_mud_13.wav", "original": "mud_13.ogg"},
+        {"file": "rubberduck_mud_14.wav", "original": "mud_14.ogg"},
+        {"file": "rubberduck_mud_15.wav", "original": "mud_15.ogg"},
+        {"file": "rubberduck_mud_16.wav", "original": "mud_16.ogg"},
+        {"file": "rubberduck_mud_17.wav", "original": "mud_17.ogg"},
+        {"file": "rubberduck_mud_18.wav", "original": "mud_18.ogg"},
+        {"file": "rubberduck_mud_19.wav", "original": "mud_19.ogg"},
+        {"file": "rubberduck_mud_20.wav", "original": "mud_20.ogg"},
+        {"file": "rubberduck_mud_21.wav", "original": "mud_21.ogg"},
+        {"file": "rubberduck_mud_22.wav", "original": "mud_22.ogg"},
+        {"file": "rubberduck_mud_23.wav", "original": "mud_23.ogg"},
+        {"file": "rubberduck_mud_24.wav", "original": "mud_24.ogg"},
+        {"file": "rubberduck_mud_25.wav", "original": "mud_25.ogg"}
+      ]
+    }
+  ]
+}

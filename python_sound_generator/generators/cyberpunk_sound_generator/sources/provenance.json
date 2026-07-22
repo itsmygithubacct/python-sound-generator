@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "source_audio_policy": "CC0 1.0 or public domain only",
+  "retrieved_utc": "2026-07-22",
+  "storage_policy": "Unique approved servo excerpts remain in this provider. The keyboard recording resolves through its provenance-owning provider or the shared content-addressed asset catalog.",
+  "conversion": "The original Freesound servo master is preserved outside the runtime package. Approved impulses were decoded with FFmpeg, downmixed to mono, resampled to 44100 Hz, edge-faded, and written as signed 16-bit PCM WAV with metadata removed.",
+  "selection_policy": "Only terminal contact and implant mechanism movement use recordings. Network, hacking, EMP, radio, hologram, credit, objective, and drone-rate identities remain procedural.",
+  "collections": [
+    {
+      "name": "ServoMotor.wav",
+      "author": "derjuli",
+      "license": "CC0 1.0",
+      "source_page": "https://freesound.org/people/derjuli/sounds/824121/",
+      "original_file": "824121__derjuli__servomotor.wav",
+      "original_sha256": "6f4827139a3e1cb45bfcb5a7e0017b24b3861020c366300c269781bdad73102a",
+      "cyberpunk_use": "short real servo impulses beneath implant activation",
+      "files": [
+        {
+          "file": "derjuli_servo_impulse_01.wav",
+          "source_start_seconds": 8.94,
+          "source_duration_seconds": 0.48,
+          "sha256": "480eda0b3f1ac2e540b2ad23d807de2a31138cadebd6749ecb9cda2b15acde9f"
+        },
+        {
+          "file": "derjuli_servo_impulse_02.wav",
+          "source_start_seconds": 12.82,
+          "source_duration_seconds": 0.42,
+          "sha256": "c741538a12b6804a8ab06653e8d775be6b4ebcf0c0039ae7c828488b968d3a5d"
+        },
+        {
+          "file": "derjuli_servo_impulse_03.wav",
+          "source_start_seconds": 14.31,
+          "source_duration_seconds": 0.43,
+          "sha256": "3894efae8cb57ba6cd354f77f0de55ab4252dfc1680d850614d61a2cd25dae73"
+        }
+      ]
+    },
+    {
+      "name": "Enter Key Press Mechanical Keyboard",
+      "author": "alpinemesh",
+      "license": "CC0 1.0",
+      "source_page": "https://freesound.org/s/627647/",
+      "owner_provenance": "generators/computer_sounds_generator/sources/provenance.json",
+      "cyberpunk_use": "physical terminal-key contact",
+      "logical_files": [
+        "computer_sounds_generator/sources/key_cc0.wav"
+      ]
+    }
+  ]
+}
