@@ -49,6 +49,12 @@ def _artifact(
     options: Options,
 ) -> dict[str, Any]:
     metrics = artifact_metrics(path, signal, engine.SR)
+    procedural_sources = tuple(
+        source for source in sources if source.startswith("generator:")
+    )
+    recording_sources = tuple(
+        source for source in sources if source not in procedural_sources
+    )
     return {
         "file": path.resolve().relative_to(root.resolve()).as_posix(),
         "cue": cue_name,
@@ -60,7 +66,8 @@ def _artifact(
             "intensity": round(options.intensity, 4),
             "foley_mix": round(options.foley, 4),
         },
-        "sources": list(sources),
+        "sources": list(recording_sources),
+        "procedural_sources": list(procedural_sources),
         **metrics,
     }
 
@@ -74,16 +81,16 @@ def _write_manifest(
 ) -> Path:
     extra: dict[str, Any] = {
         "source_audio": (
-            "optional CC0 cloth, gear, body, panel, and latch recordings "
-            "reused by logical path and reduced to a cartridge-like texture"
+            "optional CC0 cloth, body, wooden-bat, creature, panel, and latch "
+            "recordings reused by logical path and cartridge-treated"
         ),
         "source_licensing": "CC0 1.0",
         "source_provenance": (
             "generators/quirky_rpg_sound_generator/sources/provenance.json"
         ),
         "synthesis": (
-            "deterministic original reduced-resolution synthesis; "
-            "optional cartridge-treated Foley; no copied game assets"
+            "deterministic original reduced-resolution identity layers plus "
+            "physical blunt-weapon movement and cartridge-treated Foley"
         ),
     }
     if pack is not None:

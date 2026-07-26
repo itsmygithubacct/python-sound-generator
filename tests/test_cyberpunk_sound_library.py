@@ -50,20 +50,41 @@ def test_cyberpunk_catalog_is_grouped_and_packs_have_stable_coverage():
     assert sum(entry.count for entry in PACKS["netrunner"].entries) == 30
     assert sum(entry.count for entry in PACKS["street-tech"].entries) == 28
     assert {name for name, cue in CUES.items() if cue.foley_kinds} == {
+        "armor_hit",
+        "dry_fire",
         "terminal_key",
         "implant_activate",
+        "melee_hit",
+        "melee_swing",
+        "pistol_shot",
+        "reload",
+        "ricochet",
+        "rifle_shot",
+        "runner_downed",
+        "shotgun_blast",
+        "smg_burst",
     }
 
 
 def test_cyberpunk_optional_hardware_inventory_resolves():
     inventory = source_inventory()
-    assert len(inventory) == 4
+    assert len(inventory) == 42
     assert missing_sources() == ()
     assert all(resolve_asset(source.path).is_file() for source in inventory)
 
 
-def test_cyberpunk_foley_is_deterministic_optional_and_narrowly_scoped():
-    for cue in ("terminal_key", "implant_activate"):
+def test_cyberpunk_foley_is_deterministic_optional_and_physically_scoped():
+    for cue in (
+        "terminal_key",
+        "implant_activate",
+        "pistol_shot",
+        "reload",
+        "melee_swing",
+        "melee_hit",
+        "armor_hit",
+        "ricochet",
+        "runner_downed",
+    ):
         first = generate_with_sources(cue, foley_mix=1.0, seed=19)
         second = generate_with_sources(cue, foley_mix=1.0, seed=19)
         procedural = generate_with_sources(cue, foley_mix=0.0, seed=19)
@@ -130,7 +151,7 @@ def test_cyberpunk_render_writes_variations_and_structured_manifest(tmp_path):
     assert first_manifest["generator"] == "cyberpunk_sound_generator"
     assert first_manifest["schema_version"] == 1
     assert first_manifest["seed_scheme"] == "stable-v2"
-    assert "procedural electronic DSP" in first_manifest["synthesis"]
+    assert "electronic identity layers" in first_manifest["synthesis"]
     assert "asset_catalog" not in first_manifest
     assert [item["sha256"] for item in artifacts] == [
         item["sha256"] for item in second_manifest["artifacts"]
@@ -186,7 +207,7 @@ def test_cyberpunk_sources_command_reports_the_complete_inventory(capsys):
     payload = json.loads(capsys.readouterr().out)
     assert payload["missing"] == []
     assert payload["invalid"] == []
-    assert len(payload["inventory"]) == 4
+    assert len(payload["inventory"]) == 42
     assert {collection["license"] for collection in payload["collections"]} == {
         "CC0 1.0"
     }

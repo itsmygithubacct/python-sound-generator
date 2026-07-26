@@ -47,6 +47,21 @@ EQUIP = sources(
     "artisticdude_chainmail.wav",
 )
 
+BODY = sources(
+    "unarmed_foley_generator",
+    *(f"independent_nu_hit_{index:02d}.wav" for index in (2, 7, 8, 20, 29, 34)),
+)
+
+CREATURE_ATTACK = sources(
+    "creature_foley_generator",
+    *(f"rubberduck_creature_attack_{index:02d}.wav" for index in (1, 2, 3, 5)),
+)
+
+CREATURE_DIE = sources(
+    "creature_foley_generator",
+    *(f"rubberduck_creature_die_{index:02d}.wav" for index in range(1, 5)),
+)
+
 WOOD_DROP = sources(
     "wood_noise_generator",
     *(f"rubberduck_wood_hit_{index:02d}.wav" for index in (1, 4, 7)),
@@ -68,6 +83,9 @@ POOLS: dict[str, tuple[FoleySource, ...]] = {
     "chest": CHEST,
     "gulp": GULP,
     "equip": EQUIP,
+    "body": BODY,
+    "creature_attack": CREATURE_ATTACK,
+    "creature_die": CREATURE_DIE,
     "wood_drop": WOOD_DROP,
     "metal_drop": METAL_DROP,
     "lock": LOCK,
@@ -129,6 +147,19 @@ def apply(
     result = list(output)
     used: list[str] = []
 
+    def duck(amount: float = 0.90) -> None:
+        """Leave the cue identity audible without masking its physical event."""
+
+        nonlocal result
+        result = dsp.scale(result, max(0.08, 1.0 - amount * mix))
+
+    def add_signal(
+        onset: float,
+        signal: Sequence[float],
+        gain: float,
+    ) -> None:
+        dsp.add_at(result, onset, list(signal), gain * mix)
+
     def add(
         onset: float,
         pool: Sequence[FoleySource],
@@ -158,7 +189,91 @@ def apply(
         )
         used.append(source)
 
-    if cue_name == "item_drop":
+    if cue_name in {"attack_swing", "attack_miss"}:
+        from ..combat_generators.lib import cues as combat
+        from ..combat_generators.lib.weapons import LONGSWORD
+
+        swing = combat.render(
+            "swing",
+            combat.Options(weapon=LONGSWORD),
+            rng,
+        )
+        if theme.name == "retro":
+            swing = reduce(swing, bits=8, hold=3)
+        duck(0.94)
+        add_signal(0.0, swing, 0.96 if cue_name == "attack_swing" else 0.82)
+        add(
+            0.0,
+            EQUIP,
+            0.14,
+            speed=1.20,
+            low_hz=160.0,
+            high_hz=6_800.0,
+            decay_seconds=0.12,
+            maximum_seconds=0.26,
+        )
+        used.append("generator:combat_generators/swing")
+    elif cue_name == "attack_hit":
+        duck(0.88)
+        add(
+            0.0,
+            BODY,
+            0.60 + 0.14 * intensity,
+            speed=0.96,
+            low_hz=45.0,
+            high_hz=7_200.0,
+            decay_seconds=0.10,
+            maximum_seconds=0.30,
+        )
+    elif cue_name == "critical_hit":
+        duck(0.94)
+        add(
+            0.0,
+            BODY,
+            0.74 + 0.14 * intensity,
+            speed=0.76,
+            low_hz=35.0,
+            high_hz=6_800.0,
+            decay_seconds=0.17,
+            maximum_seconds=0.44,
+        )
+    elif cue_name == "player_hurt":
+        duck(0.86)
+        add(
+            0.0,
+            BODY,
+            0.55 + 0.12 * intensity,
+            speed=0.88,
+            low_hz=40.0,
+            high_hz=6_800.0,
+            decay_seconds=0.12,
+            maximum_seconds=0.34,
+        )
+    elif cue_name == "enemy_attack":
+        duck(0.94)
+        add(
+            0.0,
+            CREATURE_ATTACK,
+            0.66 + 0.14 * intensity,
+            speed=1.02,
+            low_hz=60.0,
+            high_hz=10_000.0,
+            decay_seconds=0.30,
+            maximum_seconds=0.58,
+        )
+    elif cue_name == "enemy_defeat":
+        duck(0.92)
+        add(
+            0.0,
+            CREATURE_DIE,
+            0.65 + 0.14 * intensity,
+            speed=0.94,
+            low_hz=45.0,
+            high_hz=9_000.0,
+            decay_seconds=0.45,
+            maximum_seconds=0.70,
+        )
+    elif cue_name == "item_drop":
         add(
             0.17,
             ITEM_DROP,
@@ -260,10 +375,13 @@ def apply(
 
 
 __all__ = [
+    "BODY",
     "CHEST",
     "COIN_BAG",
     "COIN_FLOOR",
     "CORK",
+    "CREATURE_ATTACK",
+    "CREATURE_DIE",
     "EQUIP",
     "GULP",
     "ITEM_DROP",

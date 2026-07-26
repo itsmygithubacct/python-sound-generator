@@ -47,6 +47,12 @@ def _artifact(path: Path, root: Path, signal: list[float],
               seed: int, variation: int,
               options: Options) -> dict[str, Any]:
     metrics = artifact_metrics(path, signal, engine.SR)
+    procedural_sources = tuple(
+        source for source in sources if source.startswith("generator:")
+    )
+    recording_sources = tuple(
+        source for source in sources if source not in procedural_sources
+    )
     return {
         "file": path.resolve().relative_to(root.resolve()).as_posix(),
         "cue": cue_name,
@@ -58,7 +64,8 @@ def _artifact(path: Path, root: Path, signal: list[float],
             "intensity": round(options.intensity, 4),
             "foley_mix": round(options.foley, 4),
         },
-        "sources": list(sources),
+        "sources": list(recording_sources),
+        "procedural_sources": list(procedural_sources),
         "duration_seconds": metrics['duration_seconds'],
         "peak_dbfs": metrics['peak_dbfs'],
         "rms_dbfs": metrics['rms_dbfs'],
@@ -70,15 +77,16 @@ def _write_manifest(path: Path, artifacts: list[dict[str, Any]], *,
                     command: str, pack: str | None = None) -> Path:
     extra: dict[str, Any] = {
         "source_audio": (
-            "optional CC0 physical layers from provider-local excerpts and "
-            "approved recordings reused by logical path"
+            "optional CC0 equipment, body-impact, creature, item, and "
+            "mechanism recordings reused by logical path"
         ),
         "source_licensing": "CC0 1.0",
         "source_provenance": (
             "generators/rpg_sound_generator/sources/provenance.json"
         ),
         "synthesis": (
-            "deterministic procedural RPG gestures with an optional Foley mix"
+            "deterministic RPG identity gestures plus optional physically "
+            "modelled sword movement and recording-backed Foley"
         ),
     }
     if pack is not None:

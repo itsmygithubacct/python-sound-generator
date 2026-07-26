@@ -67,6 +67,40 @@
       ]
     },
     {
+      "name": "Middle Mouse Click",
+      "author": "1j01",
+      "license": "CC0 1.0",
+      "source_page": "https://opengameart.org/content/middle-mouse-click",
+      "retrieved_utc": "2026-07-25",
+      "selection": "Selected for mouse_click because the uploader recorded a physical mouse and supplied separate lossless press and release transients with zero-ended edits.",
+      "original_files": [
+        {
+          "file": "middle-click-press.wav",
+          "sha256": "8a0ec2e7341f70b33f0802aadeb6a0689aed893048a600bfd46b1a6716fbe8fe"
+        },
+        {
+          "file": "middle-click-release.wav",
+          "sha256": "189005834fc3fef2fd4f024d503fbf98d313111b86bbf9904808aa276383a0f3"
+        }
+      ],
+      "files": [
+        {
+          "file": "mouse_press_cc0.wav",
+          "original_file": "middle-click-press.wav",
+          "source_start_seconds": 0.0,
+          "source_duration_seconds": 0.074739,
+          "sha256": "880000eab71e35a1c35f8d97547f8e1e5a5d4c0ddc1cedb89c356c27d2c0366e"
+        },
+        {
+          "file": "mouse_release_cc0.wav",
+          "original_file": "middle-click-release.wav",
+          "source_start_seconds": 0.0,
+          "source_duration_seconds": 0.072472,
+          "sha256": "38e2e206329fea5a7fcde4bc9c89452e3ae205174e3ed26ae446f4cd0dc7ef88"
+        }
+      ]
+    },
+    {
       "name": "The Sound of dial-up Internet",
       "author": "wtermini",
       "license": "CC0 1.0",

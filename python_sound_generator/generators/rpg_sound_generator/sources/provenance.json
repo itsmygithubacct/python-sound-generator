@@ -2,9 +2,9 @@
   "schema_version": 1,
   "source_audio_policy": "CC0 1.0 or public domain only",
   "retrieved_utc": "2026-07-22",
-  "storage_policy": "Unique approved excerpts remain in this provider; reused recordings resolve through their provenance-owning provider or the shared content-addressed asset catalog.",
+  "storage_policy": "Unique approved excerpts remain in this provider; reused equipment, combat, and creature recordings resolve through their provenance-owning provider or the shared content-addressed asset catalog.",
   "conversion": "Original Freesound masters are preserved outside the runtime package. Approved regions were decoded with FFmpeg, downmixed to mono, resampled to 44100 Hz, edge-faded, and written as signed 16-bit PCM WAV with metadata removed. No synthetic replacement transients were added.",
-  "selection_policy": "Recordings reinforce only physical edges: dropped objects, carried gear, coins, a cork and swallow, a wooden chest, and a lock. Musical, progression, dialogue, encounter, save, and rest identities remain procedural.",
+  "selection_policy": "Recordings reinforce physical edges: weapon movement, body impacts, creature attacks and defeats, dropped objects, carried gear, coins, a cork and swallow, a wooden chest, and a lock. Sword-air movement remains physically modelled. Musical, progression, dialogue, encounter, save, and rest identities remain procedural.",
   "collections": [
     {
       "name": "Coins",
@@ -169,6 +169,40 @@
       "rpg_use": "door-unlock mechanism",
       "logical_files": [
         "door_sound_generator/sources/laleksic_lock.wav"
+      ]
+    },
+    {
+      "name": "37 hits/punches",
+      "author": "Independent.nu",
+      "license": "CC0 1.0",
+      "source_page": "https://opengameart.org/content/37-hitspunches",
+      "owner_provenance": "generators/unarmed_foley_generator/sources/provenance.json",
+      "rpg_use": "ordinary, critical, and player-damage body impacts",
+      "logical_files": [
+        "unarmed_foley_generator/sources/independent_nu_hit_02.wav",
+        "unarmed_foley_generator/sources/independent_nu_hit_07.wav",
+        "unarmed_foley_generator/sources/independent_nu_hit_08.wav",
+        "unarmed_foley_generator/sources/independent_nu_hit_20.wav",
+        "unarmed_foley_generator/sources/independent_nu_hit_29.wav",
+        "unarmed_foley_generator/sources/independent_nu_hit_34.wav"
+      ]
+    },
+    {
+      "name": "CC0 creature attack and defeat cues",
+      "author": "rubberduck",
+      "license": "CC0 1.0",
+      "source_page": "See generators/creature_foley_generator/sources/provenance.json",
+      "owner_provenance": "generators/creature_foley_generator/sources/provenance.json",
+      "rpg_use": "distinct enemy attack and enemy defeat voices",
+      "logical_files": [
+        "creature_foley_generator/sources/rubberduck_creature_attack_01.wav",
+        "creature_foley_generator/sources/rubberduck_creature_attack_02.wav",
+        "creature_foley_generator/sources/rubberduck_creature_attack_03.wav",
+        "creature_foley_generator/sources/rubberduck_creature_attack_05.wav",
+        "creature_foley_generator/sources/rubberduck_creature_die_01.wav",
+        "creature_foley_generator/sources/rubberduck_creature_die_02.wav",
+        "creature_foley_generator/sources/rubberduck_creature_die_03.wav",
+        "creature_foley_generator/sources/rubberduck_creature_die_04.wav"
       ]
     }
   ]

@@ -47,7 +47,7 @@ def test_quirky_rpg_catalog_is_grouped_and_packs_have_stable_coverage():
         "conditions",
     )
     assert set(STYLES) == {"suburban", "psychedelic", "lofi"}
-    assert len(CUES) == 64
+    assert len(CUES) == 65
     assert {cue.group for cue in CUES.values()} == set(GROUPS)
     assert [entry.cue for entry in PACKS["core"].entries] == list(CUES)
     assert sum(entry.count for entry in PACKS["hometown"].entries) == 48
@@ -59,12 +59,17 @@ def test_quirky_rpg_catalog_is_grouped_and_packs_have_stable_coverage():
         "enemy_hit",
         "critical_hit",
         "door_transition",
+        "attack_swing",
+        "attack_miss",
+        "enemy_attack",
+        "enemy_defeat",
+        "party_down",
     }
 
 
 def test_quirky_rpg_reuses_a_complete_foley_inventory_without_new_wavs():
     inventory = source_inventory()
-    assert len(inventory) == 13
+    assert len(inventory) == 24
     assert missing_sources() == ()
     assert all(resolve_asset(source.path).is_file() for source in inventory)
 
@@ -82,7 +87,10 @@ def test_quirky_rpg_foley_is_optional_source_aware_and_cartridge_treated():
         if name in sourceful:
             assert hybrid.sources
             assert hybrid.samples != procedural.samples
-            assert all("/sources/" in source for source in hybrid.sources)
+            assert all(
+                "/sources/" in source or source.startswith("generator:")
+                for source in hybrid.sources
+            )
         else:
             assert hybrid.sources == ()
 
@@ -118,7 +126,7 @@ def test_quirky_rpg_public_import_stays_standard_library_only():
     script = """
 import sys
 from python_sound_generator.quirky_rpg import CUES, generate
-assert len(CUES) == 64
+assert len(CUES) == 65
 assert generate('cursor_move', seed=3)
 assert 'numpy' not in sys.modules
 assert 'scipy' not in sys.modules
@@ -158,7 +166,7 @@ def test_quirky_rpg_render_writes_variations_and_structured_manifest(tmp_path):
     assert first_manifest["generator"] == "quirky_rpg_sound_generator"
     assert first_manifest["schema_version"] == 1
     assert first_manifest["seed_scheme"] == "stable-v2"
-    assert "copied game assets" in first_manifest["synthesis"]
+    assert "physical blunt-weapon movement" in first_manifest["synthesis"]
     assert "asset_catalog" not in first_manifest
     assert [item["sha256"] for item in artifacts] == [
         item["sha256"] for item in second_manifest["artifacts"]
@@ -214,7 +222,7 @@ def test_quirky_rpg_sources_command_reports_reuse_without_missing_files(capsys):
     payload = json.loads(capsys.readouterr().out)
     assert payload["missing"] == []
     assert payload["invalid"] == []
-    assert len(payload["inventory"]) == 13
+    assert len(payload["inventory"]) == 24
     assert {collection["license"] for collection in payload["collections"]} == {
         "CC0 1.0"
     }

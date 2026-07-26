@@ -65,6 +65,11 @@ CUES: dict[str, Cue] = {
         "key", "mechanism", "physical terminal or keyboard key contact",
         engine.key, -8.0, sourced=True,
     ),
+    "mouse_click": Cue(
+        "mouse_click", "mechanism",
+        "physical mouse-button press and release",
+        engine.mouse_click, -8.0, sourced=True,
+    ),
     "switch": Cue(
         "switch", "mechanism", "physical latching power switch",
         engine.switch, -7.0, sourced=True,
@@ -167,6 +172,7 @@ ZCOM = Pack(
         PackEntry("drive_loop", "drive", options=Options(seconds=4.0)),
         PackEntry("psu_loop", "psu", options=Options(seconds=4.0)),
         PackEntry("terminal_key", "key", count=3),
+        PackEntry("mouse_click", "mouse_click"),
         PackEntry("power_switch", "switch"),
         PackEntry("drive_seek", "seek", count=3),
         PackEntry("dial_tone", "dial"),

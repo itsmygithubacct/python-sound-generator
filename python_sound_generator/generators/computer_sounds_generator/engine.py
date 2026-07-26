@@ -262,6 +262,23 @@ def key(size: Size, region: Region, rng: random.Random,
     return _read_source("key_cc0.wav"), ("key_cc0.wav",)
 
 
+def mouse_click(size: Size, region: Region, rng: random.Random,
+                intensity: float) -> tuple[list[float], tuple[str, ...]]:
+    """One physical mouse click: button-down, then button-up 120 ms later."""
+
+    del size, region, rng
+    _check(1.0, intensity)
+    press = _read_source("mouse_press_cc0.wav")
+    release = _read_source("mouse_release_cc0.wav")
+    release_at = 0.12
+    # Leave the shared one-shot master's edge fade in silence rather than over
+    # the short release transient.
+    out = dsp.silence(release_at + len(release) / SR + 0.06)
+    dsp.add_at(out, 0.0, press)
+    dsp.add_at(out, release_at, release)
+    return out, ("mouse_press_cc0.wav", "mouse_release_cc0.wav")
+
+
 def switch(size: Size, region: Region, rng: random.Random,
            intensity: float) -> tuple[list[float], tuple[str, ...]]:
     del size, region, rng

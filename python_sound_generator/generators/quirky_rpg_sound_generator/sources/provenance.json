@@ -2,7 +2,7 @@
   "schema_version": 1,
   "source_audio_policy": "CC0 1.0 recordings already approved and bundled by their material-owning providers",
   "storage_policy": "No WAV is duplicated in this provider. Logical source paths resolve to the existing owning provider or the shared content-addressed asset catalog.",
-  "selection_policy": "Only physical cloth, gear, body contact, panel movement, and latch edges use recordings. Every recording is aggressively filtered, bit-reduced, and sample-held to fit the original cartridge-like palette.",
+  "selection_policy": "Only physical cloth, gear, body and wooden-bat contact, creature attack and defeat, panel movement, and latch edges use recordings. Weapon-air movement is physically modelled. Every borrowed event is filtered and lightly cartridge-treated to fit the original palette without disguising what caused it.",
   "collections": [
     {
       "name": "RPG Sound Pack",
@@ -43,7 +43,10 @@
       "quirky_rpg_use": "cartridge-treated door-panel movement",
       "logical_files": [
         "wood_noise_generator/sources/lampeight_wood_panel_scrape.wav",
-        "wood_noise_generator/sources/rutgermuller_wood_plank_scraping.wav"
+        "wood_noise_generator/sources/rutgermuller_wood_plank_scraping.wav",
+        "wood_noise_generator/sources/rubberduck_wood_hit_01.wav",
+        "wood_noise_generator/sources/rubberduck_wood_hit_04.wav",
+        "wood_noise_generator/sources/rubberduck_wood_hit_07.wav"
       ]
     },
     {
@@ -55,6 +58,24 @@
       "quirky_rpg_use": "cartridge-treated door latch",
       "logical_files": [
         "door_sound_generator/sources/laleksic_lock.wav"
+      ]
+    },
+    {
+      "name": "CC0 creature attack and defeat cues",
+      "author": "rubberduck",
+      "license": "CC0 1.0",
+      "source_page": "See generators/creature_foley_generator/sources/provenance.json for both source pages",
+      "owner_provenance": "generators/creature_foley_generator/sources/provenance.json",
+      "quirky_rpg_use": "cartridge-treated enemy attacks and defeats",
+      "logical_files": [
+        "creature_foley_generator/sources/rubberduck_creature_attack_01.wav",
+        "creature_foley_generator/sources/rubberduck_creature_attack_02.wav",
+        "creature_foley_generator/sources/rubberduck_creature_attack_03.wav",
+        "creature_foley_generator/sources/rubberduck_creature_attack_05.wav",
+        "creature_foley_generator/sources/rubberduck_creature_die_01.wav",
+        "creature_foley_generator/sources/rubberduck_creature_die_02.wav",
+        "creature_foley_generator/sources/rubberduck_creature_die_03.wav",
+        "creature_foley_generator/sources/rubberduck_creature_die_04.wav"
       ]
     }
   ]

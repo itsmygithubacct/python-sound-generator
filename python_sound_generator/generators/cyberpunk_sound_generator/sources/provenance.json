@@ -2,9 +2,9 @@
   "schema_version": 1,
   "source_audio_policy": "CC0 1.0 or public domain only",
   "retrieved_utc": "2026-07-22",
-  "storage_policy": "Unique approved servo excerpts remain in this provider. The keyboard recording resolves through its provenance-owning provider or the shared content-addressed asset catalog.",
+  "storage_policy": "Unique approved servo excerpts remain in this provider. Keyboard, firearm, body-impact, metal, and stone recordings resolve through their provenance-owning providers or the shared content-addressed asset catalog.",
   "conversion": "The original Freesound servo master is preserved outside the runtime package. Approved impulses were decoded with FFmpeg, downmixed to mono, resampled to 44100 Hz, edge-faded, and written as signed 16-bit PCM WAV with metadata removed.",
-  "selection_policy": "Only terminal contact and implant mechanism movement use recordings. Network, hacking, EMP, radio, hologram, credit, objective, and drone-rate identities remain procedural.",
+  "selection_policy": "Recordings are used only for physical events: terminal contact, implant movement, firearm mechanisms and casings, body contact, armor contact, and concrete-floor contact. Firearm reports, weapon swings, projectile deflection, network, hacking, EMP, radio, hologram, credit, objective, and drone-rate identities remain physically modelled or procedural.",
   "collections": [
     {
       "name": "ServoMotor.wav",
@@ -44,6 +44,84 @@
       "cyberpunk_use": "physical terminal-key contact",
       "logical_files": [
         "computer_sounds_generator/sources/key_cc0.wav"
+      ]
+    },
+    {
+      "name": "Auditioned firearm mechanisms",
+      "author": "InspectorJ and SpliceSound",
+      "license": "CC0 1.0",
+      "source_page": "See generators/gunshot_sounds_generator/sources/provenance.json",
+      "owner_provenance": "generators/gunshot_sounds_generator/sources/provenance.json",
+      "cyberpunk_use": "magazine, charging action, and weapon-cycle recordings delegated through the complete firearm renderer",
+      "logical_files": [
+        "gunshot_sounds_generator/sources/bolt_rifle.wav",
+        "gunshot_sounds_generator/sources/magazine_out_ar15.wav",
+        "gunshot_sounds_generator/sources/magazine_in_ar15.wav",
+        "gunshot_sounds_generator/sources/charging_handle_ar15.wav"
+      ]
+    },
+    {
+      "name": "Impact Sounds and CC0 metal contacts",
+      "author": "Kenney and rubberduck",
+      "license": "CC0 1.0",
+      "source_page": "See generators/projectile_sounds/sources/provenance.json",
+      "owner_provenance": "generators/projectile_sounds/sources/provenance.json",
+      "cyberpunk_use": "armor contact, bolt movement, casing ejection, and casing landing",
+      "logical_files": [
+        "projectile_sounds/sources/kenney_impact_metal_light_000.wav",
+        "projectile_sounds/sources/kenney_impact_metal_light_001.wav",
+        "projectile_sounds/sources/kenney_impact_metal_light_002.wav",
+        "projectile_sounds/sources/kenney_impact_metal_light_003.wav",
+        "projectile_sounds/sources/kenney_impact_metal_light_004.wav",
+        "projectile_sounds/sources/kenney_impact_metal_medium_000.wav",
+        "projectile_sounds/sources/kenney_impact_metal_medium_001.wav",
+        "projectile_sounds/sources/kenney_impact_metal_medium_002.wav",
+        "projectile_sounds/sources/kenney_impact_metal_medium_003.wav",
+        "projectile_sounds/sources/kenney_impact_metal_medium_004.wav",
+        "projectile_sounds/sources/kenney_impact_tin_medium_000.wav",
+        "projectile_sounds/sources/kenney_impact_tin_medium_001.wav",
+        "projectile_sounds/sources/kenney_impact_tin_medium_002.wav",
+        "projectile_sounds/sources/kenney_impact_tin_medium_003.wav",
+        "projectile_sounds/sources/kenney_impact_tin_medium_004.wav",
+        "projectile_sounds/sources/rubberduck_metal_hit_01.wav",
+        "projectile_sounds/sources/rubberduck_metal_hit_02.wav",
+        "projectile_sounds/sources/rubberduck_metal_hit_03.wav",
+        "projectile_sounds/sources/rubberduck_metal_hit_04.wav",
+        "projectile_sounds/sources/rubberduck_metal_hit_05.wav"
+      ]
+    },
+    {
+      "name": "Stone and concrete contacts",
+      "author": "Kenney and rubberduck",
+      "license": "CC0 1.0",
+      "source_page": "See generators/stone_noise_generator/sources/provenance.json",
+      "owner_provenance": "generators/stone_noise_generator/sources/provenance.json",
+      "cyberpunk_use": "the concrete-floor layer beneath firearm casing landings",
+      "logical_files": [
+        "stone_noise_generator/sources/kenney_impact_mining_000.wav",
+        "stone_noise_generator/sources/kenney_impact_mining_001.wav",
+        "stone_noise_generator/sources/kenney_impact_mining_002.wav",
+        "stone_noise_generator/sources/kenney_impact_mining_003.wav",
+        "stone_noise_generator/sources/kenney_impact_mining_004.wav",
+        "stone_noise_generator/sources/rubberduck_sfx2_stones_01.wav",
+        "stone_noise_generator/sources/rubberduck_sfx2_stones_02.wav",
+        "stone_noise_generator/sources/rubberduck_sfx2_stones_03.wav"
+      ]
+    },
+    {
+      "name": "37 hits/punches",
+      "author": "Independent.nu",
+      "license": "CC0 1.0",
+      "source_page": "https://opengameart.org/content/37-hitspunches",
+      "owner_provenance": "generators/unarmed_foley_generator/sources/provenance.json",
+      "cyberpunk_use": "pistol-butt contact and incapacitation body impacts",
+      "logical_files": [
+        "unarmed_foley_generator/sources/independent_nu_hit_02.wav",
+        "unarmed_foley_generator/sources/independent_nu_hit_07.wav",
+        "unarmed_foley_generator/sources/independent_nu_hit_08.wav",
+        "unarmed_foley_generator/sources/independent_nu_hit_20.wav",
+        "unarmed_foley_generator/sources/independent_nu_hit_29.wav",
+        "unarmed_foley_generator/sources/independent_nu_hit_34.wav"
       ]
     }
   ]

@@ -36,7 +36,7 @@ def test_rpg_catalog_is_grouped_and_core_pack_covers_every_cue():
         "system",
     )
     assert set(THEMES) == {"fantasy", "dark", "retro"}
-    assert len(CUES) == 64
+    assert len(CUES) == 65
     assert {cue.group for cue in CUES.values()} == set(GROUPS)
     assert [entry.cue for entry in PACKS["core"].entries] == list(CUES)
     assert {name for name, cue in CUES.items() if cue.foley_kinds} == {
@@ -47,6 +47,13 @@ def test_rpg_catalog_is_grouped_and_core_pack_covers_every_cue():
         "potion_drink",
         "chest_open",
         "door_unlock",
+        "attack_swing",
+        "attack_hit",
+        "attack_miss",
+        "critical_hit",
+        "player_hurt",
+        "enemy_attack",
+        "enemy_defeat",
     }
 
 
@@ -73,7 +80,7 @@ def test_every_rpg_cue_has_exact_duration_finite_unique_pcm():
 
 def test_rpg_optional_foley_inventory_is_complete_without_duplicate_masters():
     inventory = source_inventory()
-    assert len(inventory) == 25
+    assert len(inventory) == 39
     assert missing_sources() == ()
     assert all(resolve_asset(source.path).is_file() for source in inventory)
     assert all("/sources/" in source.logical_name for source in inventory)
@@ -90,7 +97,10 @@ def test_rpg_foley_is_deterministic_optional_and_honestly_reported():
         if name in sourceful:
             assert first.sources
             assert first.samples != procedural.samples
-            assert all("/sources/" in source for source in first.sources)
+            assert all(
+                "/sources/" in source or source.startswith("generator:")
+                for source in first.sources
+            )
         else:
             assert first.sources == ()
 
@@ -182,7 +192,7 @@ def test_rpg_sources_command_reports_the_complete_inventory(capsys):
     payload = json.loads(capsys.readouterr().out)
     assert payload["missing"] == []
     assert payload["invalid"] == []
-    assert len(payload["inventory"]) == 25
+    assert len(payload["inventory"]) == 39
     assert {collection["license"] for collection in payload["collections"]} == {
         "CC0 1.0"
     }

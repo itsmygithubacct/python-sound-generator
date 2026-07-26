@@ -49,6 +49,15 @@ def _artifact(
     options: Options,
 ) -> dict[str, Any]:
     metrics = artifact_metrics(path, signal, engine.SR)
+    procedural_sources = tuple(
+        source for source in sources
+        if source.startswith(
+            ("generator:", "generated-space:", "suppression-balance:")
+        )
+    )
+    recording_sources = tuple(
+        source for source in sources if source not in procedural_sources
+    )
     return {
         "file": path.resolve().relative_to(root.resolve()).as_posix(),
         "cue": cue_name,
@@ -60,7 +69,8 @@ def _artifact(
             "intensity": round(options.intensity, 4),
             "foley_mix": round(options.foley, 4),
         },
-        "sources": list(sources),
+        "sources": list(recording_sources),
+        "procedural_sources": list(procedural_sources),
         **metrics,
     }
 
@@ -74,15 +84,16 @@ def _write_manifest(
 ) -> Path:
     extra: dict[str, Any] = {
         "source_audio": (
-            "optional CC0 key contact and servo movement selected by logical path"
+            "optional CC0 hardware, firearm-mechanism, material-contact, and "
+            "body-impact recordings selected by logical path"
         ),
         "source_licensing": "CC0 1.0",
         "source_provenance": (
             "generators/cyberpunk_sound_generator/sources/provenance.json"
         ),
         "synthesis": (
-            "deterministic procedural electronic DSP with an optional tiny "
-            "hardware-contact Foley layer"
+            "deterministic electronic identity layers plus optional specialist "
+            "firearm, combat-motion, projectile, and physical Foley rendering"
         ),
     }
     if pack is not None:
