@@ -257,7 +257,8 @@ def test_default_output_stays_outside_the_installed_package(tmp_path, monkeypatc
 def test_only_runtime_provider_material_is_packaged():
     forbidden = {"output", "out", "research", "tests"}
     for path in PROVIDER_ROOT.rglob("*"):
-        assert not forbidden.intersection(path.parts), path
+        relative_path = path.relative_to(PROVIDER_ROOT)
+        assert not forbidden.intersection(relative_path.parts), relative_path
 
 
 def test_no_provider_markdown_or_requirements_are_packaged():
