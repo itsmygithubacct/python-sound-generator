@@ -383,6 +383,14 @@ make build
 python -m twine check dist/*
 ```
 
+Set `SOURCE_DATE_EPOCH` to a non-negative Unix timestamp when producing release
+artifacts. The wheel and source distribution then use canonical archive times
+and ownership metadata, so rebuilding the same tree with the same locked build
+environment produces byte-identical artifacts.
+
+Run `make check-reproducible-sdist` to build the complete source archive twice
+and verify its bytes, entry order, timestamps, and ownership metadata.
+
 `verify` runs Ruff, the complete test suite, and the 32-provider health check.
 CI repeats those checks on Python 3.11 through 3.14 and validates both built
 distributions. The unified tests pin registry uniqueness, namespace-safe lazy loading,

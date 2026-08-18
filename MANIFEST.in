@@ -1,6 +1,9 @@
 include README.md
 include LICENSE
 include ASSET_LICENSES.md
+include build_backend.py
+include reproducible_sdist.py
+include tools/check_reproducible_sdist.py
 recursive-include python_sound_generator/generators *.wav *.json *.html *.mjs
 recursive-include python_sound_generator/assets *.wav *.json
 global-exclude __pycache__ *.py[cod]
