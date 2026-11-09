@@ -6,9 +6,11 @@ approved CC0/public-domain Foley recordings.
 
 It is not part of the Plebian-OS install or its content catalog. The Kilix for
 Windows companion lists it in its application catalog
-(`kilix apps install python-sound-generator`, alias `soundgen`), and
-[pleb-tower](https://github.com/itsmygithubacct/pleb-tower#readme) renders its
-sound effects through it at build time.
+(`kilix apps install python-sound-generator`, alias `soundgen`).
+[pleb-tower](https://github.com/itsmygithubacct/pleb-tower#readme) and
+[kilix-land-desktop](https://github.com/itsmygithubacct/kilix-land-desktop#readme)
+render their sound effects through it when they regenerate their sound banks
+(`make audio`); their normal builds do not run it.
 
 ## What it does
 
@@ -116,6 +118,9 @@ lazy `Provider` entry. Details: [docs/architecture.md](docs/architecture.md).
 - [pleb-tower](https://github.com/itsmygithubacct/pleb-tower#readme): its
   `tools/generate_audio.py` renders the game's sound effects through these
   providers; the recorded provenance is in its `assets/audio/provenance.json`.
+- [kilix-land-desktop](https://github.com/itsmygithubacct/kilix-land-desktop#readme):
+  its `tools/generate_audio.py` renders the Land desktop's sound effects through
+  these providers.
 - [kilix](https://github.com/itsmygithubacct/kilix#readme): the Kilix for
   Windows companion's application catalog pins and installs it.
 
@@ -126,8 +131,9 @@ Python Sound Generator is one of the repositories behind
 install whose desktop is [Kilix](https://github.com/itsmygithubacct/kilix#readme)
 running the [Kilix 95](https://github.com/itsmygithubacct/kilix-95#readme)
 desktop through [Pleb](https://github.com/itsmygithubacct/pleb#readme).
-It is not installed by Plebian-OS; it is a build-time audio tool for its games and
-an installable app in the Kilix for Windows companion. The map of every
+It is not installed by Plebian-OS; Pleb Tower and the Land desktop regenerate
+their sound banks with it, and it is an installable app in the Kilix for Windows
+companion. The map of every
 repository and how it ships is on the
 [components page](https://github.com/itsmygithubacct/plebian-os/blob/main/docs/components.md).
 
