@@ -1,372 +1,135 @@
 # Python Sound Generator
 
-One modular command line for 32 game-audio domains. It combines deterministic
-procedural DSP with approved CC0/public-domain Foley while keeping each domain
-isolated behind a lazy provider registry. The external Strudel music recorder
-is the documented exception to byte-for-byte deterministic rendering.
+Python Sound Generator is one command line, `soundgen`, that renders game sound
+effects for 32 audio domains from deterministic procedural synthesis and
+approved CC0/public-domain Foley recordings.
 
-```text
-soundgen CLI
-    │
-    ├── lazy provider registry
-    │     ├── fire / water / wood / stone / …
-    │     ├── combat / weapons / projectiles / gunshots
-    │     └── RPG / quirky RPG / ninja / cyberpunk / ambience / UI / voices
-    │
-    └── neutral python_sound_generator._audio layer
-          ├── standard-library DSP + loop/rotor models
-          ├── NumPy/SciPy recording transforms
-          ├── PCM, CLI runtime, manifests, and seed derivation
-          └── content-addressed WAV assets + logical provenance aliases
-```
+It is not part of the Plebian-OS install or its content catalog. The Kilix for
+Windows companion lists it in its application catalog
+(`kilix apps install python-sound-generator`, alias `soundgen`), and
+[pleb-tower](https://github.com/itsmygithubacct/pleb-tower#readme) renders its
+sound effects through it at build time.
 
-Only the selected provider is imported. Listing the catalog does not load NumPy,
-SciPy, source WAVs, or the other DSP engines. Provider modules stay beneath the
-`python_sound_generator.generators` namespace, so dispatch does not publish
-generic names such as `lib` or legacy provider package names into `sys.modules`.
+## What it does
 
-## Install
+- Renders fire, water, wood, stone, weapons, projectiles, gunshots, vehicles,
+  appliances, creatures, voices, ambience, UI and more: 32 providers behind one
+  lazy registry.
+- Provides four themed cue libraries (RPG, cyberpunk, quirky 16-bit RPG and
+  ninja) with styles, variation packs, and an opt-in Foley mix.
+- Writes WAV files with a schema-v1 manifest of options, stable seeds, levels,
+  SHA-256 checksums and logical source names.
+- Derives seeds from provider, cue, filename and variation, so adding a pack
+  entry never changes existing sounds.
+- Renders packaged recipe cue banks that delegate to the real provider CLIs.
+- Checks its own health (`soundgen doctor`) and reports catalogs as JSON.
+- Imports only the provider you ask for: listing the catalog loads no NumPy,
+  SciPy or WAV data.
+
+## Quick start
 
 Python 3.11 or newer is required.
 
 ```sh
+git clone https://github.com/itsmygithubacct/python-sound-generator.git
+cd python-sound-generator
 python3 -m venv .venv
 . .venv/bin/activate
 python -m pip install -e '.[dev]'
-```
 
-For a source checkout with dependencies already installed, the module form also
-works directly:
-
-```sh
-python3 -m python_sound_generator list
-```
-
-## Unified CLI
-
-```sh
-soundgen list
-soundgen info fire
-soundgen doctor
-
-soundgen fire list
+soundgen list                                      # the 32 providers
 soundgen fire render lava_flow --seconds 8 --out output/lava
-soundgen ui pack aquarium --out output/aquarium
-soundgen rpg render coin_pickup --theme fantasy --count 3
-soundgen rpg pack core --theme retro --out output/rpg
-soundgen cyberpunk render scan_ping --style electric --count 3
-soundgen cyberpunk pack core --style noir --play
-soundgen quirky-rpg pack core --style suburban --play
-soundgen recipe validate
-soundgen recipe render cyber-runner --cue ui.cursor --out output/recipes
-soundgen ninja render katana_clash --style arcade --count 3
-soundgen ninja pack core --style shadow --play
-soundgen car-engine output/engine.wav --duration 4 --engine v8 --seed 7
-soundgen car-engine sample output/mini.wav --duration 4 --seed 7
-soundgen car-engine inspect
+soundgen rpg pack core --theme fantasy --play      # audition all 65 RPG cues
 ```
 
-`soundgen PROVIDER ...` passes the remaining arguments unchanged to that
-provider's established CLI. This preserves each domain's meaningful axes rather
-than forcing wood forms, firearm mechanisms, musical styles, vehicle surfaces,
-and appliance speeds into one misleading universal option schema. Use
-`soundgen PROVIDER --help` for that provider's exact interface.
+With the dependencies already installed, `python3 -m python_sound_generator list`
+works from a source checkout without installing.
 
-The packaged `soundgen.recipe.v1` file defines four generic example cue banks:
-Fantasy Adventure, Cyber Runner, Fantasy Quest, and Suburban Odyssey. Rendering delegates
-to the real provider CLIs and writes an aggregate manifest without timestamps
-or absolute source paths. Validation checks the provider's real cue and
-style/theme catalogs, bounds recipe sizes and counts, rejects output traversal
-and symlink escapes, and verifies each rendered WAV against its provider
-manifest before writing aggregate manifest checksums. The current recipes are
-procedural-only. If sampled Foley is later added, validation accepts only
-CC0/public-domain records with valid source and license URLs, an ISO access
-date, creator, non-empty attribution record, and original SHA-256.
+## Usage
 
-The car provider keeps its original procedural shorthand and adds `sample` for
-the bundled CC0 recording bank, `inspect` for its RPM/load anchors and
-provenance, and `render-bank` for compatible external banks.
+| Command | What it does |
+|---|---|
+| `soundgen list [--json]` | every provider with a one-line description |
+| `soundgen info PROVIDER [--json]` | one provider's catalog details |
+| `soundgen doctor [--json]` | checks every entry point, runtime file, JSON asset and WAV container |
+| `soundgen PROVIDER ...` | runs that provider's own CLI with the remaining arguments unchanged |
+| `soundgen PROVIDER --help` | that provider's exact options |
+| `soundgen recipe validate`, `soundgen recipe render NAME` | validate or render the packaged recipe cue banks |
+| `soundgen car-engine sample`, `inspect`, `render-bank` | the car provider's recording bank, RPM/load anchors and external banks |
 
-Provider module names are accepted as compatibility aliases:
+The themed libraries share the verbs `list`, `sources`, `info CUE`,
+`render CUE` and `pack NAME`, with options such as `--seed`, `--count`,
+`--out`, `--play`, a style or theme, and `--foley-mix 0..1`; other providers
+keep their own interfaces. Output goes to `output/<provider>/` under the current
+directory unless `--out` says otherwise (a few providers take a positional
+output filename).
 
-```sh
-soundgen fire_sound_generator list
-soundgen projectile_sounds list
-```
-
-Machine-readable catalog and health output are available with `--json`:
-
-```sh
-soundgen list --json
-soundgen info appliances --json
-soundgen doctor --json
-```
-
-`doctor` verifies every entrypoint, required runtime file, JSON asset, and WAV
-container before reporting provider import health. Catalog rows also distinguish
-conventional `sources/` files from audio stored in other runtime banks.
-
-The same lazy boundary is available to Python callers:
+From Python:
 
 ```python
 from python_sound_generator import get_provider, providers, run
 
-print([provider.slug for provider in providers()])
-print(get_provider("household-appliance").description)
 status = run("fire", ["render", "lava_flow", "--seconds", "8"])
 ```
 
-`run()` preserves each provider's native arguments and returns its process-style
-status code. Unknown provider names raise `KeyError`; import and render errors
-remain visible to the caller.
+## How it works
 
-## RPG sound library
-
-The `rpg` provider adds 65 deterministic one-shots for a complete party-RPG
-sound vocabulary: menus, inventory, equipment, items, physical battle, elemental
-magic, summons, progression, field mechanisms, vehicles, saving, and rest.
-Every cue can be rendered in `fantasy`, `dark`, or `retro` themes. The `core`
-pack emits one of every cue in group directories; `inventory` and `progression`
-emit variation banks for repeated events.
-
-```sh
-soundgen rpg list
-soundgen rpg sources
-soundgen rpg info level_up --theme dark
-soundgen rpg render chest_open --theme fantasy --foley-mix 0.75 --seed 42
-soundgen rpg pack core --theme retro --out output/rpg
-soundgen rpg pack core --theme fantasy --play  # audition all 65 cues in order
+```
+soundgen CLI ──▶ lazy provider registry (python_sound_generator/providers.py)
+                   └─ imports only the selected provider from generators/
+                         └─ shared python_sound_generator._audio layer:
+                              standard-library DSP, loops and rotors,
+                              optional NumPy/SciPy Foley transforms,
+                              PCM writer, manifests, stable-v2 seeds,
+                              content-addressed WAV assets
 ```
 
-Python callers can synthesize samples without going through the CLI. Importing
-the dedicated module opts into its DSP engine without making top-level provider
-discovery eager:
+Each provider keeps its own registry, renderer, mastering and source-selection
+policy, and keeps its own command-line axes instead of a forced common schema.
+Duplicate recordings are stored once by SHA-256 under
+`python_sound_generator/assets/audio/`, and `assets/catalog.json` maps every
+logical source name back to its provider and provenance ledger. The default
+`--foley-mix 0` path is procedural and standard-library-only; the external
+Strudel music recorder is the one exception to byte-for-byte deterministic
+output.
 
-```python
-from python_sound_generator.rpg import generate_with_sources, write_wav
+Adding a domain takes a runtime package with approved source names plus one
+lazy `Provider` entry. Details: [docs/architecture.md](docs/architecture.md).
 
-result = generate_with_sources(
-    "potion_drink", theme="fantasy", foley_mix=0.75, seed=42
-)
-write_wav("output/potion_drink.wav", result.samples)
-print(result.sources)
-```
+## Documentation
 
-Generated WAVs are mono, 44.1 kHz, signed 16-bit PCM. Render and pack commands
-also write a manifest containing cue options, deterministic seeds, duration,
-levels, SHA-256 checksums, and exact logical source names. Its default
-`--foley-mix 0` path remains procedural and standard-library-only. A nonzero
-mix adds approved physical layers to fourteen cues, including modelled weapon
-movement and recorded body/creature impacts, while progression, dialogue,
-encounter, save, and rest identities remain synthesized.
+- [docs/architecture.md](docs/architecture.md): the provider registry, the
+  shared `_audio` layer, adding a domain, and what the distribution includes.
+- [docs/cli.md](docs/cli.md): the unified CLI, recipes, JSON output, the Python
+  facade, output and manifests, and the Strudel music toolchain.
+- [docs/libraries.md](docs/libraries.md): the RPG, cyberpunk, quirky 16-bit RPG
+  and ninja libraries, and the Foley review.
+- [docs/development.md](docs/development.md): installation, `make verify`,
+  reproducible builds and CI.
+- [ASSET_LICENSES.md](ASSET_LICENSES.md): licensing and provenance of bundled
+  recordings and rendered output.
+- [foley_intake/README.md](foley_intake/README.md): the Foley intake masters
+  used to reproduce packaged excerpts.
 
-## Cyberpunk game sound library
+## Related repositories
 
-The `cyberpunk` provider supplies 64 deterministic one-shots across interface,
-network, security, cyberware, world, combat, stealth, matrix, and magic groups.
-Its `electric`, `noir`, and `corporate` styles preserve event meanings while
-changing pitch, bandwidth, instability, distortion, and low-frequency weight.
-The synthesis combines FM-like tones, packet pulses, quantised oscillators,
-filtered radio static, sub impacts, and deterministic glitch processing.
+- [pleb-tower](https://github.com/itsmygithubacct/pleb-tower#readme): its
+  `tools/generate_audio.py` renders the game's sound effects through these
+  providers; the recorded provenance is in its `assets/audio/provenance.json`.
+- [kilix](https://github.com/itsmygithubacct/kilix#readme): the Kilix for
+  Windows companion's application catalog pins and installs it.
 
-```sh
-soundgen cyberpunk list
-soundgen cyberpunk sources
-soundgen cyberpunk info hack_success --style corporate
-soundgen cyberpunk render emp_blast --style noir --count 3 --seed 42
-soundgen cyberpunk render implant_activate --foley-mix 0.7 --seed 42
-soundgen cyberpunk pack netrunner --style electric --out output/cyberpunk
-soundgen cyberpunk pack core --style electric --play  # audition all 64 in order
-```
+## Part of Plebian-OS
 
-The `core` pack writes one cue per organised group directory. `netrunner`
-provides variations for network and hacking events; `street-tech` covers
-terminals, holograms, implants, credits, objectives, communications, and drone
-alerts. All commands emit stable-v2 seeds and schema-v1 manifests.
-
-```python
-from python_sound_generator.cyberpunk import generate, write_wav
-
-samples = generate("implant_activate", style="electric", seed=42)
-write_wav("output/implant_activate.wav", samples)
-```
-
-The default provider path remains standard-library-only. `--foley-mix 0..1`
-optionally adds specialist firearm reports and mechanisms, modelled
-close-combat movement and ricochet, and approved key, servo, body, metal, and
-stone contacts to thirteen physical cues. Network, hacking, EMP, radio,
-hologram, credit, objective, and drone-rate cues remain procedural.
-
-## Quirky 16-bit RPG sound library
-
-The `quirky-rpg` provider supplies 65 original one-shots for an offbeat
-early-1990s console RPG: compact menus, dialogue reactions, everyday items,
-psychic abilities, battle and field feedback, character-role actions, town
-services, conditions, telephones, doors, saving, party changes, and surreal
-events. Its `suburban`, `psychedelic`, and `lofi` styles change the waveform
-palette, pitch instability, bandwidth, bit depth, sample hold, echo, and
-transient weight while keeping each gameplay event recognizable.
-
-```sh
-soundgen quirky-rpg list
-soundgen quirky-rpg sources
-soundgen quirky-rpg info strange_event --style psychedelic
-soundgen quirky-rpg render psi_cast --style psychedelic --count 3 --seed 42
-soundgen quirky-rpg render critical_hit --foley-mix 0.65 --seed 42
-soundgen quirky-rpg pack hometown --style suburban --out output/quirky-rpg
-soundgen quirky-rpg pack core --style suburban --play  # audition all 65 in order
-```
-
-The `core` pack writes every cue once in group directories. `hometown` provides
-48 variations for repeated interface, dialogue, item, and world events;
-`psychic` and `battle` each provide 15 focused variations. Render and pack
-commands write stable-v2 seeds and schema-v1 manifests.
-
-```python
-from python_sound_generator.quirky_rpg import generate, write_wav
-
-samples = generate("strange_event", style="psychedelic", seed=42)
-write_wav("output/strange_event.wav", samples)
-```
-
-This library defaults to original procedural synthesis. A nonzero Foley mix
-adds modelled blunt-weapon movement and reuses approved cloth, body-impact,
-wood-contact, creature, panel, and latch recordings for ten physical cues,
-then filters, bit-reduces, and sample-holds each borrowed layer into the
-cartridge-like palette. It does not copy melodies, samples, or named assets
-from any existing game.
-
-## Ninja game sound library
-
-The `ninja` provider supplies 30 deterministic cues across movement, blades,
-projectiles, tools, and stealth-world feedback. Its `shadow`, `arcade`, and
-`cinematic` styles move between restrained gameplay readability, bright compact
-exaggeration, and darker weight. The `core`, `infiltration`, `arsenal`, and
-`tools` packs contain 30, 33, 36, and 18 files respectively.
-
-```sh
-soundgen ninja list
-soundgen ninja sources
-soundgen ninja info takedown --style cinematic
-soundgen ninja render katana_clash --style arcade --count 3 --seed 42
-soundgen ninja pack arsenal --style shadow --out output/ninja
-soundgen ninja pack core --style shadow --play  # audition all 30 in order
-```
-
-This provider is intentionally hybrid. Approved CC0 recordings supply chaotic
-physical details the ear recognizes immediately: cloth, body contact, timber,
-stone, light metal, panel scraping, and latches. Procedural synthesis owns air
-motion, spinning rates, blade resonance, smoke and flash energy, alerts, and
-the success cadence. `--foley-mix 0..1` controls recorded-layer contribution;
-every manifest names the exact logical source files it consumed.
-
-No WAV is copied into the ninja package. Its 35-source inventory resolves to
-existing provider banks or content-addressed shared assets, while
-[`sources/provenance.json`](python_sound_generator/generators/ninja_sound_generator/sources/provenance.json)
-links each reuse to its provenance-owning provider.
-
-```python
-from python_sound_generator.ninja import generate_with_sources, write_wav
-
-result = generate_with_sources("sliding_door", style="shadow", seed=42)
-write_wav("output/sliding_door.wav", result.samples)
-print(result.sources)
-```
-
-### Implemented Foley review
-
-The hybrid-domain audit covers the four libraries below. Their physical
-events have opt-in modelled or recording-backed layers while musical and
-abstract identities remain synthesized.
-
-| Library | Foley-enabled cues | Implementation |
-| --- | --- | --- |
-| `rpg` | Fourteen item, equipment, battle, and mechanism cues | Modelled sword movement plus approved coins, cork, swallow, chest, cloth/gear, material, body, creature, and lock contacts; 39-source inventory. |
-| `cyberpunk` | Thirteen hardware and combat cues | Specialist firearm, combat-motion, and ricochet models plus approved key, servo, body, metal, and stone contacts; 42-source inventory. |
-| `quirky-rpg` | Ten equipment, battle, and world cues | Modelled blunt-weapon movement plus 24 reused cloth, body, wood, creature, panel, and latch sources with cartridge treatment; no duplicated WAV bank. |
-| `computer` | `mouse_click` | Separate CC0 mouse-button press and release contacts assembled with their physical timing; two provider-owned sources. |
-
-All three retain `--foley-mix 0` as the default, so existing procedural renders
-and lightweight imports remain unchanged. Their `sources` commands expose the
-complete CC0 ledgers, resolution diagnostics, and checksum verification for
-every provider-owned excerpt. The ninja provider exposes the same diagnostics.
-
-## Shared audio architecture
-
-The public package owns discovery, aliases, lazy loading, diagnostics, and
-dispatch. Consolidated provider implementations live under
-`python_sound_generator/generators/` and keep their domain-specific registries,
-renderers, mastering choices, and source-selection policy. Reusable mechanics
-live under `python_sound_generator/_audio/`:
-
-- `dsp.py`, `chiptune.py`, `loops.py`, and `rotor.py` are standard-library-only;
-- `foley_numpy.py` owns recording I/O, trimming, resampling, placement, loop
-  construction, immutable sample caching, and NumPy PCM output;
-- `foley_bank.py` owns logical source records, deterministic selection,
-  safe provider paths, varispeed, filtering, and tail control for hybrid domains;
-- `foley_cli.py` owns consistent source inventories and provenance checksum
-  diagnostics for recording-backed command-line providers;
-- `validation.py` owns finite bounded-value checks shared by public controls;
-- `pcm.py` owns the common mono/stereo `AudioBuffer` and dependency-free writer;
-- `runtime.py` owns playback, artifact statistics, manifest envelopes, and
-  stable named seed derivation;
-- `models.py` supplies small structural contracts and shared variation naming;
-- `assets.py` resolves provider-level logical names through the shared catalog.
-
-The old `generators.foley_core`, `combat_generators.lib.dsp`, and
-`environment_ambience_generator.loopdsp` paths remain compatibility imports.
-Importing the neutral standard-library modules never imports NumPy or SciPy.
-
-Adding a domain requires two bounded changes:
-
-1. add its runtime package and approved logical source names;
-2. add one lazy `Provider` entry in `python_sound_generator/providers.py`.
-
-No provider is imported to register another provider, and a broken optional
-domain cannot prevent catalog discovery.
-
-## What is included
-
-The distribution includes runtime Python modules, approved source WAVs, source
-provenance JSON, and the shared Foley core. It deliberately excludes generated
-outputs, audition renders, caches, superseded research candidates, test debris,
-and design/session notes.
-
-Duplicate recordings are stored once under `python_sound_generator/assets/audio/`
-by SHA-256. `assets/catalog.json` maps every original provider-relative filename
-to that immutable blob and its original provenance ledger. Unique recordings
-remain in their provider bank. Providers continue to report and emit logical
-source names, so consolidation does not transfer authorship or licensing
-ownership. The bundled recording policy is CC0 or public domain; the ledgers
-remain the source of truth for each byte. Full-length Foley intake masters are
-local reproducibility inputs and are deliberately excluded from Git and built
-packages.
-
-## Output
-
-Provider CLIs retain their exact output filenames. Pass `--out`
-where a provider supports it to choose a destination. By default, generated
-files go to `output/<provider>/` beneath the current working directory, never
-into the installed package. A few standalone procedural providers use a
-positional output filename; their `--help` text documents it.
-
-Render and pack manifests use schema version 1. The common envelope includes a
-structured audio format, the legacy human-readable format string, and
-`seed_scheme: "stable-v2"`; provider-specific provenance and options remain
-extension fields. Artifact `loop` is always boolean and seam measurements live
-under `seam`. Stable-v2 seeds derive from provider, cue, logical filename, and
-variation, so inserting or reordering a pack entry does not change existing
-sounds. The Python runtime retains `legacy_seed()` for callers that must
-reconstruct the former positional convention.
-
-### External music toolchain
-
-The `music` provider drives Strudel as an external process; Strudel is not linked
-or bundled. Set `STRUDEL_DIR` to a prepared Strudel checkout with Vite,
-Puppeteer Core, and `@strudel/web`, and optionally set `CHROME_BIN` and
-`STRUDEL_PORT`. Node, Chrome/Chromium, and FFmpeg must be available. Read-only
-commands such as `music list`, `music info`, and cycle-math verification work
-without that toolchain.
+Python Sound Generator is one of the repositories behind
+[Plebian-OS](https://github.com/itsmygithubacct/plebian-os#readme), a Debian
+install whose desktop is [Kilix](https://github.com/itsmygithubacct/kilix#readme)
+running the [Kilix 95](https://github.com/itsmygithubacct/kilix-95#readme)
+desktop through [Pleb](https://github.com/itsmygithubacct/pleb#readme).
+It is not installed by Plebian-OS; it is a build-time audio tool for its games and
+an installable app in the Kilix for Windows companion. The map of every
+repository and how it ships is on the
+[components page](https://github.com/itsmygithubacct/plebian-os/blob/main/docs/components.md).
 
 ## License
 
@@ -374,28 +137,3 @@ Project-authored code, documentation, procedural synthesis definitions, and
 music patterns are available under the [MIT License](LICENSE). Bundled
 recordings retain their recorded CC0/public-domain terms; see
 [ASSET_LICENSES.md](ASSET_LICENSES.md) and each provider's provenance ledger.
-
-## Verification
-
-```sh
-make verify
-make build
-python -m twine check dist/*
-```
-
-Set `SOURCE_DATE_EPOCH` to a non-negative Unix timestamp when producing release
-artifacts. The wheel and source distribution then use canonical archive times
-and ownership metadata, so rebuilding the same tree with the same locked build
-environment produces byte-identical artifacts.
-
-Run `make check-reproducible-sdist` to build the complete source archive twice
-and verify its bytes, entry order, timestamps, and ownership metadata.
-
-`verify` runs Ruff, the complete test suite, and the 32-provider health check.
-CI repeats those checks on Python 3.11 through 3.14 and validates both built
-distributions. The unified tests pin registry uniqueness, namespace-safe lazy loading,
-compatibility aliases, DSP PCM characterization hashes, stable seeds, manifest
-schema, shared-buffer output, content-addressed asset integrity, all-provider
-imports and help commands, packaged-data integrity, and end-to-end WAV renders
-through the facade—including a default-output render from the household
-appliance Foley provider.
